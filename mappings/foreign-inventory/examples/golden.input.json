@@ -1,0 +1,6 @@
+{
+  "foreign_id": "outside:product-123",
+  "qty": 15,
+  "measurement": "cm",
+  "owner": "external-merchant"
+}

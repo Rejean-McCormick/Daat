@@ -1,0 +1,6 @@
+{
+  "external_id": "outside:product-123",
+  "quantity": 15,
+  "unit": "centimeter",
+  "owner": "external-merchant"
+}

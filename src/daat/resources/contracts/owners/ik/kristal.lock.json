@@ -1,0 +1,12 @@
+{
+  "format": "kristal.consumer-lock/v2",
+  "version": "6.0.0",
+  "canonicalization_profile": "kristal.v6:jcs-rfc8785",
+  "canonicalization_version": "1",
+  "standard_archive_sha256": "sha256:4274775abc1f687631d30a524143e05695a7af6c153a7e2bceb88660da57e00c",
+  "standard_manifest_sha256": "sha256:1cc531c918d8c97c0caca8ced7560e54f9c8a98c5527fc90e32cb569dbdbb9b9",
+  "contract_digests": {
+    "schemas/kristal-state.schema.json": "sha256:47e5cd7fd3a801adfd230a7591a70a62ff89a39d42023d87fe99851bc32725c5",
+    "schemas/reader-policy.schema.json": "sha256:e5b8f8741a1736e8a7ce1204cf0ce1e0345b1a7e4b2fa19b19980b9b66e34599"
+  }
+}

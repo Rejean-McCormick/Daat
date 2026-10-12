@@ -1,0 +1,160 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://interaction-kernel.dev/schemas/1.1/receipt.schema.json",
+  "title": "IK Receipt",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "specversion",
+    "record_type",
+    "id",
+    "time",
+    "interaction_id",
+    "source",
+    "status",
+    "retryable",
+    "data"
+  ],
+  "properties": {
+    "specversion": {
+      "const": "ik/1.1"
+    },
+    "record_type": {
+      "const": "receipt"
+    },
+    "id": {
+      "type": "string",
+      "minLength": 8,
+      "maxLength": 200
+    },
+    "time": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "interaction_id": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 200
+    },
+    "source": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "system"
+      ],
+      "properties": {
+        "system": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 120
+        },
+        "instance": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "maxLength": 200
+        },
+        "organization": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "maxLength": 200
+        },
+        "world": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "maxLength": 200
+        },
+        "release": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "maxLength": 200
+        }
+      }
+    },
+    "target": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "system"
+      ],
+      "properties": {
+        "system": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 120
+        },
+        "instance": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "maxLength": 200
+        },
+        "organization": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "maxLength": 200
+        },
+        "world": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "maxLength": 200
+        },
+        "release": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "maxLength": 200
+        }
+      }
+    },
+    "status": {
+      "enum": [
+        "accepted",
+        "rejected",
+        "blocked",
+        "succeeded",
+        "failed"
+      ]
+    },
+    "code": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 200
+    },
+    "retryable": {
+      "type": "boolean"
+    },
+    "external_reference": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 2000
+    },
+    "data": {
+      "type": "object"
+    },
+    "correlation_id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 500
+    }
+  }
+}

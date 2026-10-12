@@ -1,0 +1,15 @@
+{
+  "algorithm": "sha256",
+  "files": {
+    "artifact-ref.schema.json": "e423bbf0cb20c7c464f41cb22308bfd23a231c251a4c276ad10b0b2649c82369",
+    "envelope.schema.json": "1584ab44ec27e8a99fa64927a0cd72d520d0fe6a12df3ceac43001cf818b7d9e",
+    "export-manifest.schema.json": "d49729d03fbf4d8d16f4ef25e3a0595be3d0acc7664c3eb767ea462d70dba789",
+    "kristal.lock.json": "da0c55ba7e49ded0f8dd0892be85bcd23bc040e1386b0b7395c3e1c53b92c368",
+    "profiles/kristal/kristal.artifact.ready/2.0.0/payload.schema.json": "6bfe4b7cdc22cbf87f03fccb674d0d659782d15407e91ef6e402ed368b56ecee",
+    "profiles/kristal/kristal.artifact.ready/2.0.0/profile.json": "465ec4208ba38780dc6ad19d0726f896cfa9326dabfd1c6c5a9ed81c3a74542b",
+    "profiles/kristal/kristal.build.request/2.0.0/payload.schema.json": "b489fa0107abacc98c386b4dccd5269ef18217e27444873021ea90644f42704f",
+    "profiles/kristal/kristal.build.request/2.0.0/profile.json": "a7db0dab9e3833958419047196c5c72d65104f7db3c65ce4834823072299a946",
+    "receipt.schema.json": "f3abe499b1cc5cb847afab55adb05966693d3cd230f6450727b9ed0a0ee39e26"
+  },
+  "source": "Interaction-Kernel user-supplied snapshot 2026-10-12"
+}

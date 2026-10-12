@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "external_id",
+    "quantity",
+    "unit",
+    "owner"
+  ],
+  "properties": {
+    "external_id": {
+      "type": "string"
+    },
+    "quantity": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "unit": {
+      "enum": [
+        "centimeter",
+        "meter"
+      ]
+    },
+    "owner": {
+      "type": "string"
+    }
+  }
+}

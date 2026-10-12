@@ -1,0 +1,66 @@
+{
+  "format": "daat.mapping-profile/0.2.0-draft",
+  "id": "outside-inventory",
+  "version": "1.0.0",
+  "capabilities": [
+    "example.inventory.read"
+  ],
+  "source_contract": {
+    "ref": "outside.inventory/1.0.0",
+    "path": "source.schema.json",
+    "sha256": "59946bc4fc0aafab93b73048c709f974d3c3652842889cf04123bc07cc2342ea"
+  },
+  "target_contract": {
+    "ref": "example.inventory-summary/1.0.0",
+    "path": "target.schema.json",
+    "sha256": "ed23cfcf7312ba7a7dfc237c6ce7d6131db3804f71e8ae43f45c6c93cbf459cd"
+  },
+  "rules": [
+    {
+      "op": "rename",
+      "from": "foreign_id",
+      "to": "external_id",
+      "class": "alias",
+      "obligation": "external_id"
+    },
+    {
+      "op": "rename",
+      "from": "qty",
+      "to": "quantity",
+      "class": "alias",
+      "obligation": "quantity"
+    },
+    {
+      "op": "map_enum",
+      "from": "measurement",
+      "to": "unit",
+      "class": "value",
+      "obligation": "unit",
+      "map": {
+        "cm": "centimeter",
+        "m": "meter"
+      }
+    },
+    {
+      "op": "copy",
+      "from": "owner",
+      "to": "owner",
+      "class": "identity",
+      "obligation": "owner"
+    }
+  ],
+  "field_policy": {
+    "must_preserve": [
+      "owner"
+    ],
+    "exclusions": [],
+    "required_target_obligations": [
+      "external_id",
+      "quantity",
+      "unit",
+      "owner"
+    ]
+  },
+  "golden_input": "examples/golden.input.json",
+  "golden_expected": "examples/golden.expected.json"
+}

@@ -1,0 +1,92 @@
+{
+  "format": "daat.mapping-profile/0.2.0-draft",
+  "id": "native-export-identity",
+  "version": "1.0.0",
+  "capabilities": [
+    "kristal-build"
+  ],
+  "source_contract": {
+    "ref": "ik.export-manifest/1.1",
+    "path": "source.schema.json",
+    "sha256": "d49729d03fbf4d8d16f4ef25e3a0595be3d0acc7664c3eb767ea462d70dba789"
+  },
+  "target_contract": {
+    "ref": "ik.export-manifest/1.1",
+    "path": "target.schema.json",
+    "sha256": "d49729d03fbf4d8d16f4ef25e3a0595be3d0acc7664c3eb767ea462d70dba789"
+  },
+  "rules": [
+    {
+      "op": "copy",
+      "from": "id",
+      "to": "id",
+      "class": "identity",
+      "obligation": "id"
+    },
+    {
+      "op": "copy",
+      "from": "profile",
+      "to": "profile",
+      "class": "identity",
+      "obligation": "profile"
+    },
+    {
+      "op": "copy",
+      "from": "producer",
+      "to": "producer",
+      "class": "identity",
+      "obligation": "producer"
+    },
+    {
+      "op": "copy",
+      "from": "snapshot_at",
+      "to": "snapshot_at",
+      "class": "identity",
+      "obligation": "snapshot_at"
+    },
+    {
+      "op": "copy",
+      "from": "subjects",
+      "to": "subjects",
+      "class": "identity",
+      "obligation": "subjects"
+    },
+    {
+      "op": "copy",
+      "from": "items",
+      "to": "items",
+      "class": "identity",
+      "obligation": "items"
+    },
+    {
+      "op": "copy",
+      "from": "integrity",
+      "to": "integrity",
+      "class": "identity",
+      "obligation": "integrity"
+    }
+  ],
+  "field_policy": {
+    "must_preserve": [
+      "id",
+      "profile",
+      "producer",
+      "snapshot_at",
+      "subjects",
+      "items",
+      "integrity"
+    ],
+    "exclusions": [],
+    "required_target_obligations": [
+      "id",
+      "profile",
+      "producer",
+      "snapshot_at",
+      "subjects",
+      "items",
+      "integrity"
+    ]
+  },
+  "golden_input": "examples/golden.input.json",
+  "golden_expected": "examples/golden.expected.json"
+}

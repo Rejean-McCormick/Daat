@@ -1,0 +1,34 @@
+{
+  "id": "kristal.artifact.ready",
+  "version": "2.0.0",
+  "class": "event",
+  "description": "DaaT announces one or more verified Kristal v6 artifacts are available.",
+  "source_systems": [
+    "daat"
+  ],
+  "target_systems": [
+    "konnaxion",
+    "orgo"
+  ],
+  "target_capability": "knowledge-consumer",
+  "payload_schema": "payload.schema.json",
+  "authority": {
+    "required": false,
+    "accepted_kinds": []
+  },
+  "artifacts": {
+    "outputs": {
+      "requirement": "required"
+    }
+  },
+  "delivery": {
+    "durability": "durable",
+    "idempotency": "optional",
+    "ordering": "none"
+  },
+  "response": {
+    "acceptance_receipt": "optional",
+    "final_receipt": "forbidden",
+    "outcome_events": []
+  }
+}

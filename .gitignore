@@ -1,0 +1,26 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+*.egg-info/
+build/
+dist/
+.coverage
+out/
+*.db
+*.sqlite
+.env*
+
+*.pem
+*.key
+*.p12
+*.pfx
+*.token
+*.secret
+*credentials*
+.env
+.env.*
+
+# generated release state
+.tmp-install/
+.venv-*/

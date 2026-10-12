@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "foreign_id",
+    "qty",
+    "measurement",
+    "owner"
+  ],
+  "properties": {
+    "foreign_id": {
+      "type": "string"
+    },
+    "qty": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "measurement": {
+      "enum": [
+        "cm",
+        "m"
+      ]
+    },
+    "owner": {
+      "type": "string"
+    }
+  }
+}

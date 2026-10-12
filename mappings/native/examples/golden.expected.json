@@ -1,0 +1,26 @@
+{
+  "id": "export-test-123",
+  "profile": "example.export/1.0.0",
+  "producer": {
+    "system": "orgo",
+    "organization": "school-demo"
+  },
+  "snapshot_at": "2026-10-12T12:00:00Z",
+  "subjects": [
+    {
+      "type": "project",
+      "id": "scene-1"
+    }
+  ],
+  "items": [
+    {
+      "type": "application/json",
+      "ref": "urn:orgo:export:1",
+      "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+    }
+  ],
+  "integrity": {
+    "algorithm": "sha256",
+    "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+  }
+}

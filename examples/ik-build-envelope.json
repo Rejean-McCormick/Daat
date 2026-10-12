@@ -1,0 +1,56 @@
+{
+  "specversion": "ik/1.1",
+  "id": "request-demo-123456",
+  "class": "command",
+  "time": "2026-10-12T12:00:00Z",
+  "profile": {
+    "id": "kristal.build.request",
+    "version": "2.0.0"
+  },
+  "source": {
+    "system": "orgo",
+    "organization": "school-demo"
+  },
+  "target": {
+    "system": "daat"
+  },
+  "subject": {
+    "type": "project",
+    "id": "scene-1"
+  },
+  "authority": {
+    "kind": "operational-workflow"
+  },
+  "idempotency_key": "demo-key-001",
+  "artifact_refs": [
+    {
+      "owner": {
+        "system": "orgo",
+        "organization": "school-demo"
+      },
+      "artifact_type": "test.export",
+      "artifact_id": "sample-1",
+      "integrity": {
+        "algorithm": "sha256",
+        "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+      },
+      "locator": {
+        "ref": "urn:sample:export:1"
+      }
+    }
+  ],
+  "response": {
+    "acceptance_receipt": true,
+    "final_receipt": true,
+    "outcome_events": [
+      "kristal.artifact.ready"
+    ]
+  },
+  "data": {
+    "mapping_profile": "native-export-identity/1.0.0",
+    "requested_outputs": [
+      "kristal_state"
+    ],
+    "kristal_contract_set": "6.0.0"
+  }
+}
