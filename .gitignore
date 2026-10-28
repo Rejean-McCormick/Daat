@@ -24,3 +24,5 @@ out/
 # generated release state
 .tmp-install/
 .venv-*/
+ZmartZnap.pyw
+GitSink.bat
