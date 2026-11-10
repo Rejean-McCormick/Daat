@@ -188,3 +188,25 @@ def test_external_policy_row_limit_counts_nested_collection(external_call,allowe
     payload['items']=[{'id':1},{'id':2}]
     with pytest.raises(AdmissionError) as e:gate.map(replace(external_call,payload=payload))
     assert e.value.code=='POLICY_OBLIGATION_DENIED'
+
+
+def test_mediatheque_receipt_is_not_an_approved_external_mapping_profile(allowed_profiles):
+    """A custody receipt is not an IK command, a trusted map source or canon."""
+    receipt = {
+        'format': 'koa.encyk-source-handoff-receipt/1.0.0',
+        'status': 'accepted',
+        'contract': 'encyk.source-evidence-handoff/2.0.0',
+        'source_uuid': '00000000-0000-4000-a000-000000000001',
+        'semantic_identity_assigned': False,
+    }
+    call = ExternalCall('synthetic-only', 'school-demo', 'outside-app',
+                        'koa.mediatheque-source-receipt/1.0.0', receipt)
+    # There is no bilateral adopted profile for that receipt format.
+    with pytest.raises(AdmissionError) as error:
+        external_boundary(allowed_profiles).map(call)
+    assert error.value.code == 'MAPPING_PROFILE_DENIED'
+    # Even a future operator-approved profile still requires proof of source
+    # ownership and disclosure permission from the real library instance.
+    with pytest.raises(AdmissionError) as error:
+        external_boundary(allowed_profiles, source_verifier=VerifiedSource(False)).map(call)
+    assert error.value.code == 'SOURCE_UNTRUSTED'

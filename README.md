@@ -89,6 +89,8 @@ bridge = V6BuildBridge()  # fails closed: no host identity/policy/audit/verifier
 # bridge.process(ik_envelope, export_manifest, Path("mappings/native/profile.json"), native_client)
 ```
 
+For the separate **Skope/EncyK → Médiathèque source-custody lane**, see [source custody boundary and remaining owner gates](docs/25-SOURCE-CUSTODY-BOUNDARY.md). A storage receipt is not a DaaT mapping profile or Kristal approval.
+
 See [Implementation status](docs/19-IMPLEMENTATION-STATUS.md), [AGENTS.md](AGENTS.md), [full specifications](docs/README.md) and [AI backlog](docs/15-AI-BUILD-BACKLOG.md).
 
 ## Important upstream contract boundaries
