@@ -90,3 +90,8 @@ SDK + external developer self-service
          |
 Optional operational service hardening
 ```
+
+<!-- daat-universal-onramp-docs-2026-11-13 -->
+## Later onramp/connector development plan (2026-11-13)
+
+This file preserves the original v0.1 milestones and their scope. For the **next coding work**, follow [33 — Coding roadmap](33-CODING-ROADMAP.md), alongside [26 — Universal onramp](26-UNIVERSAL-DATA-ONRAMP.md), [31 — Pilots](31-PILOT-PLAYBOOKS.md), and [32 — Negative acceptance](32-TEST-AND-THREAT-PLAN.md). These are proposed targets; [19 — Implementation status](19-IMPLEMENTATION-STATUS.md) remains the factual feature ledger. No generic IK external ingress, source-custody handoff or v11 authoring profile is silently adopted.

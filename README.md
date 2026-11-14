@@ -1,10 +1,37 @@
 # DaaT — External Interoperability & Alignment Boundary
 
-**Code version:** `0.3.0` (offline library/CLI security-boundary alpha). **Runtime status:** pre-production, **not a deployed IK service**.
+**Code version:** `0.4.2` (offline source-preparation + existing security-boundary alpha). **Runtime status:** pre-production, **not a deployed IK service**.
 
 > DaaT makes integration possible without imposing uniformity. An external application's necessary semantic adaptations can be recorded and measured as a transparent, reducible *alignment burden*, not a judgment of the application's quality.
 
 DaaT is an **external-facing integration boundary**. A natively aligned client may need no semantic mapping; other clients use explicit, tested, version-pinned mapping profiles. Every client still needs authenticated admission, owner authorization, schema validation, and safe artifact access. DaaT never replaces IK, Orgo, Kristal, or an owner's identity or storage authority.
+
+
+## 0.4.1 — Kristal owner-chain preflight and review transfer
+
+This patch adds **read-only** inspection of the separately installed Framework/Kit/Kristalizer/diK/Arketype repositories and a content-bound, noncanonical `kristal-prepare-handoff` packet from exact local preview + review documents. It does **not** add a deployed Kit importer or an approved IK profile. The supplied source snapshots document a draft.3/draft.4 diK/Kit incompatibility that requires owner qualification. See [36 — Kristal owner chain](docs/36-KRISTAL-OWNER-CHAIN-LOCAL-HANDOFF.md).
+
+```bash
+python -m daat kristal-owner-preflight --root /path/to/mycode
+python -m daat kristal-prepare-handoff --preview preview.json --review review.json --out owner-proposal.json
+python -m daat kristal-verify-handoff --handoff owner-proposal.json --preview preview.json --review review.json
+```
+
+## 0.4.0 — Offline universal onramp preview (source-to-candidate, not canonical)
+
+DaaT now offers **local read-only source preparation** for bounded PDF (`pypdf` optional), ZIP, Git (full immutable commit), CSV/JSON/JSONL/TSV, scholarly metadata and typed Acomba export files. The registry describes **36 research source families** but does **not** claim 36 connectors. Outputs are content-addressed, noncanonical evidence/candidate previews, optionally inspected and reviewed with local CLI commands; no source bytes are printed by default.
+
+```bash
+python -m pip install -e '.[dev,pdf]'
+python -m daat list-source-families
+python -m daat list-adapters
+python -m daat prepare-local --help
+python -m daat prepare-review --help
+```
+
+The host-injected external reader port requires a separately authenticated operator, verified source grants, fresh policy, audit and independently checked output; **it is not a deployed network service or a new IK wire profile**. Kristal semantic authority, source custody, diK, IK routing and release remain with their owners. See [35 — Implemented offline onramp](docs/35-OFFLINE-ONRAMP-IMPLEMENTATION-0.4.md) and [Kintsugi credits](THIRD-PARTY-REFERENCES.md).
+
+The older v0.3.0 sections below describe the previously released security-boundary scope.
 
 ## Security boundary — optimized v0.3.0
 
@@ -108,3 +135,7 @@ After installing the project, run `python examples/fake_host_demo.py`. This veri
 ## Verifiable source integrity
 
 Run `python tools/verify_manifest.py` to verify the tracked ZIP source contents against `REPOSITORY-MANIFEST.json` and `python tools/check_markdown_links.py` for local documentation links. The manifest is a local checksum inventory, **not a signed attestation**.
+
+## 0.4.2 — Actual kOA checkout alignment (read-only)
+
+The new `kristal-owner-locations` command interprets the declared local checkout paths in kOA C0's repository inventory. `kristal-owner-preflight` can now use the same nested paths and verify byte equality of diK alpha.7's 11 bundled v11 schemas against Framework draft.4. **Schema parity is not owner functional qualification or permission to import**. See [docs/37](docs/37-C0-INVENTORY-AND-DIK-SCHEMA-PARITY.md). The recognized DaAT checkout is `C:\mycode\Interaction-Kernel\Daat`, not `C:\mycode\Daat`.

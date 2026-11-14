@@ -21,3 +21,8 @@ Statements tagged `PROPOSAL` are targets, not claims of implemented code. The wo
 - Local DaaT mapping draft is implemented but not an IK-owner-approved wire profile.
 
 Do not select versions or authorities by guesswork.
+
+<!-- daat-universal-onramp-docs-2026-11-13 -->
+## Onramp documentation baseline — 2026-11-13
+
+Documents [26–34](26-UNIVERSAL-DATA-ONRAMP.md) and proposed [ADR-0004](decisions/ADR-0004-UNIVERSAL-ONRAMP-KINTSUGI.md) express an expanded, implementation-ready **target design**. They neither change the approved owner precedence above nor the actual offline v0.3.0 implementation described in [19](19-IMPLEMENTATION-STATUS.md). The old v0.1 release label on this page is a historical specification baseline, **not** the currently implemented package version.

@@ -41,3 +41,8 @@ Write an ADR with context, options, selected recommendation, contract impact, ba
 - Confirm semantics and release scope of a **generic IK external ingress profile**; no wire handler shipped.
 - Agree durable idempotency, outbox/reconciliation and error/blocked receipt policy before service deployment.
 - Complete upstream license and dependency pin reviews before public publication.
+
+<!-- daat-universal-onramp-docs-2026-11-13 -->
+## Additional onramp dependencies (proposal; 2026-11-13)
+
+The implementation order and blocked decision owners for the proposed universal onramp are consolidated in [33 — Coding roadmap](33-CODING-ROADMAP.md). In particular, the generic external IK ingress, DaaT↔Médiathèque disclosure, Framework/Kit/diK v11 compatibility, OSS licenses/source rights, and host-backed Konfid/audit/replay **remain separate owner decisions**. [Proposed ADR-0004](decisions/ADR-0004-UNIVERSAL-ONRAMP-KINTSUGI.md) cannot approve another owner's transport, semantic or publication contracts.

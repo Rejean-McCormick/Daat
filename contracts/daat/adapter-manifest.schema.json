@@ -1,0 +1,88 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:daat:offline-adapter-manifest:0.1.0-prototype",
+  "title": "Local DaaT adapter declaration; NOT an IK profile",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "format",
+    "id",
+    "version",
+    "kind",
+    "lane",
+    "family_ids",
+    "read_only",
+    "implementation",
+    "source_rights_required",
+    "description"
+  ],
+  "properties": {
+    "format": {
+      "const": "daat.local-adapter/0.1.0-prototype"
+    },
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9_.-]{2,80}$"
+    },
+    "version": {
+      "type": "string",
+      "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$"
+    },
+    "kind": {
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9_.-]{2,80}$"
+    },
+    "lane": {
+      "enum": [
+        "L1",
+        "L2",
+        "L3",
+        "L4",
+        "L5",
+        "L6",
+        "L7",
+        "L8"
+      ]
+    },
+    "family_ids": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "pattern": "^[0-9]{2}$"
+      }
+    },
+    "read_only": {
+      "const": true
+    },
+    "implementation": {
+      "enum": [
+        "built_in",
+        "trusted_host_worker"
+      ]
+    },
+    "source_rights_required": {
+      "const": true
+    },
+    "description": {
+      "type": "string",
+      "minLength": 8,
+      "maxLength": 500
+    },
+    "external_component": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 160
+    },
+    "approved_owner_profile": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "const": null
+    }
+  }
+}

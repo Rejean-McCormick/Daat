@@ -90,3 +90,15 @@ If upstream v6/v7/v8/v9/v10 contracts conflict, a receiver's authorization polic
 ## Current implementation note (v0.3.0)
 
 The offline Python CLI/library and in-process security gate are implemented and must pass `python -m pytest -q`. Review `docs/19-IMPLEMENTATION-STATUS.md` before claiming readiness. The new mapping draft is not an approved IK wire profile; all real trust and external transport decisions remain blocked.
+
+## 9. 0.4.0 implementation handoff (offline; owner contracts unchanged)
+
+The new `source`, `catalog`, `registry`, `pipeline`, `connectors`, `review`, `hosted` and `journal` modules produce **noncanonical local previews only**. Never treat a successful local preview or reviewer packet as authenticated source custody, an IK message, a Kit import, semantic authority or publication consent. The hosted provider interface is intentionally host-injected and fails closed. See `docs/35-OFFLINE-ONRAMP-IMPLEMENTATION-0.4.md` for exact scope and blockers; execute all relevant owner TCKs before enabling any real external effects.
+
+## 10. v0.4.1 owner-chain preflight and handoff
+
+`src/daat/kristal_chain.py` provides local owner pin checks and noncanonical reviewer handoff packets. It cannot be used to instantiate KQ/KP/KA/KS, call owner Kit writes, or claim a reviewed source is verified. `kristal-prepare-handoff` is not an adopted receiver profile. Preserve the exact 13-file Kit Framework draft.4 pin and do not treat diK draft.3 as proven compatible. No local SHA-256 checksum authenticates the remote source.
+
+## v0.4.2 — Owner path hints and byte parity
+
+When a C0 repository inventory is available, its `C:\mycode` paths are **untrusted location hints only**. Never treat a path, file digest, Kit pin, diK schema parity, declarative reviewer or a source custody receipt as identity, authorization or semantic approval. Do not automatically run arbitrary owner code, import a diK catalog, mint any KQ/KP/KA/KS, or change a Kit workspace. Read the exact owner version and contract before suggesting any bilateral execution.

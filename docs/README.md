@@ -1,6 +1,6 @@
 # DaaT architecture and implementation documentation
 
-These files form the **canonical build specification** for DaaT. They are intended for human engineers and AI implementation agents; this release ships **no operational DaaT runtime**.
+These files form the **canonical build specification** for DaaT. They are intended for human engineers and AI implementation agents; DaaT v0.3.0 includes an **offline Python library/CLI**, not a deployed external integration service; see [19](19-IMPLEMENTATION-STATUS.md).
 
 Read order:
 
@@ -37,3 +37,29 @@ For strict AI implementation constraints, see [../AGENTS.md](../AGENTS.md). For 
 All four describe implemented local gates and outstanding owner integrations. No IK external ingress schema is invented here.
 
 - [24 — Release evidence](24-RELEASE-EVIDENCE.md)
+
+<!-- daat-universal-onramp-docs-2026-11-13 -->
+## Universal external-data onramp — final design / coding baseline (2026-11-13)
+
+**Status:** `TARGET_DESIGN`; the DaaT v0.3.0 offline library remains the factual implementation baseline in [19](19-IMPLEMENTATION-STATUS.md). These additions **do not** adopt a new IK wire profile, source custody API, v11 Kit runtime or production service.
+
+- [26 — Universal onramp: vision and ownership](26-UNIVERSAL-DATA-ONRAMP.md)
+- [27 — Source taxonomy and 36-family registry](27-SOURCE-TAXONOMY-AND-REGISTRY.md)
+- [28 — Kintsugi/Kompendio open-source integration](28-KINTSUGI-OSS-INTEGRATION.md)
+- [29 — User journey, processing and handoffs](29-PROCESS-AND-HANDOFFS.md)
+- [30 — Native Kristal standards and provenance](30-KRISTAL-STANDARDS-AND-PROVENANCE.md)
+- [31 — Four pilot playbooks](31-PILOT-PLAYBOOKS.md)
+- [32 — Tests, negative cases and threat gates](32-TEST-AND-THREAT-PLAN.md)
+- [33 — Coding roadmap and owner decisions](33-CODING-ROADMAP.md)
+- [34 — Source and owner traceability](34-OWNER-SOURCE-TRACEABILITY.md)
+- [Proposed ADR-0004 — Universal onramp/Kintsugi](decisions/ADR-0004-UNIVERSAL-ONRAMP-KINTSUGI.md)
+
+The [36-family exploratory CSV](data/source-family-landscape-36.csv) is a research catalogue, not a claim that connectors are shipped or that their data may be copied. Future external integrations require exact producer/consumer owner contracts and qualification.
+
+## Offline source-preparation code (0.4.0)
+
+- [35 — Implemented offline source-to-candidate CLI and owner blockers](35-OFFLINE-ONRAMP-IMPLEMENTATION-0.4.md)
+
+- [36 — Kristal owner-chain local handoff](36-KRISTAL-OWNER-CHAIN-LOCAL-HANDOFF.md) (v0.4.1; offline, not an approved owner importer).
+
+- [37 — C0 local paths and diK schema-parity limits](37-C0-INVENTORY-AND-DIK-SCHEMA-PARITY.md)

@@ -1,0 +1,55 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:daat:prototype:kristal-review-handoff:0.1.0",
+  "title": "DaaT local Kristal review handoff (NOT owner-adopted IK/Kit wire contract)",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "format", "state", "source", "preview_sha256", "review_sha256", "reviewer_assertion_unverified",
+    "purpose", "submitted_candidates", "submitted_count", "unreviewed_count", "rejected_or_deferred_count",
+    "source_data_copied", "recipient_roles", "prohibited_effects", "required_admissions", "owner_contract",
+    "owner_approval", "ik_ingress_approved", "publication_authorized", "handoff_sha256"
+  ],
+  "properties": {
+    "format": {"const": "daat.kristal-review-handoff/0.1.0-prototype"},
+    "state": {"const": "offline_noncanonical_review_transfer_not_approved_ingress"},
+    "source": {"type": "object", "required": ["kind", "family_id", "local_ref", "manifest_sha256", "rights"]},
+    "preview_sha256": {"$ref": "#/$defs/sha256"},
+    "review_sha256": {"$ref": "#/$defs/sha256"},
+    "reviewer_assertion_unverified": {"type": "string", "minLength": 1},
+    "purpose": {"type": "string", "minLength": 1},
+    "submitted_candidates": {"type": "array", "items": {"$ref": "#/$defs/candidate"}},
+    "submitted_count": {"type": "integer", "minimum": 0},
+    "unreviewed_count": {"type": "integer", "minimum": 0},
+    "rejected_or_deferred_count": {"type": "integer", "minimum": 0},
+    "source_data_copied": {"type": "boolean"},
+    "recipient_roles": {"const": ["Kristalizer (review proposal)", "diK (lexical/crosswalk proposals)", "Kristal Authoring Kit (separate approved admission)"]},
+    "prohibited_effects": {"const": ["mint_KQ_KP_KA_KS", "activate", "publish", "write_owner_workspace"]},
+    "required_admissions": {"const": ["source_custody_permission", "authenticated_reviewer", "reviewed_semantic_mapping", "owner_adopted_versioned_contract", "exact_framework_and_kit_pins", "receiving_owner_validation"]},
+    "owner_contract": {"type": "null"},
+    "owner_approval": {"type": "null"},
+    "ik_ingress_approved": {"const": false},
+    "publication_authorized": {"const": false},
+    "handoff_sha256": {"$ref": "#/$defs/sha256"}
+  },
+  "$defs": {
+    "sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+    "candidate": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["candidate_id", "evidence_id", "source_anchor", "source_sha256", "record_type", "proposed_arketypes", "external_identifiers_unreviewed", "review_reason", "semantic_identity"],
+      "properties": {
+        "candidate_id": {"type": "string", "pattern": "^cand-[a-f0-9]{64}$"},
+        "evidence_id": {"type": "string", "pattern": "^ev-[a-f0-9]{64}$"},
+        "source_anchor": {"type": "object", "required": ["kind", "location"]},
+        "source_sha256": {"$ref": "#/$defs/sha256"},
+        "record_type": {"type": "string", "minLength": 1},
+        "proposed_arketypes": {"type": "array", "items": {"type": "string"}},
+        "external_identifiers_unreviewed": {"type": "object"},
+        "review_reason": {"type": "string", "minLength": 5},
+        "semantic_identity": {"type": "null"},
+        "source_record_data_unverified": {"type": "object"}
+      }
+    }
+  }
+}

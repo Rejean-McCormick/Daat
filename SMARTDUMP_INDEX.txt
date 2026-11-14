@@ -1,12 +1,12 @@
 SMART DUMPER INDEX
 ==================
-generated_at: 2026-11-09T16:30:17.642304
+generated_at: 2026-11-13T15:51:03.010991
 source_root: C:\mycode\Interaction-Kernel\Daat
 mode: snapshot
 zip_file: Daat_Code_snapshot.zip
 embedded_index: SMARTDUMP_INDEX.txt
-file_count: 136
-total_bytes: 433579
+file_count: 138
+total_bytes: 445344
 compression: ZIP_DEFLATED level 1
 
 FILES
@@ -52,6 +52,7 @@ docs/21-KONFID-CONTRACT-ALIGNMENT.md	2787 bytes
 docs/22-EXTERNAL-MAPPING-GUIDE.md	2791 bytes
 docs/23-THREAT-AND-TRUST-MATRIX.md	2990 bytes
 docs/24-RELEASE-EVIDENCE.md	2366 bytes
+docs/25-SOURCE-CUSTODY-BOUNDARY.md	3756 bytes
 docs/decisions/ADR-0001-DAAT-PURPOSE.md	1942 bytes
 docs/decisions/ADR-0002-ALIGNMENT-MEASUREMENT.md	1172 bytes
 docs/decisions/ADR-0003-IK-PROFILE-GOVERNANCE.md	883 bytes
@@ -72,11 +73,12 @@ mappings/native/profile.json	1958 bytes
 mappings/native/source.schema.json	3383 bytes
 mappings/native/target.schema.json	3383 bytes
 pyproject.toml	749 bytes
-README.md	8136 bytes
+README.md	8371 bytes
 README_FR.md	1958 bytes
 RELEASE-VALIDATION.md	2148 bytes
-REPOSITORY-MANIFEST.json	14784 bytes
+REPOSITORY-MANIFEST.json	14989 bytes
 SECURITY.md	940 bytes
+SMARTDUMP_INDEX.txt	6399 bytes
 src/daat/__init__.py	103 bytes
 src/daat/__main__.py	47 bytes
 src/daat/adapter.py	555 bytes
@@ -110,7 +112,7 @@ tests/test_bridge.py	10233 bytes
 tests/test_cli.py	975 bytes
 tests/test_contracts.py	3751 bytes
 tests/test_mapping.py	5255 bytes
-tests/test_security.py	10024 bytes
+tests/test_security.py	11194 bytes
 tools/check_markdown_links.py	1019 bytes
 tools/verify_manifest.py	1521 bytes
 wiki/00-DOCUMENT-STATUS.md	1044 bytes
