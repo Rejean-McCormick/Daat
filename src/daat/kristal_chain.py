@@ -390,15 +390,29 @@ def verify_handoff(packet: dict[str, Any], *, preview: dict[str, Any] | None = N
             expected_item_keys.add('source_record_data_unverified')
         if not isinstance(item, dict) or set(item) != expected_item_keys or item.get('semantic_identity') is not None:
             raise AdmissionError('HANDOFF_AUTHORITY_INVALID', 'Handoff attempted undeclared or canonical fields')
-        if not isinstance(item.get('source_anchor'), dict) or not isinstance(item.get('proposed_arketypes'), list):
-            raise AdmissionError('HANDOFF_INVALID', 'Invalid evidence anchor or design hints')
-        if not isinstance(item.get('evidence_id'), str) or not isinstance(item.get('candidate_id'), str) or not _RE_SHA.fullmatch(item.get('source_sha256', '')):
+        if (not isinstance(item.get('source_anchor'), dict)
+                or not isinstance(item.get('proposed_arketypes'), list)
+                or not all(isinstance(x, str) and re.fullmatch(r'ARK-[0-9]{2}', x)
+                           for x in item['proposed_arketypes'])
+                or not isinstance(item.get('external_identifiers_unreviewed'), dict)
+                or not isinstance(item.get('record_type'), str) or not item['record_type']
+                or not isinstance(item.get('review_reason'), str)
+                or not 5 <= len(item['review_reason'].strip()) <= 1000):
+            raise AdmissionError('HANDOFF_INVALID', 'Invalid evidence, design hints or review fields')
+        if (not isinstance(item.get('evidence_id'), str)
+                or not re.fullmatch(r'ev-[a-f0-9]{64}', item['evidence_id'])
+                or not isinstance(item.get('candidate_id'), str)
+                or not re.fullmatch(r'cand-[a-f0-9]{64}', item['candidate_id'])
+                or not isinstance(item.get('source_sha256'), str)
+                or not _RE_SHA.fullmatch(item['source_sha256'])):
             raise AdmissionError('HANDOFF_INVALID', 'Unbound candidate evidence in handoff')
         if item['candidate_id'] in ids:
             raise AdmissionError('HANDOFF_INVALID', 'Duplicate candidate in handoff')
         ids.add(item['candidate_id'])
         if ('source_record_data_unverified' in item) != (packet.get('source_data_copied') is True):
             raise AdmissionError('HANDOFF_INVALID', 'Raw source inclusion declaration mismatch')
+    if (preview is None) != (review is None):
+        raise AdmissionError('HANDOFF_INPUT_INVALID', 'A handoff must be paired with both preview and review')
     if preview is not None and review is not None:
         reference = prepare_handoff(preview, review, include_evidence=packet['source_data_copied'])
         if reference != packet:

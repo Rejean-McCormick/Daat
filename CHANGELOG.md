@@ -1,3 +1,9 @@
+## 0.4.3 — local review hardening and chain audit (2026-11-14)
+
+- Strict structure, digest and candidate checks for local review/handoff prototypes.
+- Read-only `kristal-local-chain-audit` command.
+- No owner effect or canonical admission.
+
 # Changelog
 
 ## 0.4.2 — kOA snapshot-based owner location and diK byte parity

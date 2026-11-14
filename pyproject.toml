@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "daat-boundary"
-version = "0.4.2"
+version = "0.4.3"
 description = "Offline typed source-to-evidence preparation and IK v6 mapping boundary toolkit (pre-production)"
 readme = "README.md"
 requires-python = ">=3.10"

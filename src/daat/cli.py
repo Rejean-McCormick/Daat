@@ -157,6 +157,13 @@ def main(argv: list[str] | None = None) -> int:
     vh.add_argument("--handoff", type=Path, required=True)
     vh.add_argument("--preview", type=Path, help="Original preview (must be paired with --review)")
     vh.add_argument("--review", type=Path, help="Original review (must be paired with --preview)")
+    audit = sub.add_parser("kristal-local-chain-audit", help="Verify exact offline preview/review/handoff binding (no owner writes)")
+    audit.add_argument("--preview", type=Path, required=True)
+    audit.add_argument("--review", type=Path, required=True)
+    audit.add_argument("--handoff", type=Path, required=True)
+    audit.add_argument("--root", type=Path, help="Optional local owner workspace for read-only pin inspection")
+    audit.add_argument("--inventory", type=Path, help="Optional C0 inventory (requires --root)")
+    audit.add_argument("--out", type=Path, help="Optional private audit JSON file")
     args = parser.parse_args(argv)
     try:
         result: dict | list | None = None
@@ -248,6 +255,22 @@ def main(argv: list[str] | None = None) -> int:
             result = verify_handoff(load_json(args.handoff, max_bytes=100_000_000),
                                     preview=load_json(args.preview, max_bytes=100_000_000) if args.preview else None,
                                     review=load_json(args.review, max_bytes=20_000_000) if args.review else None)
+        elif args.command == "kristal-local-chain-audit":
+            from .chain_audit import audit_local_chain
+            from .output import write_private_json
+            if args.inventory is not None and args.root is None:
+                raise DaatError("CHAIN_AUDIT_INPUT_INVALID", "--inventory requires --root")
+            report = audit_local_chain(
+                load_json(args.preview, max_bytes=100_000_000),
+                load_json(args.review, max_bytes=20_000_000),
+                load_json(args.handoff, max_bytes=100_000_000),
+                owner_root=args.root, inventory=args.inventory)
+            if args.out:
+                write_private_json(args.out, report)
+                result = {"written": True, "audit_sha256": report["audit_sha256"],
+                          "status": report["status"], "owner_admission": "not_qualified"}
+            else:
+                result = report
         if getattr(args, "out", None) is not None and args.command in ("map", "alignment-report"):
             write_json(args.out, result)
         else:

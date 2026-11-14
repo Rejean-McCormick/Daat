@@ -32,3 +32,7 @@ Un catalogue des 36 familles et des lecteurs locaux, en lecture seule, ont été
 ## v0.4.2 — Alignement des chemins réels
 
 Les dépôts sont maintenant repérés via `docs/inventory/repositories.json` du dépôt central kOA, sous `C:\mycode`. Le chemin réel de DaAT est `C:\mycode\Interaction-Kernel\Daat`. La nouvelle vérification compare également les **11 schémas v11** de diK et Framework, sans conclure à une compatibilité fonctionnelle ni autoriser la création de Kristals. Voir `docs/37-C0-INVENTORY-AND-DIK-SCHEMA-PARITY.md`.
+
+## v0.4.3 — Audit local de la chaîne
+
+`daat kristal-local-chain-audit --preview P.json --review R.json --handoff H.json` valide les trois artefacts liés, sans création ni publication de Kristal. Ajouter `--root C:\\mycode` pour contrôler les empreintes des dépôts propriétaires, sans les exécuter. Ce n'est pas une admission par le Kit.

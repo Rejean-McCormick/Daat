@@ -139,3 +139,7 @@ Run `python tools/verify_manifest.py` to verify the tracked ZIP source contents 
 ## 0.4.2 — Actual kOA checkout alignment (read-only)
 
 The new `kristal-owner-locations` command interprets the declared local checkout paths in kOA C0's repository inventory. `kristal-owner-preflight` can now use the same nested paths and verify byte equality of diK alpha.7's 11 bundled v11 schemas against Framework draft.4. **Schema parity is not owner functional qualification or permission to import**. See [docs/37](docs/37-C0-INVENTORY-AND-DIK-SCHEMA-PARITY.md). The recognized DaAT checkout is `C:\mycode\Interaction-Kernel\Daat`, not `C:\mycode\Daat`.
+
+## v0.4.3 — Verified local chain audit
+
+Use `daat kristal-local-chain-audit --preview P.json --review R.json --handoff H.json` for deterministic verification of the exact local noncanonical chain. `--root C:\\mycode` optionally checks owner pins. Results are **not** Kit admission, IK ingress or publication evidence; details in `docs/37-CHAIN-LOCAL-AUDIT-AND-REVIEW-HARDENING.md`.
