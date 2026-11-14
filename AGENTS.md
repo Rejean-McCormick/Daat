@@ -102,3 +102,7 @@ The new `source`, `catalog`, `registry`, `pipeline`, `connectors`, `review`, `ho
 ## v0.4.2 — Owner path hints and byte parity
 
 When a C0 repository inventory is available, its `C:\mycode` paths are **untrusted location hints only**. Never treat a path, file digest, Kit pin, diK schema parity, declarative reviewer or a source custody receipt as identity, authorization or semantic approval. Do not automatically run arbitrary owner code, import a diK catalog, mint any KQ/KP/KA/KS, or change a Kit workspace. Read the exact owner version and contract before suggesting any bilateral execution.
+
+## v0.4.4 — ChatGPT operator-in-the-loop pathway
+
+`src/daat/chatgpt_loop.py` and `tools/DaAT_ChatGPT_Loop.pyw` provide an offline manual prompt-response tool. All AI-returned candidates are untrusted, require exact anchors to material furnished by the user, and may only become human review drafts. Do not install provider login/scraping code or treat user-source access as third-party disclosure rights. Local hashes are not source authentication and no canonical Kit admission is granted. See `docs/38-MANUAL-CHATGPT-KRISTAL-PARTS-LOOP.md`.

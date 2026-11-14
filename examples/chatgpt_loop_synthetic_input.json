@@ -1,0 +1,23 @@
+{
+  "purpose": "Extraire des propositions prudentes de composants de Kristal à vérifier humainement",
+  "sources": [
+    {
+      "provider": "Medium",
+      "title": "EXEMPLE FICTIF — Participation aux décisions",
+      "locator": "",
+      "scope": "excerpt",
+      "access_method": "user_paste",
+      "rights_basis": "Passage fictif créé pour les tests, autorisé à être partagé",
+      "text": "Selon cet exemple fictif, les groupes documentent leurs décisions pour faciliter la compréhension et la participation. Cette phrase n'est pas une preuve scientifique."
+    },
+    {
+      "provider": "PhilPapers",
+      "title": "EXEMPLE FICTIF — Résumé bibliographique",
+      "locator": "",
+      "scope": "summary",
+      "access_method": "authorized_export",
+      "rights_basis": "Résumé fictif créé pour les tests, autorisé à être partagé",
+      "text": "Ce résumé fictif distingue la responsabilité personnelle et la responsabilité institutionnelle. Le texte intégral de l'article n'est pas disponible dans cet exemple."
+    }
+  ]
+}

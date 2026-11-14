@@ -143,3 +143,7 @@ The new `kristal-owner-locations` command interprets the declared local checkout
 ## v0.4.3 — Verified local chain audit
 
 Use `daat kristal-local-chain-audit --preview P.json --review R.json --handoff H.json` for deterministic verification of the exact local noncanonical chain. `--root C:\\mycode` optionally checks owner pins. Results are **not** Kit admission, IK ingress or publication evidence; details in `docs/37-CHAIN-LOCAL-AUDIT-AND-REVIEW-HARDENING.md`.
+
+## v0.4.4 — User-mediated ChatGPT source-to-candidate loop
+
+The Windows `LANCER_DAAT_CHATGPT_LOOP.pyw` interface and `chatgpt-build-prompt` / `chatgpt-verify-response` CLI operations create bounded prompts from user-supplied authorized source text and check verbatim citations in returned JSON. Medium/PhilPapers accounts remain outside DaAT; summaries are not treated as full articles. This creates **noncanonical candidate parts only**, with no automated ChatGPT access, semantic authority, Kit import or publication. See `docs/38-MANUAL-CHATGPT-KRISTAL-PARTS-LOOP.md`.

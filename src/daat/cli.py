@@ -164,6 +164,17 @@ def main(argv: list[str] | None = None) -> int:
     audit.add_argument("--root", type=Path, help="Optional local owner workspace for read-only pin inspection")
     audit.add_argument("--inventory", type=Path, help="Optional C0 inventory (requires --root)")
     audit.add_argument("--out", type=Path, help="Optional private audit JSON file")
+    chatcreate = sub.add_parser("chatgpt-build-prompt", help="Build offline ChatGPT prompt for manual operator handoff; no network")
+    chatcreate.add_argument("input", type=Path, help="JSON {purpose, sources}; pasted/authorized text only")
+    chatcreate.add_argument("--rights-acknowledged", action="store_true")
+    chatcreate.add_argument("--allow-chatgpt-sharing", action="store_true", help="Confirm permitted third-party disclosure")
+    chatcreate.add_argument("--out", type=Path, required=True, help="Private bundle, including text and prompt")
+    chatcreate.add_argument("--replace", action="store_true")
+    chatverify = sub.add_parser("chatgpt-verify-response", help="Verify source-linked response and export noncanonical draft")
+    chatverify.add_argument("--bundle", type=Path, required=True)
+    chatverify.add_argument("--response", type=Path, required=True)
+    chatverify.add_argument("--out", type=Path, required=True)
+    chatverify.add_argument("--replace", action="store_true")
     args = parser.parse_args(argv)
     try:
         result: dict | list | None = None
@@ -211,6 +222,29 @@ def main(argv: list[str] | None = None) -> int:
         elif args.command == "verify-review":
             from .review import verify_review_packet
             result = verify_review_packet(load_json(args.input, max_bytes=20_000_000))
+        elif args.command == "chatgpt-build-prompt":
+            from .chatgpt_loop import make_bundle
+            from .output import write_private_json
+            submission = load_json(args.input, max_bytes=500_000)
+            if not isinstance(submission, dict) or set(submission) != {"purpose", "sources"}:
+                raise DaatError("CHATGPT_INPUT_INVALID", "Expect {purpose, sources} JSON")
+            bundle = make_bundle(submission["sources"], purpose=submission["purpose"],
+                                 user_rights_confirmed=args.rights_acknowledged,
+                                 chatgpt_disclosure_confirmed=args.allow_chatgpt_sharing)
+            write_private_json(args.out, bundle, replace=args.replace)
+            result = {"written": True, "request_sha256": bundle["request_sha256"],
+                      "sources": len(bundle["request"]["sources"]),
+                      "note": "Private bundle contains source text; operator must manually copy prompt to ChatGPT"}
+        elif args.command == "chatgpt-verify-response":
+            from .chatgpt_loop import validate_chatgpt_response
+            from .output import write_private_json
+            bundle = load_json(args.bundle, max_bytes=1_000_000)
+            response = load_json(args.response, max_bytes=500_000)
+            draft = validate_chatgpt_response(bundle, response)
+            write_private_json(args.out, draft, replace=args.replace)
+            result = {"written": True, "draft_sha256": draft["draft_sha256"],
+                      "candidate_count": len(draft["candidate_parts"]),
+                      "status": draft["status"], "owner_authority_granted": False}
         elif args.command == "inspect-journal":
             from .journal import LocalPreviewJournal
             with LocalPreviewJournal(args.path) as journal:

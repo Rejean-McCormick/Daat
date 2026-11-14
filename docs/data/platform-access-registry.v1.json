@@ -1,0 +1,4289 @@
+{
+  "schema": "koa.daat.platform-access-registry.v1",
+  "revision": "2026-11-14-research-1",
+  "classification": "RESEARCH_CATALOGUE_ONLY",
+  "notes": [
+    "No entry is a deployed connector, legal license, canonical contract, authorization or source-byte grant.",
+    "Platforms can offer multiple access methods; cataloguing a route does not prove it works for a given account or item.",
+    "Owner of acquisition/custody is upstream; DaAT maps/admission with explicit contracts only.",
+    "Manual ChatGPT handoffs are limited by permission to share data; login alone never grants disclosure rights.",
+    "Bibliographic metadata, abstracts, excerpts and full text have distinct epistemic and legal coverage.",
+    "API documentation verified for selected platforms only; all other modes require dedicated owner verification."
+  ],
+  "method_legend": {
+    "api_read": "API de lecture officielle",
+    "harvest_oai_pmh": "Moissonnage OAI-PMH",
+    "rss_atom": "Flux RSS/Atom",
+    "bulk_export": "Export massif / dump",
+    "user_export": "Export du compte utilisateur",
+    "local_file": "Fichier remis localement",
+    "authenticated_web": "Lecture navigateur connecté, sans extraction automatisée de session",
+    "federated_ref": "Référence fédérée / lien stable",
+    "git_snapshot": "Clone ou archive Git à révision fixe",
+    "database_read": "Requête SQL/ODBC en lecture seule",
+    "events": "Webhooks ou flux d’événements",
+    "manual_paste": "Copier-coller autorisé",
+    "licensed_batch": "Lot sous licence/accord spécifique"
+  },
+  "families": [
+    {
+      "id": "01",
+      "name": "Références bibliographiques",
+      "examples": "PhilPapers, OpenAlex, Crossref"
+    },
+    {
+      "id": "02",
+      "name": "Archives académiques OA",
+      "examples": "PhilArchive, arXiv, dépôts institutionnels"
+    },
+    {
+      "id": "03",
+      "name": "Bibliothèques et catalogues",
+      "examples": "WorldCat, catalogues universitaires, BAnQ"
+    },
+    {
+      "id": "04",
+      "name": "Bases de connaissances publiques",
+      "examples": "Wikidata, bases RDF, thésaurus SKOS"
+    },
+    {
+      "id": "05",
+      "name": "Encyclopédies et wikis",
+      "examples": "Wikipédia, MediaWiki, wikis internes"
+    },
+    {
+      "id": "06",
+      "name": "Sites et articles Web",
+      "examples": "revues, médias, portails spécialisés"
+    },
+    {
+      "id": "07",
+      "name": "Jeux de données ouverts",
+      "examples": "portails CKAN/DCAT, data.gouv, StatCan"
+    },
+    {
+      "id": "08",
+      "name": "PDF et documents locaux",
+      "examples": "dossiers d’entreprise, littérature grise"
+    },
+    {
+      "id": "09",
+      "name": "Archives de documents",
+      "examples": "dossiers ZIP, tar, disques, GED historiques"
+    },
+    {
+      "id": "10",
+      "name": "Cloud documentaire",
+      "examples": "Google Drive, SharePoint, OneDrive, S3"
+    },
+    {
+      "id": "11",
+      "name": "Dépôts de code",
+      "examples": "GitHub, GitLab, Bitbucket, Git local"
+    },
+    {
+      "id": "12",
+      "name": "Gestion de projets et tickets",
+      "examples": "GitHub Issues, Jira, Linear, Redmine"
+    },
+    {
+      "id": "13",
+      "name": "ERP et comptabilité PME",
+      "examples": "Acomba, Sage, QuickBooks, Xero"
+    },
+    {
+      "id": "14",
+      "name": "ERP/CRM entreprise",
+      "examples": "SAP, Dynamics, Salesforce, Odoo"
+    },
+    {
+      "id": "15",
+      "name": "Commerce et inventaires",
+      "examples": "Shopify, WooCommerce, POS/WMS"
+    },
+    {
+      "id": "16",
+      "name": "Bases relationnelles",
+      "examples": "PostgreSQL, MySQL, SQL Server, Oracle, SQLite"
+    },
+    {
+      "id": "17",
+      "name": "Lacs analytiques",
+      "examples": "S3, BigQuery, Snowflake, Databricks"
+    },
+    {
+      "id": "18",
+      "name": "Graphes d’entreprise",
+      "examples": "Neo4j, RDF triplestores, taxonomies"
+    },
+    {
+      "id": "19",
+      "name": "Courriels et discussions",
+      "examples": "IMAP, MBOX, Teams, Slack"
+    },
+    {
+      "id": "20",
+      "name": "Éducation",
+      "examples": "Moodle, Canvas LMS, SCORM, xAPI"
+    },
+    {
+      "id": "21",
+      "name": "Santé",
+      "examples": "FHIR, HL7 v2, CDA, DICOM"
+    },
+    {
+      "id": "22",
+      "name": "Droit et administration",
+      "examples": "lois, règlements, jurisprudence, contrats"
+    },
+    {
+      "id": "23",
+      "name": "Cartographie/GIS",
+      "examples": "OpenStreetMap, municipalités, cadastre"
+    },
+    {
+      "id": "24",
+      "name": "Climat et observation Terre",
+      "examples": "NOAA, Copernicus, météo, satellites"
+    },
+    {
+      "id": "25",
+      "name": "IoT et industrie",
+      "examples": "SCADA, MQTT, OPC UA, automates, maintenance"
+    },
+    {
+      "id": "26",
+      "name": "Laboratoires scientifiques",
+      "examples": "LIMS/ELN, instruments, bioinformatique"
+    },
+    {
+      "id": "27",
+      "name": "Images/vidéos/audio",
+      "examples": "médiathèques, fonds patrimoniaux"
+    },
+    {
+      "id": "28",
+      "name": "Archives institutionnelles",
+      "examples": "musées, patrimoine, généalogie"
+    },
+    {
+      "id": "29",
+      "name": "Finances/bancaire",
+      "examples": "API bancaire autorisée, ISO 20022, ERP"
+    },
+    {
+      "id": "30",
+      "name": "Registres publics et société",
+      "examples": "élections, entreprises, indicateurs, démographie"
+    },
+    {
+      "id": "31",
+      "name": "Flux d’événements",
+      "examples": "Kafka, Webhooks, CloudEvents, logs"
+    },
+    {
+      "id": "32",
+      "name": "Saisie humaine structurée",
+      "examples": "formulaires, témoignages, observations terrain"
+    },
+    {
+      "id": "33",
+      "name": "Simulation et jumeaux numériques",
+      "examples": "modèles industriels, scénarios"
+    },
+    {
+      "id": "34",
+      "name": "Réseaux sociaux/communautés",
+      "examples": "plateformes et forums autorisés"
+    },
+    {
+      "id": "35",
+      "name": "Flux et catalogues multimédias",
+      "examples": "podcasts, chaînes, playlists, RSS"
+    },
+    {
+      "id": "36",
+      "name": "Références fédérées externes",
+      "examples": "catalogues d’autres écosystèmes"
+    }
+  ],
+  "platforms": [
+    {
+      "id": "philpapers",
+      "platform": "PhilPapers",
+      "family_ids": [
+        "01",
+        "02"
+      ],
+      "family_labels": [
+        "Références bibliographiques",
+        "Archives académiques OA"
+      ],
+      "access_paths": [
+        {
+          "mode": "api_read",
+          "label": "API de lecture officielle",
+          "lanes": [
+            "L2"
+          ],
+          "doc_status": "official_docs_checked"
+        },
+        {
+          "mode": "harvest_oai_pmh",
+          "label": "Moissonnage OAI-PMH",
+          "lanes": [
+            "L3"
+          ],
+          "doc_status": "official_docs_checked"
+        },
+        {
+          "mode": "licensed_batch",
+          "label": "Lot sous licence/accord spécifique",
+          "lanes": [
+            "L3",
+            "L4"
+          ],
+          "doc_status": "candidate_requires_verification"
+        },
+        {
+          "mode": "manual_paste",
+          "label": "Copier-coller autorisé",
+          "lanes": [
+            "L1"
+          ],
+          "doc_status": "candidate_requires_verification"
+        }
+      ],
+      "preferred_path": "harvest_oai_pmh",
+      "information_scope": "Bibliographie et taxonomie; corpus OA distinct",
+      "prerequisites": "Clé/accord selon flux; OAI ouvert uniquement sur périmètre disponible",
+      "blocking_limits": "API JSON des sous-ensembles sous conditions; redistribution massive restreinte",
+      "chatgpt_policy": "metadata_only_by_default",
+      "source_reference_urls": [
+        "https://philpapers.org/help/api/",
+        "https://philpapers.org/help/api/json.html",
+        "https://philpapers.org/help/oai.html",
+        "https://philpapers.org/help/terms.html"
+      ],
+      "platform_doc_status": "official_docs_checked",
+      "daat_connector_status": "not_certified",
+      "owner_authorization_status": "not_established",
+      "full_text_access_implied": false,
+      "canonical_kristal_authority": false
+    },
+    {
+      "id": "philarchive",
+      "platform": "PhilArchive",
+      "family_ids": [
+        "02"
+      ],
+      "family_labels": [
+        "Archives académiques OA"
+      ],
+      "access_paths": [
+        {
+          "mode": "harvest_oai_pmh",
+          "label": "Moissonnage OAI-PMH",
+          "lanes": [
+            "L3"
+          ],
+          "doc_status": "official_docs_checked"
+        },
+        {
+          "mode": "local_file",
+          "label": "Fichier remis localement",
+          "lanes": [
+            "L1"
+          ],
+          "doc_status": "candidate_requires_verification"
+        },
+        {
+          "mode": "federated_ref",
+          "label": "Référence fédérée / lien stable",
+          "lanes": [
+            "L8"
+          ],
+          "doc_status": "candidate_requires_verification"
+        }
+      ],
+      "preferred_path": "harvest_oai_pmh",
+      "information_scope": "Références et dépôts OA autorisés",
+      "prerequisites": "Vérifier licence du texte, version et source",
+      "blocking_limits": "OAI donne des métadonnées; disponibilité d'un PDF ne confère pas licence de redistribution",
+      "chatgpt_policy": "permitted_text_only",
+      "source_reference_urls": [
+        "https://philpapers.org/help/oai.html",
+        "https://philpapers.org/help/terms.html"
+      ],
+      "platform_doc_status": "official_docs_checked",
+      "daat_connector_status": "not_certified",
+      "owner_authorization_status": "not_established",
+      "full_text_access_implied": false,
+      "canonical_kristal_authority": false
+    },
+    {
+      "id": "medium",
+      "platform": "Medium",
+      "family_ids": [
+        "06"
+      ],
+      "family_labels": [
+        "Sites et articles Web"
+      ],
+      "access_paths": [
+        {
+          "mode": "rss_atom",
+          "label": "Flux RSS/Atom",
+          "lanes": [
+            "L3"
+          ],
+          "doc_status": "official_docs_checked"
+        },
+        {
+          "mode": "user_export",
+          "label": "Export du compte utilisateur",
+          "lanes": [
+            "L1",
+            "L4"
+          ],
+          "doc_status": "official_docs_checked"
+        },
+        {
+          "mode": "authenticated_web",
+          "label": "Lecture navigateur connecté, sans extraction automatisée de session",
+          "lanes": [
+            "L8"
+          ],
+          "doc_status": "candidate_requires_verification"
+        },
+        {
+          "mode": "manual_paste",
+          "label": "Copier-coller autorisé",
+          "lanes": [
+            "L1"
+          ],
+          "doc_status": "candidate_requires_verification"
+        }
+      ],
+      "preferred_path": "rss_atom",
+      "information_scope": "RSS découverte/extraits; ZIP HTML du titulaire; texte fourni",
+      "prerequisites": "RSS public; export du propre compte; accès navigateur détenu par utilisateur",
+      "blocking_limits": "Paywall exclu du texte intégral RSS; pas de nouveaux jetons API; partage du texte dépend des droits",
+      "chatgpt_policy": "permitted_text_only",
+      "source_reference_urls": [
+        "https://help.medium.com/hc/en-us/articles/214874118-Using-RSS-feeds-of-profiles-publications-and-topics/",
+        "https://help.medium.com/hc/en-us/articles/115004745787-Export-your-account-data",
+        "https://help.medium.com/hc/en-us/articles/213480228-API-Importing"
+      ],
+      "platform_doc_status": "official_docs_checked",
+      "daat_connector_status": "not_certified",
+      "owner_authorization_status": "not_established",
+      "full_text_access_implied": false,
+      "canonical_kristal_authority": false
+    },
+    {
+      "id": "openalex",
+      "platform": "OpenAlex",
+      "family_ids": [
+        "01"
+      ],
+      "family_labels": [
+        "Références bibliographiques"
+      ],
+      "access_paths": [
+        {
+          "mode": "api_read",
+          "label": "API de lecture officielle",
+          "lanes": [
+            "L2"
+          ],
+          "doc_status": "official_docs_checked"
+        },
+        {
+          "mode": "bulk_export",
+          "label": "Export massif / dump",
+          "lanes": [
+            "L4"
+          ],
+          "doc_status": "candidate_requires_verification"
+        },
+        {
+          "mode": "federated_ref",
+          "label": "Référence fédérée / lien stable",
+          "lanes": [
+            "L8"
+          ],
+          "doc_status": "candidate_requires_verification"
+        }
+      ],
+      "preferred_path": "api_read",
+      "information_scope": "Métadonnées de travaux, auteurs, institutions, accès OA",
+      "prerequisites": "API publique avec budget d'usage; vérifier conditions et coûts",
+      "blocking_limits": "Métadonnées/abstracts != licence de texte intégral",
+      "chatgpt_policy": "metadata_only_by_default",
+      "source_reference_urls": [
+        "https://help.openalex.org/api/"
+      ],
+      "platform_doc_status": "official_docs_checked",
+      "daat_connector_status": "not_certified",
+      "owner_authorization_status": "not_established",
+      "full_text_access_implied": false,
+      "canonical_kristal_authority": false
+    },
+    {
+      "id": "crossref",
+      "platform": "Crossref",
+      "family_ids": [
+        "01"
+      ],
+      "family_labels": [
+        "Références bibliographiques"
+      ],
+      "access_paths": [
+        {
+          "mode": "api_read",
+          "label": "API de lecture officielle",
+          "lanes": [
+            "L2"
+          ],
+          "doc_status": "official_docs_checked"
+        },
+        {
+          "mode": "bulk_export",
+          "label": "Export massif / dump",
+          "lanes": [
+            "L4"
+          ],
+          "doc_status": "candidate_requires_verification"
+        },
+        {
+          "mode": "federated_ref",
+          "label": "Référence fédérée / lien stable",
+          "lanes": [
+            "L8"
+          ],
+          "doc_status": "candidate_requires_verification"
+        }
+      ],
+      "preferred_path": "api_read",
+      "information_scope": "DOI, éditeurs, métadonnées, liens, licences, corrections",
+      "prerequisites": "API publique; utiliser identification et pagination raisonnable",
+      "blocking_limits": "Certains résumés peuvent relever de droits tiers",
+      "chatgpt_policy": "metadata_only_by_default",
+      "source_reference_urls": [
+        "https://www.crossref.org/documentation/retrieve-metadata/rest-api"
+      ],
+      "platform_doc_status": "official_docs_checked",
+      "daat_connector_status": "not_certified",
+      "owner_authorization_status": "not_established",
+      "full_text_access_implied": false,
+      "canonical_kristal_authority": false
+    },
+    {
+      "id": "semantic-scholar",
+      "platform": "Semantic Scholar",
+      "family_ids": [
+        "01"
+      ],
+      "family_labels": [
+        "Références bibliographiques"
+      ],
+      "access_paths": [
+        {
+          "mode": "api_read",
+          "label": "API de lecture officielle",
+          "lanes": [
+            "L2"
+          ],
+          "doc_status": "official_docs_checked"
+        },
+        {
+          "mode": "bulk_export",
+          "label": "Export massif / dump",
+          "lanes": [
+            "L4"
+          ],
+          "doc_status": "official_docs_checked"
+        },
+        {
+          "mode": "federated_ref",
+          "label": "Référence fédérée / lien stable",
+          "lanes": [
+            "L8"
+          ],
+          "doc_status": "candidate_requires_verification"
+        }
+      ],
+      "preferred_path": "api_read",
+      "information_scope": "Métadonnées, références, graphes de citation",
+      "prerequisites": "Quota et clés selon endpoints",
+      "blocking_limits": "Accès aux données ne signifie pas droit au texte intégral",
+      "chatgpt_policy": "metadata_only_by_default",
+      "source_reference_urls": [
+        "https://webflow.semanticscholar.org/product/api"
+      ],
+      "platform_doc_status": "official_docs_checked",
+      "daat_connector_status": "not_certified",
+      "owner_authorization_status": "not_established",
+      "full_text_access_implied": false,
+      "canonical_kristal_authority": false
+    },
+    {
+      "id": "arxiv",
+      "platform": "arXiv",
+      "family_ids": [
+        "02"
+      ],
+      "family_labels": [
+        "Archives académiques OA"
+      ],
+      "access_paths": [
+        {
+          "mode": "api_read",
+          "label": "API de lecture officielle",
+          "lanes": [
+            "L2"
+          ],
+          "doc_status": "candidate_requires_verification"
+        },
+        {
+          "mode": "harvest_oai_pmh",
+          "label": "Moissonnage OAI-PMH",
+          "lanes": [
+            "L3"
+          ],
+          "doc_status": "candidate_requires_verification"
+        },
+        {
+          "mode": "bulk_export",
+          "label": "Export massif / dump",
+          "lanes": [
+            "L4"
+          ],
+          "doc_status": "candidate_requires_verification"
+        },
+        {
+          "mode": "local_file",
+          "label": "Fichier remis localement",
+          "lanes": [
+            "L1"
+          ],
+          "doc_status": "candidate_requires_verification"
+        }
+      ],
+      "preferred_path": "harvest_oai_pmh",
+      "information_scope": "Préprints, métadonnées, versions",
+      "prerequisites": "Règles de débit et licences par document",
+      "blocking_limits": "Les versions et droits varient; ne pas assimiler préprint et article revu",
+      "chatgpt_policy": "permitted_text_only",
+      "source_reference_urls": [],
+      "platform_doc_status": "candidate_requires_verification",
+      "daat_connector_status": "not_certified",
+      "owner_authorization_status": "not_established",
+      "full_text_access_implied": false,
+      "canonical_kristal_authority": false
+    },
+    {
+      "id": "pubmed-ncbi",
+      "platform": "PubMed / NCBI",
+      "family_ids": [
+        "01",
+        "02"
+      ],
+      "family_labels": [
+        "Références bibliographiques",
+        "Archives académiques OA"
+      ],
+      "access_paths": [
+        {
+          "mode": "api_read",
+          "label": "API de lecture officielle",
+          "lanes": [
+            "L2"
+          ],
+          "doc_status": "official_docs_checked"
+        },
+        {
+          "mode": "bulk_export",
+          "label": "Export massif / dump",
+          "lanes": [
+            "L4"
+          ],
+          "doc_status": "candidate_requires_verification"
+        },
+        {
+          "mode": "federated_ref",
+          "label": "Référence fédérée / lien stable",
+          "lanes": [
+            "L8"
+          ],
+          "doc_status": "candidate_requires_verification"
+        }
+      ],
+      "preferred_path": "api_read",
+      "information_scope": "Citations biomédicales, résumés; liens PMC",
+      "prerequisites": "E-utilities, identifiants PMID/PMCID et restrictions de débit",
+      "blocking_limits": "PubMed != accès libre universel aux textes intégraux",
+      "chatgpt_policy": "metadata_only_by_default",
+      "source_reference_urls": [
+        "https://www.ncbi.nlm.nih.gov/books/NBK25500/"
+      ],
+      "platform_doc_status": "official_docs_checked",
+      "daat_connector_status": "not_certified",
+      "owner_authorization_status": "not_established",
+      "full_text_access_implied": false,
+      "canonical_kristal_authority": false
+    },
+    {
+      "id": "europe-pmc",
+      "platform": "Europe PMC",
+      "family_ids": [
+        "02"
+      ],
+      "family_labels": [
+        "Archives académiques OA"
+      ],
+      "access_paths": [
+        {
+          "mode": "api_read",
+          "label": "API de lecture officielle",
+          "lanes": [
+            "L2"
+          ],
+          "doc_status": "candidate_requires_verification"
+        },
+        {
+          "mode": "bulk_export",
+          "label": "Export massif / dump",
+          "lanes": [
+            "L4"
+          ],
+          "doc_status": "candidate_requires_verification"
+        },
+        {
+          "mode": "federated_ref",
+          "label": "Référence fédérée / lien stable",
+          "lanes": [
+            "L8"
+          ],
+          "doc_status": "candidate_requires_verification"
+        }
+      ],
+      "preferred_path": "api_read",
+      "information_scope": "Références et sous-ensemble OA texte intégral",
+      "prerequisites": "Vérifier licences, sources et conditions API",
+      "blocking_limits": "Seuls certains documents ont du texte complet réutilisable",
+      "chatgpt_policy": "metadata_only_by_default",
+      "source_reference_urls": [],
+      "platform_doc_status": "candidate_requires_verification",
+      "daat_connector_status": "not_certified",
+      "owner_authorization_status": "not_established",
+      "full_text_access_implied": false,
+      "canonical_kristal_authority": false
+    },
+    {
+      "id": "doaj",
+      "platform": "DOAJ",
+      "family_ids": [
+        "01"
+      ],
+      "family_labels": [
+        "Références bibliographiques"
+      ],
+      "access_paths": [
+        {
+          "mode": "api_read",
+          "label": "API de lecture officielle",
+          "lanes": [
+            "L2"
+          ],
+          "doc_status": "candidate_requires_verification"
+        },
+        {
+          "mode": "bulk_export",
+          "label": "Export massif / dump",
+          "lanes": [
+            "L4"
+          ],
+          "doc_status": "candidate_requires_verification"
+        },
+        {
+          "mode": "federated_ref",
+          "label": "Référence fédérée / lien stable",
+          "lanes": [
+            "L8"
+          ],
+          "doc_status": "candidate_requires_verification"
+        }
+      ],
+      "preferred_path": "api_read",
+      "information_scope": "Répertoire de revues et articles OA",
+      "prerequisites": "Vérifier version API et licences d'articles",
+      "blocking_limits": "Open access ne signifie pas droits uniformes",
+      "chatgpt_policy": "metadata_only_by_default",
+      "source_reference_urls": [],
+      "platform_doc_status": "candidate_requires_verification",
+      "daat_connector_status": "not_certified",
+      "owner_authorization_status": "not_established",
+      "full_text_access_implied": false,
+      "canonical_kristal_authority": false
+    },
+    {
+      "id": "hal",
+      "platform": "HAL",
+      "family_ids": [
+        "02"
+      ],
+      "family_labels": [
+        "Archives académiques OA"
+      ],
+      "access_paths": [
+        {
+          "mode": "api_read",
+          "label": "API de lecture officielle",
+          "lanes": [
+            "L2"
+          ],
+          "doc_status": "candidate_requires_verification"
+        },
+        {
+          "mode": "harvest_oai_pmh",
+          "label": "Moissonnage OAI-PMH",
+          "lanes": [
+            "L3"
+          ],
+          "doc_status": "candidate_requires_verification"
+        },
+        {
+          "mode": "bulk_export",
+          "label": "Export massif / dump",
+          "lanes": [
+            "L4"
+          ],
+          "doc_status": "candidate_requires_verification"
+        }
+      ],
+      "preferred_path": "harvest_oai_pmh",
+      "information_scope": "Dépôts et versions institutionnelles",
+      "prerequisites": "API/OAI selon collections; droits par fichier",
+      "blocking_limits": "Embargo et métadonnées vs textes",
+      "chatgpt_policy": "metadata_only_by_default",
+      "source_reference_urls": [],
+      "platform_doc_status": "candidate_requires_verification",
+      "daat_connector_status": "not_certified",
+      "owner_authorization_status": "not_established",
+      "full_text_access_implied": false,
+      "canonical_kristal_authority": false
+    },
+    {
+      "id": "zenodo",
+      "platform": "Zenodo",
+      "family_ids": [
+        "02",
+        "08"
+      ],
+      "family_labels": [
+        "Archives académiques OA",
+        "PDF et documents locaux"
+      ],
+      "access_paths": [
+        {
+          "mode": "api_read",
+          "label": "API de lecture officielle",
+          "lanes": [
+            "L2"
+          ],
+          "doc_status": "candidate_requires_verification"
+        },
+        {
+          "mode": "bulk_export",
+          "label": "Export massif / dump",
+          "lanes": [
+            "L4"
+          ],
+          "doc_status": "candidate_requires_verification"
+        },
+        {
+          "mode": "local_file",
+          "label": "Fichier remis localement",
+          "lanes": [
+            "L1"
+          ],
+          "doc_status": "candidate_requires_verification"
+        }
+      ],
+      "preferred_path": "api_read",
+      "information_scope": "Enregistrements, DOI, données et fichiers",
+      "prerequisites": "Déclaration de licence par record",
+      "blocking_limits": "Métadonnées vs contenu et versions",
+      "chatgpt_policy": "permitted_text_only",
+      "source_reference_urls": [],
+      "platform_doc_status": "candidate_requires_verification",
+      "daat_connector_status": "not_certified",
+      "owner_authorization_status": "not_established",
+      "full_text_access_implied": false,
+      "canonical_kristal_authority": false
+    },
+    {
+      "id": "osf",
+      "platform": "OSF",
+      "family_ids": [
+        "02",
+        "09"
+      ],
+      "family_labels": [
+        "Archives académiques OA",
+        "Archives de documents"
+      ],
+      "access_paths": [
+        {
+          "mode": "api_read",
+          "label": "API de lecture officielle",
+          "lanes": [
+            "L2"
+          ],
+          "doc_status": "candidate_requires_verification"
+        },
+        {
+          "mode": "user_export",
+          "label": "Export du compte utilisateur",
+          "lanes": [
+            "L1",
+            "L4"
+          ],
+          "doc_status": "candidate_requires_verification"
+        },
+        {
+          "mode": "local_file",
+          "label": "Fichier remis localement",
+          "lanes": [
+            "L1"
+          ],
+          "doc_status": "candidate_requires_verification"
+        }
+      ],
+      "preferred_path": "api_read",
+      "information_scope": "Projets, préprints, dépôts collaboratifs",
+      "prerequisites": "Jeton/espace privé si requis",
+      "blocking_limits": "Droits et partage selon projet",
+      "chatgpt_policy": "permitted_text_only",
+      "source_reference_urls": [],
+      "platform_doc_status": "candidate_requires_verification",
+      "daat_connector_status": "not_certified",
+      "owner_authorization_status": "not_established",
+      "full_text_access_implied": false,
+      "canonical_kristal_authority": false
+    },
+    {
+      "id": "ssrn",
+      "platform": "SSRN",
+      "family_ids": [
+        "02"
+      ],
+      "family_labels": [
+        "Archives académiques OA"
+      ],
+      "access_paths": [
+        {
+          "mode": "federated_ref",
+          "label": "Référence fédérée / lien stable",
+          "lanes": [
+            "L8"
+          ],
+          "doc_status": "candidate_requires_verification"
+        },
+        {
+          "mode": "manual_paste",
+          "label": "Copier-coller autorisé",
+          "lanes": [
+            "L1"
+          ],
+          "doc_status": "candidate_requires_verification"
+        },
+        {
+          "mode": "user_export",
+          "label": "Export du compte utilisateur",
+          "lanes": [
+            "L1",
+            "L4"
+          ],
+          "doc_status": "candidate_requires_verification"
+        }
+      ],
+      "preferred_path": "federated_ref",
+      "information_scope": "Références, abstracts et textes autorisés",
+      "prerequisites": "Droits individuels et accès institutionnel",
+      "blocking_limits": "Pas de moissonnage automatique assumé",
+      "chatgpt_policy": "metadata_only_by_default",
+      "source_reference_urls": [],
+      "platform_doc_status": "candidate_requires_verification",
+      "daat_connector_status": "not_certified",
+      "owner_authorization_status": "not_established",
+      "full_text_access_implied": false,
+      "canonical_kristal_authority": false
+    },
+    {
+      "id": "biorxiv",
+      "platform": "bioRxiv",
+      "family_ids": [
+        "02"
+      ],
+      "family_labels": [
+        "Archives académiques OA"
+      ],
+      "access_paths": [
+        {
+          "mode": "api_read",
+          "label": "API de lecture officielle",
+          "lanes": [
+            "L2"
+          ],
+          "doc_status": "candidate_requires_verification"
+        },
+        {
+          "mode": "harvest_oai_pmh",
+          "label": "Moissonnage OAI-PMH",
+          "lanes": [
+            "L3"
+          ],
+          "doc_status": "candidate_requires_verification"
+        },
+        {
+          "mode": "federated_ref",
+          "label": "Référence fédérée / lien stable",
+          "lanes": [
+            "L8"
+          ],
+          "doc_status": "candidate_requires_verification"
+        }
+      ],
+      "preferred_path": "api_read",
+      "information_scope": "Métadonnées de préprints",
+      "prerequisites": "Vérifier les flux officiels et licences",
+      "blocking_limits": "Préprints non revus et versions changeantes",
+      "chatgpt_policy": "metadata_only_by_default",
+      "source_reference_urls": [],
+      "platform_doc_status": "candidate_requires_verification",
+      "daat_connector_status": "not_certified",
+      "owner_authorization_status": "not_established",
+      "full_text_access_implied": false,
+      "canonical_kristal_authority": false
+    },
+    {
+      "id": "zotero",
+      "platform": "Zotero",
+      "family_ids": [
+        "01",
+        "03"
+      ],
+      "family_labels": [
+        "Références bibliographiques",
+        "Bibliothèques et catalogues"
+      ],
+      "access_paths": [
+        {
+          "mode": "api_read",
+          "label": "API de lecture officielle",
+          "lanes": [
+            "L2"
+          ],
+          "doc_status": "official_docs_checked"
+        },
+        {
+          "mode": "user_export",
+          "label": "Export du compte utilisateur",
+          "lanes": [
+            "L1",
+            "L4"
+          ],
+          "doc_status": "candidate_requires_verification"
+        },
+        {
+          "mode": "local_file",
+          "label": "Fichier remis localement",
+          "lanes": [
+            "L1"
+          ],
+          "doc_status": "candidate_requires_verification"
+        }
+      ],
+      "preferred_path": "api_read",
+      "information_scope": "Bibliothèques, collections, citations et pièces autorisées",
+      "prerequisites": "Compte, clé personnelle, API v3 / local API",
+      "blocking_limits": "Pièces jointes régies par leurs droits d'origine",
+      "chatgpt_policy": "metadata_only_by_default",
+      "source_reference_urls": [
+        "https://www.zotero.org/support/dev/web_api/v3/basics",
+        "https://www.zotero.org/support/dev/web_api/v3/syncing"
+      ],
+      "platform_doc_status": "official_docs_checked",
+      "daat_connector_status": "not_certified",
+      "owner_authorization_status": "not_established",
+      "full_text_access_implied": false,
+      "canonical_kristal_authority": false
+    },
+    {
+      "id": "orcid",
+      "platform": "ORCID",
+      "family_ids": [
+        "01"
+      ],
+      "family_labels": [
+        "Références bibliographiques"
+      ],
+      "access_paths": [
+        {
+          "mode": "api_read",
+          "label": "API de lecture officielle",
+          "lanes": [
+            "L2"
+          ],
+          "doc_status": "candidate_requires_verification"
+        },
+        {
+          "mode": "federated_ref",
+          "label": "Référence fédérée / lien stable",
+          "lanes": [
+            "L8"
+          ],
+          "doc_status": "candidate_requires_verification"
+        },
+        {
+          "mode": "user_export",
+          "label": "Export du compte utilisateur",
+          "lanes": [
+            "L1",
+            "L4"
+          ],
+          "doc_status": "candidate_requires_verification"
+        }
+      ],
+      "preferred_path": "api_read",
+      "information_scope": "Identifiants chercheurs, affiliations, travaux",
+      "prerequisites": "Scopes et visibilité par champ",
+      "blocking_limits": "Identité déclarée n'est pas garantie de qualité",
+      "chatgpt_policy": "metadata_only_by_default",
+      "source_reference_urls": [],
+      "platform_doc_status": "candidate_requires_verification",
+      "daat_connector_status": "not_certified",
+      "owner_authorization_status": "not_established",
+      "full_text_access_implied": false,
+      "canonical_kristal_authority": false
+    },
+    {
+      "id": "worldcat",
+      "platform": "WorldCat",
+      "family_ids": [
+        "03"
+      ],
+      "family_labels": [
+        "Bibliothèques et catalogues"
+      ],
+      "access_paths": [
+        {
+          "mode": "api_read",
+          "label": "API de lecture officielle",
+          "lanes": [
+            "L2"
+          ],
+          "doc_status": "candidate_requires_verification"
+        },
+        {
+          "mode": "licensed_batch",
+          "label": "Lot sous licence/accord spécifique",
+          "lanes": [
+            "L3",
+            "L4"
+          ],
+          "doc_status": "candidate_requires_verification"
+        },
+        {
+          "mode": "user_export",
+          "label": "Export du compte utilisateur",
+          "lanes": [
+            "L1",
+            "L4"
+          ],
+          "doc_status": "candidate_requires_verification"
+        }
+      ],
+      "preferred_path": "api_read",
+      "information_scope": "Notices de catalogues",
+      "prerequisites": "Accord/licence bibliographique, accès OCLC",
+      "blocking_limits": "Pas de redistribution par défaut",
+      "chatgpt_policy": "metadata_only_by_default",
+      "source_reference_urls": [],
+      "platform_doc_status": "candidate_requires_verification",
+      "daat_connector_status": "not_certified",
+      "owner_authorization_status": "not_established",
+      "full_text_access_implied": false,
+      "canonical_kristal_authority": false
+    },
+    {
+      "id": "banq-catalogues-qu-b-cois",
+      "platform": "BAnQ / catalogues québécois",
+      "family_ids": [
+        "03",
+        "28"
+      ],
+      "family_labels": [
+        "Bibliothèques et catalogues",
+        "Archives institutionnelles"
+      ],
+      "access_paths": [
+        {
+          "mode": "harvest_oai_pmh",
+          "label": "Moissonnage OAI-PMH",
+          "lanes": [
+            "L3"
+          ],
+          "doc_status": "candidate_requires_verification"
+        },
+        {
+          "mode": "local_file",
+          "label": "Fichier remis localement",
+          "lanes": [
+            "L1"
+          ],
+          "doc_status": "candidate_requires_verification"
+        },
+        {
+          "mode": "federated_ref",
+          "label": "Référence fédérée / lien stable",
+          "lanes": [
+            "L8"
+          ],
+          "doc_status": "candidate_requires_verification"
+        }
+      ],
+      "preferred_path": "federated_ref",
+      "information_scope": "Notices et objets patrimoniaux selon service",
+      "prerequisites": "Vérifier interface exacte par collection",
+      "blocking_limits": "Les droits varient par document et collection",
+      "chatgpt_policy": "metadata_only_by_default",
+      "source_reference_urls": [],
+      "platform_doc_status": "candidate_requires_verification",
+      "daat_connector_status": "not_certified",
+      "owner_authorization_status": "not_established",
+      "full_text_access_implied": false,
+      "canonical_kristal_authority": false
+    },
+    {
+      "id": "wikidata",
+      "platform": "Wikidata",
+      "family_ids": [
+        "04"
+      ],
+      "family_labels": [
+        "Bases de connaissances publiques"
+      ],
+      "access_paths": [
+        {
+          "mode": "api_read",
+          "label": "API de lecture officielle",
+          "lanes": [
+            "L2"
+          ],
+          "doc_status": "candidate_requires_verification"
+        },
+        {
+          "mode": "bulk_export",
+          "label": "Export massif / dump",
+          "lanes": [
+            "L4"
+          ],
+          "doc_status": "candidate_requires_verification"
+        },
+        {
+          "mode": "federated_ref",
+          "label": "Référence fédérée / lien stable",
+          "lanes": [
+            "L8"
+          ],
+          "doc_status": "candidate_requires_verification"
+        }
+      ],
+      "preferred_path": "api_read",
+      "information_scope": "Entités, propriétés, références, qualifiers",
+      "prerequisites": "API SPARQL/dumps selon quotas",
+      "blocking_limits": "Q/P externes ne sont jamais des KQ/KP internes",
+      "chatgpt_policy": "metadata_only_by_default",
+      "source_reference_urls": [],
+      "platform_doc_status": "candidate_requires_verification",
+      "daat_connector_status": "not_certified",
+      "owner_authorization_status": "not_established",
+      "full_text_access_implied": false,
+      "canonical_kristal_authority": false
+    },
+    {
+      "id": "dbpedia-rdf-public",
+      "platform": "DBpedia / RDF public",
+      "family_ids": [
+        "04",
+        "18"
+      ],
+      "family_labels": [
+        "Bases de connaissances publiques",
+        "Graphes d’entreprise"
+      ],
+      "access_paths": [
+        {
+          "mode": "api_read",
+          "label": "API de lecture officielle",
+          "lanes": [
+            "L2"
+          ],
+          "doc_status": "candidate_requires_verification"
+        },
+        {
+          "mode": "bulk_export",
+          "label": "Export massif / dump",
+          "lanes": [
+            "L4"
+          ],
+          "doc_status": "candidate_requires_verification"
+        },
+        {
+          "mode": "federated_ref",
+          "label": "Référence fédérée / lien stable",
+          "lanes": [
+            "L8"
+          ],
+          "doc_status": "candidate_requires_verification"
+        }
+      ],
+      "preferred_path": "bulk_export",
+      "information_scope": "Triplets RDF et ontologies",
+      "prerequisites": "Endpoint public ou export versionné",
+      "blocking_limits": "Dérivé externe, provenance et inférences à contrôler",
+      "chatgpt_policy": "metadata_only_by_default",
+      "source_reference_urls": [],
+      "platform_doc_status": "candidate_requires_verification",
+      "daat_connector_status": "not_certified",
+      "owner_authorization_status": "not_established",
+      "full_text_access_implied": false,
+      "canonical_kristal_authority": false
+    },
+    {
+      "id": "wikipedia",
+      "platform": "Wikipedia",
+      "family_ids": [
+        "05"
+      ],
+      "family_labels": [
+        "Encyclopédies et wikis"
+      ],
+      "access_paths": [
+        {
+          "mode": "api_read",
+          "label": "API de lecture officielle",
+          "lanes": [
+            "L2"
+          ],
+          "doc_status": "candidate_requires_verification"
+        },
+        {
+          "mode": "bulk_export",
+          "label": "Export massif / dump",
+          "lanes": [
+            "L4"
+          ],
+          "doc_status": "candidate_requires_verification"
+        },
+        {
+          "mode": "federated_ref",
+          "label": "Référence fédérée / lien stable",
+          "lanes": [
+            "L8"
+          ],
+          "doc_status": "candidate_requires_verification"
+        }
+      ],
+      "preferred_path": "api_read",
+      "information_scope": "Pages, révisions, wikitext",
+      "prerequisites": "MediaWiki API et dumps; attribution",
+      "blocking_limits": "Texte collaboratif n'est pas validation canonique",
+      "chatgpt_policy": "permitted_text_only",
+      "source_reference_urls": [],
+      "platform_doc_status": "candidate_requires_verification",
+      "daat_connector_status": "not_certified",
+      "owner_authorization_status": "not_established",
+      "full_text_access_implied": false,
+      "canonical_kristal_authority": false
+    },
+    {
+      "id": "mediawiki-autonome",
+      "platform": "MediaWiki autonome",
+      "family_ids": [
+        "05"
+      ],
+      "family_labels": [
+        "Encyclopédies et wikis"
+      ],
+      "access_paths": [
+        {
+          "mode": "api_read",
+          "label": "API de lecture officielle",
+          "lanes": [
+            "L2"
+          ],
+          "doc_status": "candidate_requires_verification"
+        },
+        {
+          "mode": "bulk_export",
+          "label": "Export massif / dump",
+          "lanes": [
+            "L4"
+          ],
+          "doc_status": "candidate_requires_verification"
+        },
+        {
+          "mode": "authenticated_web",
+          "label": "Lecture navigateur connecté, sans extraction automatisée de session",
+          "lanes": [
+            "L8"
+          ],
+          "doc_status": "candidate_requires_verification"
+        }
+      ],
+      "preferred_path": "api_read",
+      "information_scope": "Pages et historiques internes",
+      "prerequisites": "Authentification selon wiki",
+      "blocking_limits": "Permissions wiki et ACL",
+      "chatgpt_policy": "permitted_text_only",
+      "source_reference_urls": [],
+      "platform_doc_status": "candidate_requires_verification",
+      "daat_connector_status": "not_certified",
+      "owner_authorization_status": "not_established",
+      "full_text_access_implied": false,
+      "canonical_kristal_authority": false
+    },
+    {
+      "id": "wordpress",
+      "platform": "WordPress",
+      "family_ids": [
+        "06"
+      ],
+      "family_labels": [
+        "Sites et articles Web"
+      ],
+      "access_paths": [
+        {
+          "mode": "api_read",
+          "label": "API de lecture officielle",
+          "lanes": [
+            "L2"
+          ],
+          "doc_status": "official_docs_checked"
+        },
+        {
+          "mode": "rss_atom",
+          "label": "Flux RSS/Atom",
+          "lanes": [
+            "L3"
+          ],
+          "doc_status": "candidate_requires_verification"
+        },
+        {
+          "mode": "user_export",
+          "label": "Export du compte utilisateur",
+          "lanes": [
+            "L1",
+            "L4"
+          ],
+          "doc_status": "candidate_requires_verification"
+        },
+        {
+          "mode": "authenticated_web",
+          "label": "Lecture navigateur connecté, sans extraction automatisée de session",
+          "lanes": [
+            "L8"
+          ],
+          "doc_status": "candidate_requires_verification"
+        }
+      ],
+      "preferred_path": "api_read",
+      "information_scope": "Articles, pages, médias, révisions selon site",
+      "prerequisites": "REST API pour publications; accès protégé selon site",
+      "blocking_limits": "API ne garantit pas réutilisation des textes tiers",
+      "chatgpt_policy": "permitted_text_only",
+      "source_reference_urls": [
+        "https://developer.wordpress.org/rest-api/reference/posts/"
+      ],
+      "platform_doc_status": "official_docs_checked",
+      "daat_connector_status": "not_certified",
+      "owner_authorization_status": "not_established",
+      "full_text_access_implied": false,
+      "canonical_kristal_authority": false
+    },
+    {
+      "id": "ghost",
+      "platform": "Ghost",
+      "family_ids": [
+        "06"
+      ],
+      "family_labels": [
+        "Sites et articles Web"
+      ],
+      "access_paths": [
+        {
+          "mode": "api_read",
+          "label": "API de lecture officielle",
+          "lanes": [
+            "L2"
+          ],
+          "doc_status": "official_docs_checked"
+        },
+        {
+          "mode": "rss_atom",
+          "label": "Flux RSS/Atom",
+          "lanes": [
+            "L3"
+          ],
+          "doc_status": "candidate_requires_verification"
+        },
+        {
+          "mode": "user_export",
+          "label": "Export du compte utilisateur",
+          "lanes": [
+            "L1",
+            "L4"
+          ],
+          "doc_status": "candidate_requires_verification"
+        }
+      ],
+      "preferred_path": "api_read",
+      "information_scope": "Articles publiés et métadonnées",
+      "prerequisites": "Content API clé de lecture et site configuré",
+      "blocking_limits": "Clé de lecture ne confère pas licence sur contenu tiers",
+      "chatgpt_policy": "permitted_text_only",
+      "source_reference_urls": [
+        "https://ghost.org/docs/content-api/"
+      ],
+      "platform_doc_status": "official_docs_checked",
+      "daat_connector_status": "not_certified",
+      "owner_authorization_status": "not_established",
+      "full_text_access_implied": false,
+      "canonical_kristal_authority": false
+    },
+    {
+      "id": "substack",
+      "platform": "Substack",
+      "family_ids": [
+        "06"
+      ],
+      "family_labels": [
+        "Sites et articles Web"
+      ],
+      "access_paths": [
+        {
+          "mode": "rss_atom",
+          "label": "Flux RSS/Atom",
+          "lanes": [
+            "L3"
+          ],
+          "doc_status": "candidate_requires_verification"
+        },
+        {
+          "mode": "user_export",
+          "label": "Export du compte utilisateur",
+          "lanes": [
+            "L1",
+            "L4"
+          ],
+          "doc_status": "candidate_requires_verification"
+        },
+        {
+          "mode": "manual_paste",
+          "label": "Copier-coller autorisé",
+          "lanes": [
+            "L1"
+          ],
+          "doc_status": "candidate_requires_verification"
+        },
+        {
+          "mode": "authenticated_web",
+          "label": "Lecture navigateur connecté, sans extraction automatisée de session",
+          "lanes": [
+            "L8"
+          ],
+          "doc_status": "candidate_requires_verification"
+        }
+      ],
+      "preferred_path": "rss_atom",
+      "information_scope": "Flux et publications accessibles",
+      "prerequisites": "RSS lorsque exposé; export du propriétaire à vérifier",
+      "blocking_limits": "Abonnements et contenus restreints; API générale non présumée",
+      "chatgpt_policy": "permitted_text_only",
+      "source_reference_urls": [],
+      "platform_doc_status": "candidate_requires_verification",
+      "daat_connector_status": "not_certified",
+      "owner_authorization_status": "not_established",
+      "full_text_access_implied": false,
+      "canonical_kristal_authority": false
+    },
+    {
+      "id": "blogger",
+      "platform": "Blogger",
+      "family_ids": [
+        "06"
+      ],
+      "family_labels": [
+        "Sites et articles Web"
+      ],
+      "access_paths": [
+        {
+          "mode": "rss_atom",
+          "label": "Flux RSS/Atom",
+          "lanes": [
+            "L3"
+          ],
+          "doc_status": "candidate_requires_verification"
+        },
+        {
+          "mode": "api_read",
+          "label": "API de lecture officielle",
+          "lanes": [
+            "L2"
+          ],
+          "doc_status": "candidate_requires_verification"
+        },
+        {
+          "mode": "user_export",
+          "label": "Export du compte utilisateur",
+          "lanes": [
+            "L1",
+            "L4"
+          ],
+          "doc_status": "candidate_requires_verification"
+        }
+      ],
+      "preferred_path": "rss_atom",
+      "information_scope": "Articles de blogs",
+      "prerequisites": "Flux publics; API selon compte",
+      "blocking_limits": "Accès privé non implicite",
+      "chatgpt_policy": "permitted_text_only",
+      "source_reference_urls": [],
+      "platform_doc_status": "candidate_requires_verification",
+      "daat_connector_status": "not_certified",
+      "owner_authorization_status": "not_established",
+      "full_text_access_implied": false,
+      "canonical_kristal_authority": false
+    },
+    {
+      "id": "flux-rss-atom-g-n-rique",
+      "platform": "Flux RSS/Atom générique",
+      "family_ids": [
+        "06",
+        "35"
+      ],
+      "family_labels": [
+        "Sites et articles Web",
+        "Flux et catalogues multimédias"
+      ],
+      "access_paths": [
+        {
+          "mode": "rss_atom",
+          "label": "Flux RSS/Atom",
+          "lanes": [
+            "L3"
+          ],
+          "doc_status": "candidate_requires_verification"
+        },
+        {
+          "mode": "federated_ref",
+          "label": "Référence fédérée / lien stable",
+          "lanes": [
+            "L8"
+          ],
+          "doc_status": "candidate_requires_verification"
+        }
+      ],
+      "preferred_path": "rss_atom",
+      "information_scope": "Nouveaux titres, auteurs, dates, extraits ou contenu offert",
+      "prerequisites": "Flux public et droits de réutilisation",
+      "blocking_limits": "Feed n'assure jamais texte complet",
+      "chatgpt_policy": "metadata_only_by_default",
+      "source_reference_urls": [],
+      "platform_doc_status": "candidate_requires_verification",
+      "daat_connector_status": "not_certified",
+      "owner_authorization_status": "not_established",
+      "full_text_access_implied": false,
+      "canonical_kristal_authority": false
+    },
+    {
+      "id": "ckan",
+      "platform": "CKAN",
+      "family_ids": [
+        "07"
+      ],
+      "family_labels": [
+        "Jeux de données ouverts"
+      ],
+      "access_paths": [
+        {
+          "mode": "api_read",
+          "label": "API de lecture officielle",
+          "lanes": [
+            "L2"
+          ],
+          "doc_status": "official_docs_checked"
+        },
+        {
+          "mode": "bulk_export",
+          "label": "Export massif / dump",
+          "lanes": [
+            "L4"
+          ],
+          "doc_status": "candidate_requires_verification"
+        },
+        {
+          "mode": "local_file",
+          "label": "Fichier remis localement",
+          "lanes": [
+            "L1"
+          ],
+          "doc_status": "candidate_requires_verification"
+        }
+      ],
+      "preferred_path": "api_read",
+      "information_scope": "Catalogues et ressources CSV/JSON/Parquet",
+      "prerequisites": "API Action v3 selon portail, licences par jeu",
+      "blocking_limits": "Un portail peut héberger ressources externes avec conditions propres",
+      "chatgpt_policy": "permitted_text_only",
+      "source_reference_urls": [
+        "https://docs.ckan.org/en/latest/api/"
+      ],
+      "platform_doc_status": "official_docs_checked",
+      "daat_connector_status": "not_certified",
+      "owner_authorization_status": "not_established",
+      "full_text_access_implied": false,
+      "canonical_kristal_authority": false
+    },
+    {
+      "id": "statistique-canada",
+      "platform": "Statistique Canada",
+      "family_ids": [
+        "07",
+        "30"
+      ],
+      "family_labels": [
+        "Jeux de données ouverts",
+        "Registres publics et société"
+      ],
+      "access_paths": [
+        {
+          "mode": "api_read",
+          "label": "API de lecture officielle",
+          "lanes": [
+            "L2"
+          ],
+          "doc_status": "candidate_requires_verification"
+        },
+        {
+          "mode": "bulk_export",
+          "label": "Export massif / dump",
+          "lanes": [
+            "L4"
+          ],
+          "doc_status": "candidate_requires_verification"
+        },
+        {
+          "mode": "local_file",
+          "label": "Fichier remis localement",
+          "lanes": [
+            "L1"
+          ],
+          "doc_status": "candidate_requires_verification"
+        }
+      ],
+      "preferred_path": "api_read",
+      "information_scope": "Indicateurs, tableaux statistiques et métadonnées",
+      "prerequisites": "Portails/API spécifiques; citer millésime et unités",
+      "blocking_limits": "Méthodes révisées et agrégations",
+      "chatgpt_policy": "metadata_only_by_default",
+      "source_reference_urls": [],
+      "platform_doc_status": "candidate_requires_verification",
+      "daat_connector_status": "not_certified",
+      "owner_authorization_status": "not_established",
+      "full_text_access_implied": false,
+      "canonical_kristal_authority": false
+    },
+    {
+      "id": "portail-donn-es-ouvertes-municipal",
+      "platform": "Portail données ouvertes municipal",
+      "family_ids": [
+        "07",
+        "23",
+        "30"
+      ],
+      "family_labels": [
+        "Jeux de données ouverts",
+        "Cartographie/GIS",
+        "Registres publics et société"
+      ],
+      "access_paths": [
+        {
+          "mode": "api_read",
+          "label": "API de lecture officielle",
+          "lanes": [
+            "L2"
+          ],
+          "doc_status": "candidate_requires_verification"
+        },
+        {
+          "mode": "bulk_export",
+          "label": "Export massif / dump",
+          "lanes": [
+            "L4"
+          ],
+          "doc_status": "candidate_requires_verification"
+        },
+        {
+          "mode": "local_file",
+          "label": "Fichier remis localement",
+          "lanes": [
+            "L1"
+          ],
+          "doc_status": "candidate_requires_verification"
+        }
+      ],
+      "preferred_path": "api_read",
+      "information_scope": "Données géographiques/statistiques locales",
+      "prerequisites": "API CKAN/Socrata/DCAT selon municipalité",
+      "blocking_limits": "Conditions d'utilisation propres à chaque portail",
+      "chatgpt_policy": "metadata_only_by_default",
+      "source_reference_urls": [],
+      "platform_doc_status": "candidate_requires_verification",
+      "daat_connector_status": "not_certified",
+      "owner_authorization_status": "not_established",
+      "full_text_access_implied": false,
+      "canonical_kristal_authority": false
+    },
+    {
+      "id": "pdf-fourni-par-utilisateur",
+      "platform": "PDF fourni par utilisateur",
+      "family_ids": [
+        "08"
+      ],
+      "family_labels": [
+        "PDF et documents locaux"
+      ],
+      "access_paths": [
+        {
+          "mode": "local_file",
+          "label": "Fichier remis localement",
+          "lanes": [
+            "L1"
+          ],
+          "doc_status": "candidate_requires_verification"
+        },
+        {
+          "mode": "manual_paste",
+          "label": "Copier-coller autorisé",
+          "lanes": [
+            "L1"
+          ],
+          "doc_status": "candidate_requires_verification"
+        }
+      ],
+      "preferred_path": "local_file",
+      "information_scope": "PDF texte/pages/figures",
+      "prerequisites": "Fichier autorisé et consignes PII",
+      "blocking_limits": "OCR peut être nécessaire; conserver références de page",
+      "chatgpt_policy": "permitted_text_only",
+      "source_reference_urls": [],
+      "platform_doc_status": "candidate_requires_verification",
+      "daat_connector_status": "not_certified",
+      "owner_authorization_status": "not_established",
+      "full_text_access_implied": false,
+      "canonical_kristal_authority": false
+    },
+    {
+      "id": "docx-texte-fourni-par-utilisateur",
+      "platform": "DOCX/texte fourni par utilisateur",
+      "family_ids": [
+        "08"
+      ],
+      "family_labels": [
+        "PDF et documents locaux"
+      ],
+      "access_paths": [
+        {
+          "mode": "local_file",
+          "label": "Fichier remis localement",
+          "lanes": [
+            "L1"
+          ],
+          "doc_status": "candidate_requires_verification"
+        },
+        {
+          "mode": "manual_paste",
+          "label": "Copier-coller autorisé",
+          "lanes": [
+            "L1"
+          ],
+          "doc_status": "candidate_requires_verification"
+        }
+      ],
+      "preferred_path": "local_file",
+      "information_scope": "Texte, sections, tableaux",
+      "prerequisites": "Droit d'accès et de partage",
+      "blocking_limits": "Déstructuration des tableaux et notes",
+      "chatgpt_policy": "permitted_text_only",
+      "source_reference_urls": [],
+      "platform_doc_status": "candidate_requires_verification",
+      "daat_connector_status": "not_certified",
+      "owner_authorization_status": "not_established",
+      "full_text_access_implied": false,
+      "canonical_kristal_authority": false
+    },
+    {
+      "id": "archives-zip-tar",
+      "platform": "Archives ZIP/TAR",
+      "family_ids": [
+        "09"
+      ],
+      "family_labels": [
+        "Archives de documents"
+      ],
+      "access_paths": [
+        {
+          "mode": "local_file",
+          "label": "Fichier remis localement",
+          "lanes": [
+            "L1"
+          ],
+          "doc_status": "candidate_requires_verification"
+        },
+        {
+          "mode": "bulk_export",
+          "label": "Export massif / dump",
+          "lanes": [
+            "L4"
+          ],
+          "doc_status": "candidate_requires_verification"
+        }
+      ],
+      "preferred_path": "local_file",
+      "information_scope": "Fichiers regroupés et index interne",
+      "prerequisites": "Limites de taille/profondeur et contrôle anti-bombe ZIP",
+      "blocking_limits": "Chaque fichier garde ses propres droits",
+      "chatgpt_policy": "local_only_until_privacy_review",
+      "source_reference_urls": [],
+      "platform_doc_status": "candidate_requires_verification",
+      "daat_connector_status": "not_certified",
+      "owner_authorization_status": "not_established",
+      "full_text_access_implied": false,
+      "canonical_kristal_authority": false
+    },
+    {
+      "id": "google-drive",
+      "platform": "Google Drive",
+      "family_ids": [
+        "10"
+      ],
+      "family_labels": [
+        "Cloud documentaire"
+      ],
+      "access_paths": [
+        {
+          "mode": "api_read",
+          "label": "API de lecture officielle",
+          "lanes": [
+            "L2"
+          ],
+          "doc_status": "candidate_requires_verification"
+        },
+        {
+          "mode": "user_export",
+          "label": "Export du compte utilisateur",
+          "lanes": [
+            "L1",
+            "L4"
+          ],
+          "doc_status": "candidate_requires_verification"
+        },
+        {
+          "mode": "local_file",
+          "label": "Fichier remis localement",
+          "lanes": [
+            "L1"
+          ],
+          "doc_status": "candidate_requires_verification"
+        }
+      ],
+      "preferred_path": "api_read",
+      "information_scope": "Fichiers, commentaires, versions selon scopes",
+      "prerequisites": "Consentement Google, OAuth et autorisations fichier",
+      "blocking_limits": "Scopes minimaux; ne pas copier contenu privé vers ChatGPT sans permission",
+      "chatgpt_policy": "local_only_until_privacy_review",
+      "source_reference_urls": [],
+      "platform_doc_status": "candidate_requires_verification",
+      "daat_connector_status": "not_certified",
+      "owner_authorization_status": "not_established",
+      "full_text_access_implied": false,
+      "canonical_kristal_authority": false
+    },
+    {
+      "id": "microsoft-sharepoint-onedrive",
+      "platform": "Microsoft SharePoint / OneDrive",
+      "family_ids": [
+        "10"
+      ],
+      "family_labels": [
+        "Cloud documentaire"
+      ],
+      "access_paths": [
+        {
+          "mode": "api_read",
+          "label": "API de lecture officielle",
+          "lanes": [
+            "L2"
+          ],
+          "doc_status": "candidate_requires_verification"
+        },
+        {
+          "mode": "user_export",
+          "label": "Export du compte utilisateur",
+          "lanes": [
+            "L1",
+            "L4"
+          ],
+          "doc_status": "candidate_requires_verification"
+        },
+        {
+          "mode": "local_file",
+          "label": "Fichier remis localement",
+          "lanes": [
+            "L1"
+          ],
+          "doc_status": "candidate_requires_verification"
+        }
+      ],
+      "preferred_path": "api_read",
+      "information_scope": "Fichiers, sites, métadonnées et versions",
+      "prerequisites": "Microsoft Graph et autorisations tenant",
+      "blocking_limits": "Respecter ACL et frontières de tenants",
+      "chatgpt_policy": "local_only_until_privacy_review",
+      "source_reference_urls": [],
+      "platform_doc_status": "candidate_requires_verification",
+      "daat_connector_status": "not_certified",
+      "owner_authorization_status": "not_established",
+      "full_text_access_implied": false,
+      "canonical_kristal_authority": false
+    },
+    {
+      "id": "amazon-s3",
+      "platform": "Amazon S3",
+      "family_ids": [
+        "10",
+        "17"
+      ],
+      "family_labels": [
+        "Cloud documentaire",
+        "Lacs analytiques"
+      ],
+      "access_paths": [
+        {
+          "mode": "api_read",
+          "label": "API de lecture officielle",
+          "lanes": [
+            "L2"
+          ],
+          "doc_status": "candidate_requires_verification"
+        },
+        {
+          "mode": "bulk_export",
+          "label": "Export massif / dump",
+          "lanes": [
+            "L4"
+          ],
+          "doc_status": "candidate_requires_verification"
+        },
+        {
+          "mode": "federated_ref",
+          "label": "Référence fédérée / lien stable",
+          "lanes": [
+            "L8"
+          ],
+          "doc_status": "candidate_requires_verification"
+        }
+      ],
+      "preferred_path": "api_read",
+      "information_scope": "Objets et versions, métadonnées",
+      "prerequisites": "IAM scoped read-only; versions S3 facultatives",
+      "blocking_limits": "Objet accessible ne garantit pas droit de transformation/partage",
+      "chatgpt_policy": "local_only_until_privacy_review",
+      "source_reference_urls": [],
+      "platform_doc_status": "candidate_requires_verification",
+      "daat_connector_status": "not_certified",
+      "owner_authorization_status": "not_established",
+      "full_text_access_implied": false,
+      "canonical_kristal_authority": false
+    },
+    {
+      "id": "github",
+      "platform": "GitHub",
+      "family_ids": [
+        "11",
+        "12"
+      ],
+      "family_labels": [
+        "Dépôts de code",
+        "Gestion de projets et tickets"
+      ],
+      "access_paths": [
+        {
+          "mode": "git_snapshot",
+          "label": "Clone ou archive Git à révision fixe",
+          "lanes": [
+            "L5"
+          ],
+          "doc_status": "candidate_requires_verification"
+        },
+        {
+          "mode": "api_read",
+          "label": "API de lecture officielle",
+          "lanes": [
+            "L2"
+          ],
+          "doc_status": "official_docs_checked"
+        },
+        {
+          "mode": "user_export",
+          "label": "Export du compte utilisateur",
+          "lanes": [
+            "L1",
+            "L4"
+          ],
+          "doc_status": "candidate_requires_verification"
+        }
+      ],
+      "preferred_path": "git_snapshot",
+      "information_scope": "Dépôts, commits, issues, discussions",
+      "prerequisites": "Git clone/REST/GraphQL selon permissions",
+      "blocking_limits": "Licences de code, jetons, données privées",
+      "chatgpt_policy": "local_only_until_privacy_review",
+      "source_reference_urls": [
+        "https://docs.github.com/en/rest/using-the-rest-api/using-pagination-in-the-rest-api"
+      ],
+      "platform_doc_status": "official_docs_checked",
+      "daat_connector_status": "not_certified",
+      "owner_authorization_status": "not_established",
+      "full_text_access_implied": false,
+      "canonical_kristal_authority": false
+    },
+    {
+      "id": "gitlab",
+      "platform": "GitLab",
+      "family_ids": [
+        "11",
+        "12"
+      ],
+      "family_labels": [
+        "Dépôts de code",
+        "Gestion de projets et tickets"
+      ],
+      "access_paths": [
+        {
+          "mode": "git_snapshot",
+          "label": "Clone ou archive Git à révision fixe",
+          "lanes": [
+            "L5"
+          ],
+          "doc_status": "candidate_requires_verification"
+        },
+        {
+          "mode": "api_read",
+          "label": "API de lecture officielle",
+          "lanes": [
+            "L2"
+          ],
+          "doc_status": "official_docs_checked"
+        },
+        {
+          "mode": "user_export",
+          "label": "Export du compte utilisateur",
+          "lanes": [
+            "L1",
+            "L4"
+          ],
+          "doc_status": "candidate_requires_verification"
+        }
+      ],
+      "preferred_path": "git_snapshot",
+      "information_scope": "Dépôts, merges, tickets",
+      "prerequisites": "Git et API projet; scopes ",
+      "blocking_limits": "Instances auto-hébergées peuvent différer",
+      "chatgpt_policy": "local_only_until_privacy_review",
+      "source_reference_urls": [
+        "https://docs.gitlab.com/api/projects/"
+      ],
+      "platform_doc_status": "official_docs_checked",
+      "daat_connector_status": "not_certified",
+      "owner_authorization_status": "not_established",
+      "full_text_access_implied": false,
+      "canonical_kristal_authority": false
+    },
+    {
+      "id": "bitbucket",
+      "platform": "Bitbucket",
+      "family_ids": [
+        "11"
+      ],
+      "family_labels": [
+        "Dépôts de code"
+      ],
+      "access_paths": [
+        {
+          "mode": "git_snapshot",
+          "label": "Clone ou archive Git à révision fixe",
+          "lanes": [
+            "L5"
+          ],
+          "doc_status": "candidate_requires_verification"
+        },
+        {
+          "mode": "api_read",
+          "label": "API de lecture officielle",
+          "lanes": [
+            "L2"
+          ],
+          "doc_status": "candidate_requires_verification"
+        },
+        {
+          "mode": "user_export",
+          "label": "Export du compte utilisateur",
+          "lanes": [
+            "L1",
+            "L4"
+          ],
+          "doc_status": "candidate_requires_verification"
+        }
+      ],
+      "preferred_path": "git_snapshot",
+      "information_scope": "Code, commits, tickets",
+      "prerequisites": "Accès projet/branch; API selon édition",
+      "blocking_limits": "Restrictions dépôt privé et licences",
+      "chatgpt_policy": "local_only_until_privacy_review",
+      "source_reference_urls": [],
+      "platform_doc_status": "candidate_requires_verification",
+      "daat_connector_status": "not_certified",
+      "owner_authorization_status": "not_established",
+      "full_text_access_implied": false,
+      "canonical_kristal_authority": false
+    },
+    {
+      "id": "jira",
+      "platform": "Jira",
+      "family_ids": [
+        "12"
+      ],
+      "family_labels": [
+        "Gestion de projets et tickets"
+      ],
+      "access_paths": [
+        {
+          "mode": "api_read",
+          "label": "API de lecture officielle",
+          "lanes": [
+            "L2"
+          ],
+          "doc_status": "candidate_requires_verification"
+        },
+        {
+          "mode": "bulk_export",
+          "label": "Export massif / dump",
+          "lanes": [
+            "L4"
+          ],
+          "doc_status": "candidate_requires_verification"
+        }
+      ],
+      "preferred_path": "api_read",
+      "information_scope": "Tickets, commentaires, statuts",
+      "prerequisites": "OAuth/API token ou export approuvé",
+      "blocking_limits": "PII, champs personnalisés, restrictions de projet",
+      "chatgpt_policy": "local_only_until_privacy_review",
+      "source_reference_urls": [],
+      "platform_doc_status": "candidate_requires_verification",
+      "daat_connector_status": "not_certified",
+      "owner_authorization_status": "not_established",
+      "full_text_access_implied": false,
+      "canonical_kristal_authority": false
+    },
+    {
+      "id": "linear",
+      "platform": "Linear",
+      "family_ids": [
+        "12"
+      ],
+      "family_labels": [
+        "Gestion de projets et tickets"
+      ],
+      "access_paths": [
+        {
+          "mode": "api_read",
+          "label": "API de lecture officielle",
+          "lanes": [
+            "L2"
+          ],
+          "doc_status": "candidate_requires_verification"
+        },
+        {
+          "mode": "user_export",
+          "label": "Export du compte utilisateur",
+          "lanes": [
+            "L1",
+            "L4"
+          ],
+          "doc_status": "candidate_requires_verification"
+        }
+      ],
+      "preferred_path": "api_read",
+      "information_scope": "Issues, workflows et équipes",
+      "prerequisites": "API GraphQL et droits d'espace",
+      "blocking_limits": "Données de projet privées",
+      "chatgpt_policy": "local_only_until_privacy_review",
+      "source_reference_urls": [],
+      "platform_doc_status": "candidate_requires_verification",
+      "daat_connector_status": "not_certified",
+      "owner_authorization_status": "not_established",
+      "full_text_access_implied": false,
+      "canonical_kristal_authority": false
+    },
+    {
+      "id": "acomba",
+      "platform": "Acomba",
+      "family_ids": [
+        "13"
+      ],
+      "family_labels": [
+        "ERP et comptabilité PME"
+      ],
+      "access_paths": [
+        {
+          "mode": "user_export",
+          "label": "Export du compte utilisateur",
+          "lanes": [
+            "L1",
+            "L4"
+          ],
+          "doc_status": "candidate_requires_verification"
+        },
+        {
+          "mode": "database_read",
+          "label": "Requête SQL/ODBC en lecture seule",
+          "lanes": [
+            "L6"
+          ],
+          "doc_status": "candidate_requires_verification"
+        },
+        {
+          "mode": "local_file",
+          "label": "Fichier remis localement",
+          "lanes": [
+            "L1"
+          ],
+          "doc_status": "candidate_requires_verification"
+        }
+      ],
+      "preferred_path": "user_export",
+      "information_scope": "Grand livre, écritures, clients, factures",
+      "prerequisites": "Exports utilisateur; SDK/ODBC selon édition et licence à vérifier",
+      "blocking_limits": "Données comptables sensibles; facture != paiement",
+      "chatgpt_policy": "local_only_until_privacy_review",
+      "source_reference_urls": [],
+      "platform_doc_status": "candidate_requires_verification",
+      "daat_connector_status": "not_certified",
+      "owner_authorization_status": "not_established",
+      "full_text_access_implied": false,
+      "canonical_kristal_authority": false
+    },
+    {
+      "id": "quickbooks-online",
+      "platform": "QuickBooks Online",
+      "family_ids": [
+        "13"
+      ],
+      "family_labels": [
+        "ERP et comptabilité PME"
+      ],
+      "access_paths": [
+        {
+          "mode": "api_read",
+          "label": "API de lecture officielle",
+          "lanes": [
+            "L2"
+          ],
+          "doc_status": "candidate_requires_verification"
+        },
+        {
+          "mode": "user_export",
+          "label": "Export du compte utilisateur",
+          "lanes": [
+            "L1",
+            "L4"
+          ],
+          "doc_status": "candidate_requires_verification"
+        }
+      ],
+      "preferred_path": "api_read",
+      "information_scope": "Transactions, comptes, factures",
+      "prerequisites": "API Intuit OAuth et scopes dédiés",
+      "blocking_limits": "PII et données financières; droit de partage distinct",
+      "chatgpt_policy": "local_only_until_privacy_review",
+      "source_reference_urls": [],
+      "platform_doc_status": "candidate_requires_verification",
+      "daat_connector_status": "not_certified",
+      "owner_authorization_status": "not_established",
+      "full_text_access_implied": false,
+      "canonical_kristal_authority": false
+    },
+    {
+      "id": "xero",
+      "platform": "Xero",
+      "family_ids": [
+        "13"
+      ],
+      "family_labels": [
+        "ERP et comptabilité PME"
+      ],
+      "access_paths": [
+        {
+          "mode": "api_read",
+          "label": "API de lecture officielle",
+          "lanes": [
+            "L2"
+          ],
+          "doc_status": "candidate_requires_verification"
+        },
+        {
+          "mode": "user_export",
+          "label": "Export du compte utilisateur",
+          "lanes": [
+            "L1",
+            "L4"
+          ],
+          "doc_status": "candidate_requires_verification"
+        }
+      ],
+      "preferred_path": "api_read",
+      "information_scope": "Ledger, journaux, factures",
+      "prerequisites": "OAuth/API Xero et scopes",
+      "blocking_limits": "Limites d'API et confidentialité",
+      "chatgpt_policy": "local_only_until_privacy_review",
+      "source_reference_urls": [],
+      "platform_doc_status": "candidate_requires_verification",
+      "daat_connector_status": "not_certified",
+      "owner_authorization_status": "not_established",
+      "full_text_access_implied": false,
+      "canonical_kristal_authority": false
+    },
+    {
+      "id": "sage",
+      "platform": "Sage",
+      "family_ids": [
+        "13"
+      ],
+      "family_labels": [
+        "ERP et comptabilité PME"
+      ],
+      "access_paths": [
+        {
+          "mode": "api_read",
+          "label": "API de lecture officielle",
+          "lanes": [
+            "L2"
+          ],
+          "doc_status": "candidate_requires_verification"
+        },
+        {
+          "mode": "user_export",
+          "label": "Export du compte utilisateur",
+          "lanes": [
+            "L1",
+            "L4"
+          ],
+          "doc_status": "candidate_requires_verification"
+        },
+        {
+          "mode": "database_read",
+          "label": "Requête SQL/ODBC en lecture seule",
+          "lanes": [
+            "L6"
+          ],
+          "doc_status": "candidate_requires_verification"
+        }
+      ],
+      "preferred_path": "user_export",
+      "information_scope": "Écritures et documents selon produit",
+      "prerequisites": "SDK/API varie fortement selon édition",
+      "blocking_limits": "Ne pas présumer une API uniforme Sage",
+      "chatgpt_policy": "local_only_until_privacy_review",
+      "source_reference_urls": [],
+      "platform_doc_status": "candidate_requires_verification",
+      "daat_connector_status": "not_certified",
+      "owner_authorization_status": "not_established",
+      "full_text_access_implied": false,
+      "canonical_kristal_authority": false
+    },
+    {
+      "id": "sap",
+      "platform": "SAP",
+      "family_ids": [
+        "14"
+      ],
+      "family_labels": [
+        "ERP/CRM entreprise"
+      ],
+      "access_paths": [
+        {
+          "mode": "api_read",
+          "label": "API de lecture officielle",
+          "lanes": [
+            "L2"
+          ],
+          "doc_status": "candidate_requires_verification"
+        },
+        {
+          "mode": "user_export",
+          "label": "Export du compte utilisateur",
+          "lanes": [
+            "L1",
+            "L4"
+          ],
+          "doc_status": "candidate_requires_verification"
+        },
+        {
+          "mode": "database_read",
+          "label": "Requête SQL/ODBC en lecture seule",
+          "lanes": [
+            "L6"
+          ],
+          "doc_status": "candidate_requires_verification"
+        }
+      ],
+      "preferred_path": "api_read",
+      "information_scope": "ERP et objets métier",
+      "prerequisites": "OData/BAPI/IDoc selon modules et licences",
+      "blocking_limits": "Processus et ACL propriétaires",
+      "chatgpt_policy": "local_only_until_privacy_review",
+      "source_reference_urls": [],
+      "platform_doc_status": "candidate_requires_verification",
+      "daat_connector_status": "not_certified",
+      "owner_authorization_status": "not_established",
+      "full_text_access_implied": false,
+      "canonical_kristal_authority": false
+    },
+    {
+      "id": "salesforce",
+      "platform": "Salesforce",
+      "family_ids": [
+        "14"
+      ],
+      "family_labels": [
+        "ERP/CRM entreprise"
+      ],
+      "access_paths": [
+        {
+          "mode": "api_read",
+          "label": "API de lecture officielle",
+          "lanes": [
+            "L2"
+          ],
+          "doc_status": "candidate_requires_verification"
+        },
+        {
+          "mode": "bulk_export",
+          "label": "Export massif / dump",
+          "lanes": [
+            "L4"
+          ],
+          "doc_status": "candidate_requires_verification"
+        }
+      ],
+      "preferred_path": "api_read",
+      "information_scope": "CRM, relations et activités",
+      "prerequisites": "API SOQL/OAuth et permissions objet/champ",
+      "blocking_limits": "Données personnelles et métadonnées custom",
+      "chatgpt_policy": "local_only_until_privacy_review",
+      "source_reference_urls": [],
+      "platform_doc_status": "candidate_requires_verification",
+      "daat_connector_status": "not_certified",
+      "owner_authorization_status": "not_established",
+      "full_text_access_implied": false,
+      "canonical_kristal_authority": false
+    },
+    {
+      "id": "microsoft-dynamics",
+      "platform": "Microsoft Dynamics",
+      "family_ids": [
+        "14"
+      ],
+      "family_labels": [
+        "ERP/CRM entreprise"
+      ],
+      "access_paths": [
+        {
+          "mode": "api_read",
+          "label": "API de lecture officielle",
+          "lanes": [
+            "L2"
+          ],
+          "doc_status": "candidate_requires_verification"
+        },
+        {
+          "mode": "user_export",
+          "label": "Export du compte utilisateur",
+          "lanes": [
+            "L1",
+            "L4"
+          ],
+          "doc_status": "candidate_requires_verification"
+        }
+      ],
+      "preferred_path": "api_read",
+      "information_scope": "ERP/CRM, Dataverse",
+      "prerequisites": "API selon produit et tenant",
+      "blocking_limits": "Sécurité et champs sensibles",
+      "chatgpt_policy": "local_only_until_privacy_review",
+      "source_reference_urls": [],
+      "platform_doc_status": "candidate_requires_verification",
+      "daat_connector_status": "not_certified",
+      "owner_authorization_status": "not_established",
+      "full_text_access_implied": false,
+      "canonical_kristal_authority": false
+    },
+    {
+      "id": "odoo",
+      "platform": "Odoo",
+      "family_ids": [
+        "14"
+      ],
+      "family_labels": [
+        "ERP/CRM entreprise"
+      ],
+      "access_paths": [
+        {
+          "mode": "api_read",
+          "label": "API de lecture officielle",
+          "lanes": [
+            "L2"
+          ],
+          "doc_status": "candidate_requires_verification"
+        },
+        {
+          "mode": "user_export",
+          "label": "Export du compte utilisateur",
+          "lanes": [
+            "L1",
+            "L4"
+          ],
+          "doc_status": "candidate_requires_verification"
+        }
+      ],
+      "preferred_path": "api_read",
+      "information_scope": "Objets ERP, ventes, stocks",
+      "prerequisites": "API selon version/plan",
+      "blocking_limits": "ACL par modèle et droits de données",
+      "chatgpt_policy": "local_only_until_privacy_review",
+      "source_reference_urls": [],
+      "platform_doc_status": "candidate_requires_verification",
+      "daat_connector_status": "not_certified",
+      "owner_authorization_status": "not_established",
+      "full_text_access_implied": false,
+      "canonical_kristal_authority": false
+    },
+    {
+      "id": "shopify",
+      "platform": "Shopify",
+      "family_ids": [
+        "15"
+      ],
+      "family_labels": [
+        "Commerce et inventaires"
+      ],
+      "access_paths": [
+        {
+          "mode": "api_read",
+          "label": "API de lecture officielle",
+          "lanes": [
+            "L2"
+          ],
+          "doc_status": "candidate_requires_verification"
+        },
+        {
+          "mode": "bulk_export",
+          "label": "Export massif / dump",
+          "lanes": [
+            "L4"
+          ],
+          "doc_status": "candidate_requires_verification"
+        }
+      ],
+      "preferred_path": "api_read",
+      "information_scope": "Produits, commandes, inventaire",
+      "prerequisites": "API admin sous scopes et consentement commerçant",
+      "blocking_limits": "Données consommateurs et quotas",
+      "chatgpt_policy": "local_only_until_privacy_review",
+      "source_reference_urls": [],
+      "platform_doc_status": "candidate_requires_verification",
+      "daat_connector_status": "not_certified",
+      "owner_authorization_status": "not_established",
+      "full_text_access_implied": false,
+      "canonical_kristal_authority": false
+    },
+    {
+      "id": "woocommerce",
+      "platform": "WooCommerce",
+      "family_ids": [
+        "15"
+      ],
+      "family_labels": [
+        "Commerce et inventaires"
+      ],
+      "access_paths": [
+        {
+          "mode": "api_read",
+          "label": "API de lecture officielle",
+          "lanes": [
+            "L2"
+          ],
+          "doc_status": "candidate_requires_verification"
+        },
+        {
+          "mode": "user_export",
+          "label": "Export du compte utilisateur",
+          "lanes": [
+            "L1",
+            "L4"
+          ],
+          "doc_status": "candidate_requires_verification"
+        }
+      ],
+      "preferred_path": "api_read",
+      "information_scope": "Produits, commandes, variations",
+      "prerequisites": "REST API avec clé du magasin",
+      "blocking_limits": "Données clients privées",
+      "chatgpt_policy": "local_only_until_privacy_review",
+      "source_reference_urls": [],
+      "platform_doc_status": "candidate_requires_verification",
+      "daat_connector_status": "not_certified",
+      "owner_authorization_status": "not_established",
+      "full_text_access_implied": false,
+      "canonical_kristal_authority": false
+    },
+    {
+      "id": "postgresql-mysql",
+      "platform": "PostgreSQL / MySQL",
+      "family_ids": [
+        "16"
+      ],
+      "family_labels": [
+        "Bases relationnelles"
+      ],
+      "access_paths": [
+        {
+          "mode": "database_read",
+          "label": "Requête SQL/ODBC en lecture seule",
+          "lanes": [
+            "L6"
+          ],
+          "doc_status": "candidate_requires_verification"
+        },
+        {
+          "mode": "bulk_export",
+          "label": "Export massif / dump",
+          "lanes": [
+            "L4"
+          ],
+          "doc_status": "candidate_requires_verification"
+        }
+      ],
+      "preferred_path": "database_read",
+      "information_scope": "Tables, vues, métadonnées relationnelles",
+      "prerequisites": "Compte read-only, TLS, snapshot cohérent",
+      "blocking_limits": "Ne pas exécuter requêtes non bornées",
+      "chatgpt_policy": "local_only_until_privacy_review",
+      "source_reference_urls": [],
+      "platform_doc_status": "candidate_requires_verification",
+      "daat_connector_status": "not_certified",
+      "owner_authorization_status": "not_established",
+      "full_text_access_implied": false,
+      "canonical_kristal_authority": false
+    },
+    {
+      "id": "sql-server-oracle",
+      "platform": "SQL Server / Oracle",
+      "family_ids": [
+        "16"
+      ],
+      "family_labels": [
+        "Bases relationnelles"
+      ],
+      "access_paths": [
+        {
+          "mode": "database_read",
+          "label": "Requête SQL/ODBC en lecture seule",
+          "lanes": [
+            "L6"
+          ],
+          "doc_status": "candidate_requires_verification"
+        },
+        {
+          "mode": "user_export",
+          "label": "Export du compte utilisateur",
+          "lanes": [
+            "L1",
+            "L4"
+          ],
+          "doc_status": "candidate_requires_verification"
+        }
+      ],
+      "preferred_path": "database_read",
+      "information_scope": "Tables, procédures, vues",
+      "prerequisites": "ODBC/JDBC/driver et permissions explicites",
+      "blocking_limits": "PII, charge serveur, cohérence transactionnelle",
+      "chatgpt_policy": "local_only_until_privacy_review",
+      "source_reference_urls": [],
+      "platform_doc_status": "candidate_requires_verification",
+      "daat_connector_status": "not_certified",
+      "owner_authorization_status": "not_established",
+      "full_text_access_implied": false,
+      "canonical_kristal_authority": false
+    },
+    {
+      "id": "snowflake",
+      "platform": "Snowflake",
+      "family_ids": [
+        "17"
+      ],
+      "family_labels": [
+        "Lacs analytiques"
+      ],
+      "access_paths": [
+        {
+          "mode": "api_read",
+          "label": "API de lecture officielle",
+          "lanes": [
+            "L2"
+          ],
+          "doc_status": "candidate_requires_verification"
+        },
+        {
+          "mode": "database_read",
+          "label": "Requête SQL/ODBC en lecture seule",
+          "lanes": [
+            "L6"
+          ],
+          "doc_status": "candidate_requires_verification"
+        },
+        {
+          "mode": "bulk_export",
+          "label": "Export massif / dump",
+          "lanes": [
+            "L4"
+          ],
+          "doc_status": "candidate_requires_verification"
+        }
+      ],
+      "preferred_path": "database_read",
+      "information_scope": "Tables analytiques et vues",
+      "prerequisites": "Rôles lecture et warehouse/quota",
+      "blocking_limits": "Frais de requêtes, gouvernance catalogue",
+      "chatgpt_policy": "local_only_until_privacy_review",
+      "source_reference_urls": [],
+      "platform_doc_status": "candidate_requires_verification",
+      "daat_connector_status": "not_certified",
+      "owner_authorization_status": "not_established",
+      "full_text_access_implied": false,
+      "canonical_kristal_authority": false
+    },
+    {
+      "id": "bigquery",
+      "platform": "BigQuery",
+      "family_ids": [
+        "17"
+      ],
+      "family_labels": [
+        "Lacs analytiques"
+      ],
+      "access_paths": [
+        {
+          "mode": "api_read",
+          "label": "API de lecture officielle",
+          "lanes": [
+            "L2"
+          ],
+          "doc_status": "candidate_requires_verification"
+        },
+        {
+          "mode": "bulk_export",
+          "label": "Export massif / dump",
+          "lanes": [
+            "L4"
+          ],
+          "doc_status": "candidate_requires_verification"
+        }
+      ],
+      "preferred_path": "api_read",
+      "information_scope": "Tables et datasets analytiques",
+      "prerequisites": "IAM datasets et limites de coût",
+      "blocking_limits": "Coût, données sensibles, résidences",
+      "chatgpt_policy": "local_only_until_privacy_review",
+      "source_reference_urls": [],
+      "platform_doc_status": "candidate_requires_verification",
+      "daat_connector_status": "not_certified",
+      "owner_authorization_status": "not_established",
+      "full_text_access_implied": false,
+      "canonical_kristal_authority": false
+    },
+    {
+      "id": "databricks",
+      "platform": "Databricks",
+      "family_ids": [
+        "17"
+      ],
+      "family_labels": [
+        "Lacs analytiques"
+      ],
+      "access_paths": [
+        {
+          "mode": "api_read",
+          "label": "API de lecture officielle",
+          "lanes": [
+            "L2"
+          ],
+          "doc_status": "candidate_requires_verification"
+        },
+        {
+          "mode": "bulk_export",
+          "label": "Export massif / dump",
+          "lanes": [
+            "L4"
+          ],
+          "doc_status": "candidate_requires_verification"
+        }
+      ],
+      "preferred_path": "api_read",
+      "information_scope": "Lakehouse, Delta tables",
+      "prerequisites": "Jeton/compte scoped",
+      "blocking_limits": "Contrôle UC et gouvernance",
+      "chatgpt_policy": "local_only_until_privacy_review",
+      "source_reference_urls": [],
+      "platform_doc_status": "candidate_requires_verification",
+      "daat_connector_status": "not_certified",
+      "owner_authorization_status": "not_established",
+      "full_text_access_implied": false,
+      "canonical_kristal_authority": false
+    },
+    {
+      "id": "neo4j",
+      "platform": "Neo4j",
+      "family_ids": [
+        "18"
+      ],
+      "family_labels": [
+        "Graphes d’entreprise"
+      ],
+      "access_paths": [
+        {
+          "mode": "database_read",
+          "label": "Requête SQL/ODBC en lecture seule",
+          "lanes": [
+            "L6"
+          ],
+          "doc_status": "candidate_requires_verification"
+        },
+        {
+          "mode": "bulk_export",
+          "label": "Export massif / dump",
+          "lanes": [
+            "L4"
+          ],
+          "doc_status": "candidate_requires_verification"
+        }
+      ],
+      "preferred_path": "database_read",
+      "information_scope": "Graphes de nœuds et relations",
+      "prerequisites": "Cypher READ-only, rôle/base dédiés",
+      "blocking_limits": "Graphes sensibles, sémantique non équivalente à Kristal",
+      "chatgpt_policy": "local_only_until_privacy_review",
+      "source_reference_urls": [],
+      "platform_doc_status": "candidate_requires_verification",
+      "daat_connector_status": "not_certified",
+      "owner_authorization_status": "not_established",
+      "full_text_access_implied": false,
+      "canonical_kristal_authority": false
+    },
+    {
+      "id": "rdf-sparql-endpoint",
+      "platform": "RDF / SPARQL endpoint",
+      "family_ids": [
+        "18",
+        "36"
+      ],
+      "family_labels": [
+        "Graphes d’entreprise",
+        "Références fédérées externes"
+      ],
+      "access_paths": [
+        {
+          "mode": "api_read",
+          "label": "API de lecture officielle",
+          "lanes": [
+            "L2"
+          ],
+          "doc_status": "candidate_requires_verification"
+        },
+        {
+          "mode": "bulk_export",
+          "label": "Export massif / dump",
+          "lanes": [
+            "L4"
+          ],
+          "doc_status": "candidate_requires_verification"
+        },
+        {
+          "mode": "federated_ref",
+          "label": "Référence fédérée / lien stable",
+          "lanes": [
+            "L8"
+          ],
+          "doc_status": "candidate_requires_verification"
+        }
+      ],
+      "preferred_path": "api_read",
+      "information_scope": "RDF, ontologies, vocabulaires",
+      "prerequisites": "Endpoint/documentation et droits de requête",
+      "blocking_limits": "Identifiants externes pas canoniques",
+      "chatgpt_policy": "metadata_only_by_default",
+      "source_reference_urls": [],
+      "platform_doc_status": "candidate_requires_verification",
+      "daat_connector_status": "not_certified",
+      "owner_authorization_status": "not_established",
+      "full_text_access_implied": false,
+      "canonical_kristal_authority": false
+    },
+    {
+      "id": "imap-mbox",
+      "platform": "IMAP / MBOX",
+      "family_ids": [
+        "19"
+      ],
+      "family_labels": [
+        "Courriels et discussions"
+      ],
+      "access_paths": [
+        {
+          "mode": "api_read",
+          "label": "API de lecture officielle",
+          "lanes": [
+            "L2"
+          ],
+          "doc_status": "candidate_requires_verification"
+        },
+        {
+          "mode": "user_export",
+          "label": "Export du compte utilisateur",
+          "lanes": [
+            "L1",
+            "L4"
+          ],
+          "doc_status": "candidate_requires_verification"
+        },
+        {
+          "mode": "local_file",
+          "label": "Fichier remis localement",
+          "lanes": [
+            "L1"
+          ],
+          "doc_status": "candidate_requires_verification"
+        }
+      ],
+      "preferred_path": "user_export",
+      "information_scope": "Messages, pièces jointes, conversations",
+      "prerequisites": "Consentement propriétaire et autorisations boîte",
+      "blocking_limits": "Très fortes contraintes confidentialité",
+      "chatgpt_policy": "local_only_until_privacy_review",
+      "source_reference_urls": [],
+      "platform_doc_status": "candidate_requires_verification",
+      "daat_connector_status": "not_certified",
+      "owner_authorization_status": "not_established",
+      "full_text_access_implied": false,
+      "canonical_kristal_authority": false
+    },
+    {
+      "id": "slack",
+      "platform": "Slack",
+      "family_ids": [
+        "19"
+      ],
+      "family_labels": [
+        "Courriels et discussions"
+      ],
+      "access_paths": [
+        {
+          "mode": "api_read",
+          "label": "API de lecture officielle",
+          "lanes": [
+            "L2"
+          ],
+          "doc_status": "candidate_requires_verification"
+        },
+        {
+          "mode": "user_export",
+          "label": "Export du compte utilisateur",
+          "lanes": [
+            "L1",
+            "L4"
+          ],
+          "doc_status": "candidate_requires_verification"
+        }
+      ],
+      "preferred_path": "api_read",
+      "information_scope": "Canaux, fils et réactions",
+      "prerequisites": "App scopes et export légal",
+      "blocking_limits": "Données d'équipes et personnes",
+      "chatgpt_policy": "local_only_until_privacy_review",
+      "source_reference_urls": [],
+      "platform_doc_status": "candidate_requires_verification",
+      "daat_connector_status": "not_certified",
+      "owner_authorization_status": "not_established",
+      "full_text_access_implied": false,
+      "canonical_kristal_authority": false
+    },
+    {
+      "id": "microsoft-teams",
+      "platform": "Microsoft Teams",
+      "family_ids": [
+        "19"
+      ],
+      "family_labels": [
+        "Courriels et discussions"
+      ],
+      "access_paths": [
+        {
+          "mode": "api_read",
+          "label": "API de lecture officielle",
+          "lanes": [
+            "L2"
+          ],
+          "doc_status": "candidate_requires_verification"
+        },
+        {
+          "mode": "user_export",
+          "label": "Export du compte utilisateur",
+          "lanes": [
+            "L1",
+            "L4"
+          ],
+          "doc_status": "candidate_requires_verification"
+        }
+      ],
+      "preferred_path": "api_read",
+      "information_scope": "Messages, réunions et fichiers",
+      "prerequisites": "Graph API et politiques administrateur",
+      "blocking_limits": "PII, transcriptions privées, rétention",
+      "chatgpt_policy": "local_only_until_privacy_review",
+      "source_reference_urls": [],
+      "platform_doc_status": "candidate_requires_verification",
+      "daat_connector_status": "not_certified",
+      "owner_authorization_status": "not_established",
+      "full_text_access_implied": false,
+      "canonical_kristal_authority": false
+    },
+    {
+      "id": "moodle",
+      "platform": "Moodle",
+      "family_ids": [
+        "20"
+      ],
+      "family_labels": [
+        "Éducation"
+      ],
+      "access_paths": [
+        {
+          "mode": "api_read",
+          "label": "API de lecture officielle",
+          "lanes": [
+            "L2"
+          ],
+          "doc_status": "candidate_requires_verification"
+        },
+        {
+          "mode": "user_export",
+          "label": "Export du compte utilisateur",
+          "lanes": [
+            "L1",
+            "L4"
+          ],
+          "doc_status": "candidate_requires_verification"
+        }
+      ],
+      "preferred_path": "api_read",
+      "information_scope": "Cours, ressources, évaluations",
+      "prerequisites": "Webservices par rôle",
+      "blocking_limits": "Dossiers étudiants protégés",
+      "chatgpt_policy": "local_only_until_privacy_review",
+      "source_reference_urls": [],
+      "platform_doc_status": "candidate_requires_verification",
+      "daat_connector_status": "not_certified",
+      "owner_authorization_status": "not_established",
+      "full_text_access_implied": false,
+      "canonical_kristal_authority": false
+    },
+    {
+      "id": "canvas-lms",
+      "platform": "Canvas LMS",
+      "family_ids": [
+        "20"
+      ],
+      "family_labels": [
+        "Éducation"
+      ],
+      "access_paths": [
+        {
+          "mode": "api_read",
+          "label": "API de lecture officielle",
+          "lanes": [
+            "L2"
+          ],
+          "doc_status": "candidate_requires_verification"
+        },
+        {
+          "mode": "user_export",
+          "label": "Export du compte utilisateur",
+          "lanes": [
+            "L1",
+            "L4"
+          ],
+          "doc_status": "candidate_requires_verification"
+        }
+      ],
+      "preferred_path": "api_read",
+      "information_scope": "Cours, devoirs, inscriptions",
+      "prerequisites": "API Canvas et jetons de compte",
+      "blocking_limits": "Confidentialité scolaire",
+      "chatgpt_policy": "local_only_until_privacy_review",
+      "source_reference_urls": [],
+      "platform_doc_status": "candidate_requires_verification",
+      "daat_connector_status": "not_certified",
+      "owner_authorization_status": "not_established",
+      "full_text_access_implied": false,
+      "canonical_kristal_authority": false
+    },
+    {
+      "id": "serveur-fhir",
+      "platform": "Serveur FHIR",
+      "family_ids": [
+        "21"
+      ],
+      "family_labels": [
+        "Santé"
+      ],
+      "access_paths": [
+        {
+          "mode": "api_read",
+          "label": "API de lecture officielle",
+          "lanes": [
+            "L2"
+          ],
+          "doc_status": "candidate_requires_verification"
+        },
+        {
+          "mode": "bulk_export",
+          "label": "Export massif / dump",
+          "lanes": [
+            "L4"
+          ],
+          "doc_status": "candidate_requires_verification"
+        },
+        {
+          "mode": "federated_ref",
+          "label": "Référence fédérée / lien stable",
+          "lanes": [
+            "L8"
+          ],
+          "doc_status": "candidate_requires_verification"
+        }
+      ],
+      "preferred_path": "api_read",
+      "information_scope": "Resources santé FHIR",
+      "prerequisites": "SMART on FHIR/OAuth et consentement",
+      "blocking_limits": "Données hautement sensibles; pas d'envoi à ChatGPT par défaut",
+      "chatgpt_policy": "not_recommended",
+      "source_reference_urls": [],
+      "platform_doc_status": "candidate_requires_verification",
+      "daat_connector_status": "not_certified",
+      "owner_authorization_status": "not_established",
+      "full_text_access_implied": false,
+      "canonical_kristal_authority": false
+    },
+    {
+      "id": "hl7-dicom-institutionnel",
+      "platform": "HL7/DICOM institutionnel",
+      "family_ids": [
+        "21",
+        "27"
+      ],
+      "family_labels": [
+        "Santé",
+        "Images/vidéos/audio"
+      ],
+      "access_paths": [
+        {
+          "mode": "local_file",
+          "label": "Fichier remis localement",
+          "lanes": [
+            "L1"
+          ],
+          "doc_status": "candidate_requires_verification"
+        },
+        {
+          "mode": "api_read",
+          "label": "API de lecture officielle",
+          "lanes": [
+            "L2"
+          ],
+          "doc_status": "candidate_requires_verification"
+        },
+        {
+          "mode": "federated_ref",
+          "label": "Référence fédérée / lien stable",
+          "lanes": [
+            "L8"
+          ],
+          "doc_status": "candidate_requires_verification"
+        }
+      ],
+      "preferred_path": "local_file",
+      "information_scope": "Messages, imagerie, dossiers cliniques",
+      "prerequisites": "Accord institutionnel, anonymisation, intégrité",
+      "blocking_limits": "Données cliniques; préserver étude/patient",
+      "chatgpt_policy": "not_recommended",
+      "source_reference_urls": [],
+      "platform_doc_status": "candidate_requires_verification",
+      "daat_connector_status": "not_certified",
+      "owner_authorization_status": "not_established",
+      "full_text_access_implied": false,
+      "canonical_kristal_authority": false
+    },
+    {
+      "id": "legisqu-bec",
+      "platform": "LegisQuébec",
+      "family_ids": [
+        "22"
+      ],
+      "family_labels": [
+        "Droit et administration"
+      ],
+      "access_paths": [
+        {
+          "mode": "api_read",
+          "label": "API de lecture officielle",
+          "lanes": [
+            "L2"
+          ],
+          "doc_status": "candidate_requires_verification"
+        },
+        {
+          "mode": "bulk_export",
+          "label": "Export massif / dump",
+          "lanes": [
+            "L4"
+          ],
+          "doc_status": "candidate_requires_verification"
+        },
+        {
+          "mode": "federated_ref",
+          "label": "Référence fédérée / lien stable",
+          "lanes": [
+            "L8"
+          ],
+          "doc_status": "candidate_requires_verification"
+        }
+      ],
+      "preferred_path": "federated_ref",
+      "information_scope": "Lois et règlements",
+      "prerequisites": "Examiner accès officiel et licences",
+      "blocking_limits": "Version à date, texte consolidé vs historique",
+      "chatgpt_policy": "metadata_only_by_default",
+      "source_reference_urls": [],
+      "platform_doc_status": "candidate_requires_verification",
+      "daat_connector_status": "not_certified",
+      "owner_authorization_status": "not_established",
+      "full_text_access_implied": false,
+      "canonical_kristal_authority": false
+    },
+    {
+      "id": "canlii",
+      "platform": "CanLII",
+      "family_ids": [
+        "22"
+      ],
+      "family_labels": [
+        "Droit et administration"
+      ],
+      "access_paths": [
+        {
+          "mode": "api_read",
+          "label": "API de lecture officielle",
+          "lanes": [
+            "L2"
+          ],
+          "doc_status": "candidate_requires_verification"
+        },
+        {
+          "mode": "federated_ref",
+          "label": "Référence fédérée / lien stable",
+          "lanes": [
+            "L8"
+          ],
+          "doc_status": "candidate_requires_verification"
+        },
+        {
+          "mode": "user_export",
+          "label": "Export du compte utilisateur",
+          "lanes": [
+            "L1",
+            "L4"
+          ],
+          "doc_status": "candidate_requires_verification"
+        }
+      ],
+      "preferred_path": "federated_ref",
+      "information_scope": "Jurisprudence et références",
+      "prerequisites": "Accès/licences propres aux collections",
+      "blocking_limits": "Restrictions sur collecte et redistribution",
+      "chatgpt_policy": "metadata_only_by_default",
+      "source_reference_urls": [],
+      "platform_doc_status": "candidate_requires_verification",
+      "daat_connector_status": "not_certified",
+      "owner_authorization_status": "not_established",
+      "full_text_access_implied": false,
+      "canonical_kristal_authority": false
+    },
+    {
+      "id": "openstreetmap",
+      "platform": "OpenStreetMap",
+      "family_ids": [
+        "23"
+      ],
+      "family_labels": [
+        "Cartographie/GIS"
+      ],
+      "access_paths": [
+        {
+          "mode": "api_read",
+          "label": "API de lecture officielle",
+          "lanes": [
+            "L2"
+          ],
+          "doc_status": "candidate_requires_verification"
+        },
+        {
+          "mode": "bulk_export",
+          "label": "Export massif / dump",
+          "lanes": [
+            "L4"
+          ],
+          "doc_status": "candidate_requires_verification"
+        }
+      ],
+      "preferred_path": "bulk_export",
+      "information_scope": "Objets géographiques et versions",
+      "prerequisites": "Overpass/planet/replication selon charge",
+      "blocking_limits": "ODbL, attribution, limites de requête",
+      "chatgpt_policy": "metadata_only_by_default",
+      "source_reference_urls": [],
+      "platform_doc_status": "candidate_requires_verification",
+      "daat_connector_status": "not_certified",
+      "owner_authorization_status": "not_established",
+      "full_text_access_implied": false,
+      "canonical_kristal_authority": false
+    },
+    {
+      "id": "wfs-geojson-municipal",
+      "platform": "WFS/GeoJSON municipal",
+      "family_ids": [
+        "23"
+      ],
+      "family_labels": [
+        "Cartographie/GIS"
+      ],
+      "access_paths": [
+        {
+          "mode": "api_read",
+          "label": "API de lecture officielle",
+          "lanes": [
+            "L2"
+          ],
+          "doc_status": "candidate_requires_verification"
+        },
+        {
+          "mode": "bulk_export",
+          "label": "Export massif / dump",
+          "lanes": [
+            "L4"
+          ],
+          "doc_status": "candidate_requires_verification"
+        },
+        {
+          "mode": "local_file",
+          "label": "Fichier remis localement",
+          "lanes": [
+            "L1"
+          ],
+          "doc_status": "candidate_requires_verification"
+        }
+      ],
+      "preferred_path": "api_read",
+      "information_scope": "Données géospatiales, couches",
+      "prerequisites": "WFS/WMS/API locale et licences",
+      "blocking_limits": "CRS, version géographique, géodonnées sensibles",
+      "chatgpt_policy": "local_only_until_privacy_review",
+      "source_reference_urls": [],
+      "platform_doc_status": "candidate_requires_verification",
+      "daat_connector_status": "not_certified",
+      "owner_authorization_status": "not_established",
+      "full_text_access_implied": false,
+      "canonical_kristal_authority": false
+    },
+    {
+      "id": "noaa",
+      "platform": "NOAA",
+      "family_ids": [
+        "24"
+      ],
+      "family_labels": [
+        "Climat et observation Terre"
+      ],
+      "access_paths": [
+        {
+          "mode": "api_read",
+          "label": "API de lecture officielle",
+          "lanes": [
+            "L2"
+          ],
+          "doc_status": "candidate_requires_verification"
+        },
+        {
+          "mode": "bulk_export",
+          "label": "Export massif / dump",
+          "lanes": [
+            "L4"
+          ],
+          "doc_status": "candidate_requires_verification"
+        }
+      ],
+      "preferred_path": "api_read",
+      "information_scope": "Données météo/climat",
+      "prerequisites": "Catalogues et APIs selon produit",
+      "blocking_limits": "Unités, période, qualité de mesures",
+      "chatgpt_policy": "metadata_only_by_default",
+      "source_reference_urls": [],
+      "platform_doc_status": "candidate_requires_verification",
+      "daat_connector_status": "not_certified",
+      "owner_authorization_status": "not_established",
+      "full_text_access_implied": false,
+      "canonical_kristal_authority": false
+    },
+    {
+      "id": "copernicus",
+      "platform": "Copernicus",
+      "family_ids": [
+        "24"
+      ],
+      "family_labels": [
+        "Climat et observation Terre"
+      ],
+      "access_paths": [
+        {
+          "mode": "api_read",
+          "label": "API de lecture officielle",
+          "lanes": [
+            "L2"
+          ],
+          "doc_status": "candidate_requires_verification"
+        },
+        {
+          "mode": "bulk_export",
+          "label": "Export massif / dump",
+          "lanes": [
+            "L4"
+          ],
+          "doc_status": "candidate_requires_verification"
+        }
+      ],
+      "preferred_path": "api_read",
+      "information_scope": "Imagerie satellite et séries",
+      "prerequisites": "Accès selon service Copernicus",
+      "blocking_limits": "Volumes, résolution, licence de produit",
+      "chatgpt_policy": "metadata_only_by_default",
+      "source_reference_urls": [],
+      "platform_doc_status": "candidate_requires_verification",
+      "daat_connector_status": "not_certified",
+      "owner_authorization_status": "not_established",
+      "full_text_access_implied": false,
+      "canonical_kristal_authority": false
+    },
+    {
+      "id": "broker-mqtt",
+      "platform": "Broker MQTT",
+      "family_ids": [
+        "25",
+        "31"
+      ],
+      "family_labels": [
+        "IoT et industrie",
+        "Flux d’événements"
+      ],
+      "access_paths": [
+        {
+          "mode": "events",
+          "label": "Webhooks ou flux d’événements",
+          "lanes": [
+            "L7"
+          ],
+          "doc_status": "candidate_requires_verification"
+        },
+        {
+          "mode": "api_read",
+          "label": "API de lecture officielle",
+          "lanes": [
+            "L2"
+          ],
+          "doc_status": "candidate_requires_verification"
+        }
+      ],
+      "preferred_path": "events",
+      "information_scope": "Télémétrie de dispositifs",
+      "prerequisites": "Identité du broker et droits topics",
+      "blocking_limits": "Horodatage, doublons et secrets IoT",
+      "chatgpt_policy": "not_recommended",
+      "source_reference_urls": [],
+      "platform_doc_status": "candidate_requires_verification",
+      "daat_connector_status": "not_certified",
+      "owner_authorization_status": "not_established",
+      "full_text_access_implied": false,
+      "canonical_kristal_authority": false
+    },
+    {
+      "id": "serveur-opc-ua",
+      "platform": "Serveur OPC UA",
+      "family_ids": [
+        "25"
+      ],
+      "family_labels": [
+        "IoT et industrie"
+      ],
+      "access_paths": [
+        {
+          "mode": "api_read",
+          "label": "API de lecture officielle",
+          "lanes": [
+            "L2"
+          ],
+          "doc_status": "candidate_requires_verification"
+        },
+        {
+          "mode": "events",
+          "label": "Webhooks ou flux d’événements",
+          "lanes": [
+            "L7"
+          ],
+          "doc_status": "candidate_requires_verification"
+        }
+      ],
+      "preferred_path": "api_read",
+      "information_scope": "Mesures et événements industriels",
+      "prerequisites": "Certificats et autorisation de nœuds",
+      "blocking_limits": "Environnement opérationnel critique",
+      "chatgpt_policy": "not_recommended",
+      "source_reference_urls": [],
+      "platform_doc_status": "candidate_requires_verification",
+      "daat_connector_status": "not_certified",
+      "owner_authorization_status": "not_established",
+      "full_text_access_implied": false,
+      "canonical_kristal_authority": false
+    },
+    {
+      "id": "lims-eln",
+      "platform": "LIMS / ELN",
+      "family_ids": [
+        "26"
+      ],
+      "family_labels": [
+        "Laboratoires scientifiques"
+      ],
+      "access_paths": [
+        {
+          "mode": "api_read",
+          "label": "API de lecture officielle",
+          "lanes": [
+            "L2"
+          ],
+          "doc_status": "candidate_requires_verification"
+        },
+        {
+          "mode": "user_export",
+          "label": "Export du compte utilisateur",
+          "lanes": [
+            "L1",
+            "L4"
+          ],
+          "doc_status": "candidate_requires_verification"
+        },
+        {
+          "mode": "local_file",
+          "label": "Fichier remis localement",
+          "lanes": [
+            "L1"
+          ],
+          "doc_status": "candidate_requires_verification"
+        }
+      ],
+      "preferred_path": "user_export",
+      "information_scope": "Expériences, échantillons, journaux",
+      "prerequisites": "Export laboratoire ou API fournisseur",
+      "blocking_limits": "PII et propriété intellectuelle",
+      "chatgpt_policy": "local_only_until_privacy_review",
+      "source_reference_urls": [],
+      "platform_doc_status": "candidate_requires_verification",
+      "daat_connector_status": "not_certified",
+      "owner_authorization_status": "not_established",
+      "full_text_access_implied": false,
+      "canonical_kristal_authority": false
+    },
+    {
+      "id": "iiif-collections-patrimoniales",
+      "platform": "IIIF collections patrimoniales",
+      "family_ids": [
+        "27",
+        "28"
+      ],
+      "family_labels": [
+        "Images/vidéos/audio",
+        "Archives institutionnelles"
+      ],
+      "access_paths": [
+        {
+          "mode": "api_read",
+          "label": "API de lecture officielle",
+          "lanes": [
+            "L2"
+          ],
+          "doc_status": "candidate_requires_verification"
+        },
+        {
+          "mode": "federated_ref",
+          "label": "Référence fédérée / lien stable",
+          "lanes": [
+            "L8"
+          ],
+          "doc_status": "candidate_requires_verification"
+        },
+        {
+          "mode": "local_file",
+          "label": "Fichier remis localement",
+          "lanes": [
+            "L1"
+          ],
+          "doc_status": "candidate_requires_verification"
+        }
+      ],
+      "preferred_path": "api_read",
+      "information_scope": "Manifests images et métadonnées",
+      "prerequisites": "IIIF Presentation/Image selon collection",
+      "blocking_limits": "Images protégées; attribution et droits",
+      "chatgpt_policy": "metadata_only_by_default",
+      "source_reference_urls": [],
+      "platform_doc_status": "candidate_requires_verification",
+      "daat_connector_status": "not_certified",
+      "owner_authorization_status": "not_established",
+      "full_text_access_implied": false,
+      "canonical_kristal_authority": false
+    },
+    {
+      "id": "internet-archive",
+      "platform": "Internet Archive",
+      "family_ids": [
+        "28"
+      ],
+      "family_labels": [
+        "Archives institutionnelles"
+      ],
+      "access_paths": [
+        {
+          "mode": "api_read",
+          "label": "API de lecture officielle",
+          "lanes": [
+            "L2"
+          ],
+          "doc_status": "candidate_requires_verification"
+        },
+        {
+          "mode": "bulk_export",
+          "label": "Export massif / dump",
+          "lanes": [
+            "L4"
+          ],
+          "doc_status": "candidate_requires_verification"
+        },
+        {
+          "mode": "federated_ref",
+          "label": "Référence fédérée / lien stable",
+          "lanes": [
+            "L8"
+          ],
+          "doc_status": "candidate_requires_verification"
+        }
+      ],
+      "preferred_path": "api_read",
+      "information_scope": "Collections numérisées et métadonnées",
+      "prerequisites": "API/exports selon collection",
+      "blocking_limits": "Droits variables sur items archivés",
+      "chatgpt_policy": "metadata_only_by_default",
+      "source_reference_urls": [],
+      "platform_doc_status": "candidate_requires_verification",
+      "daat_connector_status": "not_certified",
+      "owner_authorization_status": "not_established",
+      "full_text_access_implied": false,
+      "canonical_kristal_authority": false
+    },
+    {
+      "id": "open-banking-autoris",
+      "platform": "Open Banking autorisé",
+      "family_ids": [
+        "29"
+      ],
+      "family_labels": [
+        "Finances/bancaire"
+      ],
+      "access_paths": [
+        {
+          "mode": "api_read",
+          "label": "API de lecture officielle",
+          "lanes": [
+            "L2"
+          ],
+          "doc_status": "candidate_requires_verification"
+        },
+        {
+          "mode": "federated_ref",
+          "label": "Référence fédérée / lien stable",
+          "lanes": [
+            "L8"
+          ],
+          "doc_status": "candidate_requires_verification"
+        }
+      ],
+      "preferred_path": "api_read",
+      "information_scope": "Transactions et comptes utilisateurs",
+      "prerequisites": "API réglementée, consentement, fournisseurs agréés",
+      "blocking_limits": "Données très sensibles",
+      "chatgpt_policy": "not_recommended",
+      "source_reference_urls": [],
+      "platform_doc_status": "candidate_requires_verification",
+      "daat_connector_status": "not_certified",
+      "owner_authorization_status": "not_established",
+      "full_text_access_implied": false,
+      "canonical_kristal_authority": false
+    },
+    {
+      "id": "iso-20022-relev-s-bancaires",
+      "platform": "ISO 20022 / relevés bancaires",
+      "family_ids": [
+        "29"
+      ],
+      "family_labels": [
+        "Finances/bancaire"
+      ],
+      "access_paths": [
+        {
+          "mode": "local_file",
+          "label": "Fichier remis localement",
+          "lanes": [
+            "L1"
+          ],
+          "doc_status": "candidate_requires_verification"
+        },
+        {
+          "mode": "user_export",
+          "label": "Export du compte utilisateur",
+          "lanes": [
+            "L1",
+            "L4"
+          ],
+          "doc_status": "candidate_requires_verification"
+        }
+      ],
+      "preferred_path": "local_file",
+      "information_scope": "Fichiers de paiements et relevés",
+      "prerequisites": "Export par utilisateur autorisé",
+      "blocking_limits": "Jamais de transfert sensible par défaut",
+      "chatgpt_policy": "not_recommended",
+      "source_reference_urls": [],
+      "platform_doc_status": "candidate_requires_verification",
+      "daat_connector_status": "not_certified",
+      "owner_authorization_status": "not_established",
+      "full_text_access_implied": false,
+      "canonical_kristal_authority": false
+    },
+    {
+      "id": "registres-publics-d-entreprises",
+      "platform": "Registres publics d'entreprises",
+      "family_ids": [
+        "30"
+      ],
+      "family_labels": [
+        "Registres publics et société"
+      ],
+      "access_paths": [
+        {
+          "mode": "api_read",
+          "label": "API de lecture officielle",
+          "lanes": [
+            "L2"
+          ],
+          "doc_status": "candidate_requires_verification"
+        },
+        {
+          "mode": "bulk_export",
+          "label": "Export massif / dump",
+          "lanes": [
+            "L4"
+          ],
+          "doc_status": "candidate_requires_verification"
+        },
+        {
+          "mode": "federated_ref",
+          "label": "Référence fédérée / lien stable",
+          "lanes": [
+            "L8"
+          ],
+          "doc_status": "candidate_requires_verification"
+        }
+      ],
+      "preferred_path": "api_read",
+      "information_scope": "Entités légales et statuts",
+      "prerequisites": "Accès national/provincial spécifique",
+      "blocking_limits": "Périodicité et provenance",
+      "chatgpt_policy": "metadata_only_by_default",
+      "source_reference_urls": [],
+      "platform_doc_status": "candidate_requires_verification",
+      "daat_connector_status": "not_certified",
+      "owner_authorization_status": "not_established",
+      "full_text_access_implied": false,
+      "canonical_kristal_authority": false
+    },
+    {
+      "id": "kafka-cloudevents",
+      "platform": "Kafka / CloudEvents",
+      "family_ids": [
+        "31"
+      ],
+      "family_labels": [
+        "Flux d’événements"
+      ],
+      "access_paths": [
+        {
+          "mode": "events",
+          "label": "Webhooks ou flux d’événements",
+          "lanes": [
+            "L7"
+          ],
+          "doc_status": "candidate_requires_verification"
+        },
+        {
+          "mode": "bulk_export",
+          "label": "Export massif / dump",
+          "lanes": [
+            "L4"
+          ],
+          "doc_status": "candidate_requires_verification"
+        }
+      ],
+      "preferred_path": "events",
+      "information_scope": "Flux d'événements structurés",
+      "prerequisites": "ACL topics, protocole et version",
+      "blocking_limits": "Replay, ordre et idempotence",
+      "chatgpt_policy": "local_only_until_privacy_review",
+      "source_reference_urls": [],
+      "platform_doc_status": "candidate_requires_verification",
+      "daat_connector_status": "not_certified",
+      "owner_authorization_status": "not_established",
+      "full_text_access_implied": false,
+      "canonical_kristal_authority": false
+    },
+    {
+      "id": "webhooks-m-tier",
+      "platform": "Webhooks métier",
+      "family_ids": [
+        "31"
+      ],
+      "family_labels": [
+        "Flux d’événements"
+      ],
+      "access_paths": [
+        {
+          "mode": "events",
+          "label": "Webhooks ou flux d’événements",
+          "lanes": [
+            "L7"
+          ],
+          "doc_status": "candidate_requires_verification"
+        },
+        {
+          "mode": "api_read",
+          "label": "API de lecture officielle",
+          "lanes": [
+            "L2"
+          ],
+          "doc_status": "candidate_requires_verification"
+        }
+      ],
+      "preferred_path": "events",
+      "information_scope": "Notifications d'applications",
+      "prerequisites": "Authentification de signature et permissions",
+      "blocking_limits": "Webhook n'est pas preuve de vérité",
+      "chatgpt_policy": "local_only_until_privacy_review",
+      "source_reference_urls": [],
+      "platform_doc_status": "candidate_requires_verification",
+      "daat_connector_status": "not_certified",
+      "owner_authorization_status": "not_established",
+      "full_text_access_implied": false,
+      "canonical_kristal_authority": false
+    },
+    {
+      "id": "formulaires-et-enqu-tes",
+      "platform": "Formulaires et enquêtes",
+      "family_ids": [
+        "32"
+      ],
+      "family_labels": [
+        "Saisie humaine structurée"
+      ],
+      "access_paths": [
+        {
+          "mode": "user_export",
+          "label": "Export du compte utilisateur",
+          "lanes": [
+            "L1",
+            "L4"
+          ],
+          "doc_status": "candidate_requires_verification"
+        },
+        {
+          "mode": "local_file",
+          "label": "Fichier remis localement",
+          "lanes": [
+            "L1"
+          ],
+          "doc_status": "candidate_requires_verification"
+        },
+        {
+          "mode": "manual_paste",
+          "label": "Copier-coller autorisé",
+          "lanes": [
+            "L1"
+          ],
+          "doc_status": "candidate_requires_verification"
+        }
+      ],
+      "preferred_path": "user_export",
+      "information_scope": "Déclarations humaines structurées",
+      "prerequisites": "Consentement des répondants et finalité",
+      "blocking_limits": "Données subjectives/PII; ne pas transformer en faits",
+      "chatgpt_policy": "local_only_until_privacy_review",
+      "source_reference_urls": [],
+      "platform_doc_status": "candidate_requires_verification",
+      "daat_connector_status": "not_certified",
+      "owner_authorization_status": "not_established",
+      "full_text_access_implied": false,
+      "canonical_kristal_authority": false
+    },
+    {
+      "id": "simulation-jumeaux-num-riques",
+      "platform": "Simulation / jumeaux numériques",
+      "family_ids": [
+        "33"
+      ],
+      "family_labels": [
+        "Simulation et jumeaux numériques"
+      ],
+      "access_paths": [
+        {
+          "mode": "user_export",
+          "label": "Export du compte utilisateur",
+          "lanes": [
+            "L1",
+            "L4"
+          ],
+          "doc_status": "candidate_requires_verification"
+        },
+        {
+          "mode": "local_file",
+          "label": "Fichier remis localement",
+          "lanes": [
+            "L1"
+          ],
+          "doc_status": "candidate_requires_verification"
+        },
+        {
+          "mode": "api_read",
+          "label": "API de lecture officielle",
+          "lanes": [
+            "L2"
+          ],
+          "doc_status": "candidate_requires_verification"
+        }
+      ],
+      "preferred_path": "user_export",
+      "information_scope": "Modèles, paramètres, résultats simulés",
+      "prerequisites": "Licence de modèle et schéma versionné",
+      "blocking_limits": "Simulation != observation réelle",
+      "chatgpt_policy": "local_only_until_privacy_review",
+      "source_reference_urls": [],
+      "platform_doc_status": "candidate_requires_verification",
+      "daat_connector_status": "not_certified",
+      "owner_authorization_status": "not_established",
+      "full_text_access_implied": false,
+      "canonical_kristal_authority": false
+    },
+    {
+      "id": "reddit",
+      "platform": "Reddit",
+      "family_ids": [
+        "34"
+      ],
+      "family_labels": [
+        "Réseaux sociaux/communautés"
+      ],
+      "access_paths": [
+        {
+          "mode": "api_read",
+          "label": "API de lecture officielle",
+          "lanes": [
+            "L2"
+          ],
+          "doc_status": "candidate_requires_verification"
+        },
+        {
+          "mode": "user_export",
+          "label": "Export du compte utilisateur",
+          "lanes": [
+            "L1",
+            "L4"
+          ],
+          "doc_status": "candidate_requires_verification"
+        },
+        {
+          "mode": "federated_ref",
+          "label": "Référence fédérée / lien stable",
+          "lanes": [
+            "L8"
+          ],
+          "doc_status": "candidate_requires_verification"
+        }
+      ],
+      "preferred_path": "api_read",
+      "information_scope": "Posts, commentaires, métadonnées",
+      "prerequisites": "API et accords selon usage",
+      "blocking_limits": "Identité/PII et conditions de réutilisation",
+      "chatgpt_policy": "metadata_only_by_default",
+      "source_reference_urls": [],
+      "platform_doc_status": "candidate_requires_verification",
+      "daat_connector_status": "not_certified",
+      "owner_authorization_status": "not_established",
+      "full_text_access_implied": false,
+      "canonical_kristal_authority": false
+    },
+    {
+      "id": "stack-exchange",
+      "platform": "Stack Exchange",
+      "family_ids": [
+        "34"
+      ],
+      "family_labels": [
+        "Réseaux sociaux/communautés"
+      ],
+      "access_paths": [
+        {
+          "mode": "api_read",
+          "label": "API de lecture officielle",
+          "lanes": [
+            "L2"
+          ],
+          "doc_status": "candidate_requires_verification"
+        },
+        {
+          "mode": "bulk_export",
+          "label": "Export massif / dump",
+          "lanes": [
+            "L4"
+          ],
+          "doc_status": "candidate_requires_verification"
+        }
+      ],
+      "preferred_path": "api_read",
+      "information_scope": "Questions, réponses, votes",
+      "prerequisites": "API/licence d'attribution",
+      "blocking_limits": "Votes et réponses ne garantissent pas vérité",
+      "chatgpt_policy": "metadata_only_by_default",
+      "source_reference_urls": [],
+      "platform_doc_status": "candidate_requires_verification",
+      "daat_connector_status": "not_certified",
+      "owner_authorization_status": "not_established",
+      "full_text_access_implied": false,
+      "canonical_kristal_authority": false
+    },
+    {
+      "id": "youtube",
+      "platform": "YouTube",
+      "family_ids": [
+        "35"
+      ],
+      "family_labels": [
+        "Flux et catalogues multimédias"
+      ],
+      "access_paths": [
+        {
+          "mode": "api_read",
+          "label": "API de lecture officielle",
+          "lanes": [
+            "L2"
+          ],
+          "doc_status": "official_docs_checked"
+        },
+        {
+          "mode": "rss_atom",
+          "label": "Flux RSS/Atom",
+          "lanes": [
+            "L3"
+          ],
+          "doc_status": "candidate_requires_verification"
+        },
+        {
+          "mode": "user_export",
+          "label": "Export du compte utilisateur",
+          "lanes": [
+            "L1",
+            "L4"
+          ],
+          "doc_status": "candidate_requires_verification"
+        },
+        {
+          "mode": "federated_ref",
+          "label": "Référence fédérée / lien stable",
+          "lanes": [
+            "L8"
+          ],
+          "doc_status": "candidate_requires_verification"
+        }
+      ],
+      "preferred_path": "api_read",
+      "information_scope": "Vidéos et métadonnées; sous-titres selon droits",
+      "prerequisites": "API Google, OAuth et quotas pour opérations protégées",
+      "blocking_limits": "API vidéos != accès libre à toutes transcriptions",
+      "chatgpt_policy": "metadata_only_by_default",
+      "source_reference_urls": [
+        "https://developers.google.com/youtube/data/getting-started"
+      ],
+      "platform_doc_status": "official_docs_checked",
+      "daat_connector_status": "not_certified",
+      "owner_authorization_status": "not_established",
+      "full_text_access_implied": false,
+      "canonical_kristal_authority": false
+    },
+    {
+      "id": "podcasts-rss",
+      "platform": "Podcasts RSS",
+      "family_ids": [
+        "35"
+      ],
+      "family_labels": [
+        "Flux et catalogues multimédias"
+      ],
+      "access_paths": [
+        {
+          "mode": "rss_atom",
+          "label": "Flux RSS/Atom",
+          "lanes": [
+            "L3"
+          ],
+          "doc_status": "candidate_requires_verification"
+        },
+        {
+          "mode": "local_file",
+          "label": "Fichier remis localement",
+          "lanes": [
+            "L1"
+          ],
+          "doc_status": "candidate_requires_verification"
+        },
+        {
+          "mode": "federated_ref",
+          "label": "Référence fédérée / lien stable",
+          "lanes": [
+            "L8"
+          ],
+          "doc_status": "candidate_requires_verification"
+        }
+      ],
+      "preferred_path": "rss_atom",
+      "information_scope": "Épisodes, enclosures, descriptions",
+      "prerequisites": "Flux et licence audio",
+      "blocking_limits": "Transcription à obtenir/créer avec droit",
+      "chatgpt_policy": "permitted_text_only",
+      "source_reference_urls": [],
+      "platform_doc_status": "candidate_requires_verification",
+      "daat_connector_status": "not_certified",
+      "owner_authorization_status": "not_established",
+      "full_text_access_implied": false,
+      "canonical_kristal_authority": false
+    },
+    {
+      "id": "r-f-rence-f-d-r-e-externe",
+      "platform": "Référence fédérée externe",
+      "family_ids": [
+        "36"
+      ],
+      "family_labels": [
+        "Références fédérées externes"
+      ],
+      "access_paths": [
+        {
+          "mode": "federated_ref",
+          "label": "Référence fédérée / lien stable",
+          "lanes": [
+            "L8"
+          ],
+          "doc_status": "candidate_requires_verification"
+        },
+        {
+          "mode": "api_read",
+          "label": "API de lecture officielle",
+          "lanes": [
+            "L2"
+          ],
+          "doc_status": "candidate_requires_verification"
+        }
+      ],
+      "preferred_path": "federated_ref",
+      "information_scope": "Référence et pointeur vers système propriétaire",
+      "prerequisites": "Disponibilité, ACL, version et politique source",
+      "blocking_limits": "Lien n'est pas licence ou autorité",
+      "chatgpt_policy": "metadata_only_by_default",
+      "source_reference_urls": [],
+      "platform_doc_status": "candidate_requires_verification",
+      "daat_connector_status": "not_certified",
+      "owner_authorization_status": "not_established",
+      "full_text_access_implied": false,
+      "canonical_kristal_authority": false
+    }
+  ]
+}

@@ -36,3 +36,7 @@ Les dépôts sont maintenant repérés via `docs/inventory/repositories.json` du
 ## v0.4.3 — Audit local de la chaîne
 
 `daat kristal-local-chain-audit --preview P.json --review R.json --handoff H.json` valide les trois artefacts liés, sans création ni publication de Kristal. Ajouter `--root C:\\mycode` pour contrôler les empreintes des dépôts propriétaires, sans les exécuter. Ce n'est pas une admission par le Kit.
+
+## v0.4.4 — Boucle manuelle ChatGPT (Medium, PhilPapers et autres sources)
+
+Ouvre `LANCER_DAAT_CHATGPT_LOOP.pyw` : colle le **contenu réellement accessible** (résumé, extrait, métadonnées ou texte complet autorisé), confirme les droits d'usage **et de transmission à ChatGPT**, génère le prompt et colle manuellement la réponse JSON de ChatGPT. DaAT vérifie les citations exactes et produit un **brouillon de composants de Kristal non canoniques**. Aucun scraping, aucune connexion aux comptes sources, aucun appel API ChatGPT, aucune admission Kit. Voir `docs/38-MANUAL-CHATGPT-KRISTAL-PARTS-LOOP.md`.

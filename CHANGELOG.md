@@ -1,3 +1,10 @@
+## 0.4.4 — Operator-mediated ChatGPT prompt/response loop (2026-11-14)
+
+- Added a local `.pyw` desktop GUI and offline CLI for generating provenance-bounded ChatGPT prompts from manually pasted or authorized source representations.
+- Added exact-quote/source-id verification, limited-visibility flags, checksum and authority rejection of AI candidate JSON.
+- Require separate asserted rights to use sources and disclose their text to a third-party model.
+- No scraping, credential handling, network calls, canonical Kit import or publication.
+
 ## 0.4.3 — local review hardening and chain audit (2026-11-14)
 
 - Strict structure, digest and candidate checks for local review/handoff prototypes.
