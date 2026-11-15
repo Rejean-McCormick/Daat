@@ -1,0 +1,61 @@
+{
+  "question": "Quelles positions sont réellement décrites et où les preuves manquent-elles?",
+  "language": "fr",
+  "max_context_chars": 30000,
+  "sources": [
+    {
+      "platform_id": "medium",
+      "external_id": "synthetic:medium:author-example",
+      "revision": "local-fixture-1",
+      "content_kind": "full_text_authorized",
+      "title": "Article fictif d’auteur",
+      "rights": {
+        "read": "allowed",
+        "copy": "allowed",
+        "retain": "allowed",
+        "transform": "allowed",
+        "ai_disclosure": "allowed",
+        "basis": "SYNTHETIC TEST DATA ONLY — NOT A REAL LICENSE",
+        "evidence_ref": "fixture/rights/synthetic",
+        "attestation": "operator_asserted",
+        "classification": "public"
+      },
+      "path": "samples/medium-author-example.md",
+      "acquired_via": "user_export"
+    },
+    {
+      "platform_id": "philpapers",
+      "external_id": "synthetic:philpapers:bib-1",
+      "revision": "local-fixture-1",
+      "content_kind": "structured_record",
+      "title": "Notice bibliographique fictive",
+      "rights": {
+        "read": "allowed",
+        "copy": "allowed",
+        "retain": "allowed",
+        "transform": "allowed",
+        "ai_disclosure": "allowed",
+        "basis": "SYNTHETIC TEST DATA ONLY — NOT A REAL LICENSE",
+        "evidence_ref": "fixture/rights/synthetic",
+        "attestation": "operator_asserted",
+        "classification": "public"
+      },
+      "path": "samples/philpapers-metadata-example.ris",
+      "acquired_via": "authorized_export"
+    },
+    {
+      "platform_id": "zotero",
+      "external_id": "synthetic:zotero:private-unknown",
+      "revision": "unknown",
+      "content_kind": "reference_only",
+      "rights": {
+        "read": "unknown",
+        "copy": "unknown",
+        "retain": "unknown",
+        "transform": "unknown",
+        "ai_disclosure": "unknown"
+      },
+      "acquired_via": "federated_ref"
+    }
+  ]
+}

@@ -1,3 +1,11 @@
+# DaaT 0.5.0 — Information bridge implementation candidate
+
+**New non-Kristal workflow:** `LANCER_DAAT_PONT_INFORMATION.pyw` opens a silent local Windows Studio. It builds rights-filtered, source-grounded **ChatGPT Context Bundles** from manually supplied or owner-approved materials. Source registry: **89 research profiles / 36 families**, not 89 operational connectors. No auto scraping, ChatGPT transfer, owner approval, canonical build or publishing.
+
+`python -m daat.information_bridge.cli --help` provides catalog, conservative route planning, local build, batch context splitting, integrity check, manual AI candidate checking, and readiness reporting. See [implementation status and limitations](docs/pont-information/IMPLEMENTATION-0.5.0.md). Existing 0.4.x commands are preserved as legacy paths. The Studio also has same-folder bulk file import, a manual ChatGPT answer-review tab, correction prompt, and per-context `feedback.json` / `FEEDBACK-DAAT.md`. [Actual tests and limitations](RELEASE-VALIDATION-0.5.0.md).
+
+---
+
 # DaaT — External Interoperability & Alignment Boundary
 
 **Code version:** `0.4.2` (offline source-preparation + existing security-boundary alpha). **Runtime status:** pre-production, **not a deployed IK service**.
@@ -147,3 +155,7 @@ Use `daat kristal-local-chain-audit --preview P.json --review R.json --handoff H
 ## v0.4.4 — User-mediated ChatGPT source-to-candidate loop
 
 The Windows `LANCER_DAAT_CHATGPT_LOOP.pyw` interface and `chatgpt-build-prompt` / `chatgpt-verify-response` CLI operations create bounded prompts from user-supplied authorized source text and check verbatim citations in returned JSON. Medium/PhilPapers accounts remain outside DaAT; summaries are not treated as full articles. This creates **noncanonical candidate parts only**, with no automated ChatGPT access, semantic authority, Kit import or publication. See `docs/38-MANUAL-CHATGPT-KRISTAL-PARTS-LOOP.md`.
+
+## Projet cible — pont universel d’information vers ChatGPT (documentation, 2026-11-14)
+
+[**Dossier complet de construction**](docs/pont-information/00-INDEX-ET-STATUT.md) : conception intégrale des 36 familles/89 profils, acquisition autorisée, traitement de lots, provenance, contexte ChatGPT, droits, diagnostics et critères d'acceptation. **Ce dossier décrit une cible non encore implémentée** : aucun nouveau connecteur, accès distant, contrat IK ou Kristal construit n'est annoncé. La cible **exclut toute construction et publication de Kristals**. Les commandes historiques restent disponibles séparément dans 0.4.4.

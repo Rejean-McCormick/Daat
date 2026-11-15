@@ -1,3 +1,20 @@
+# DaaT 0.5.0 — Pont de l'information vers ChatGPT (candidat intégré)
+
+**Nouveau parcours actif, sans Kristal.** L'application `LANCER_DAAT_PONT_INFORMATION.pyw` permet de choisir des plateformes, joindre des fichiers ou du texte autorisé, distinguer 5 permissions (lire, copier, conserver, transformer et transmettre), puis créer un dossier contextuel vérifiable et un prompt ChatGPT. Aucun texte n'est envoyé automatiquement.
+
+- **Lancement Windows :** `C:\mycode\Interaction-Kernel\Daat\LANCER_DAAT_PONT_INFORMATION.pyw`.
+- **CLI :** `python -m daat.information_bridge.cli --help` (après installation ou avec `PYTHONPATH=src`).
+- **Exemple synthétique :** `examples/information-bridge/example-job.json`.
+- **État exact :** [implémentation 0.5.0](docs/pont-information/IMPLEMENTATION-0.5.0.md).
+- **Lot multi-fichiers :** sélectionner plusieurs fichiers autorisés d’un même dossier avec les cinq permissions explicites.
+- **Boucle ChatGPT :** coller le JSON dans l’onglet Réponse, vérifier les citations et exporter un audit non canonique.
+- **Rapport de feedback :** `FEEDBACK-DAAT.md` + `feedback.json` dans chaque export vérifiable.
+- **Validation :** [357 tests locaux et limites externes](RELEASE-VALIDATION-0.5.0.md).
+
+Les **89 profils et 36 familles sont couverts par les décisions du registre**, pas par 89 connecteurs qualifiés. Les lecteurs locaux sont exécutables; les adaptateurs réseau JSON/RSS/OAI-PMH sont des ports bornés à activer seulement avec accès et contrats hôtes vérifiés. Les droits déclarés manuellement ne sont pas des autorisations de fournisseur authentifiées. Les intégrations IK/Konfid/Médiathèque et l'exploitation multiutilisateur ne sont pas certifiées.
+
+---
+
 # DaaT — Documentation fondatrice
 
 **Statut : spécification technique de construction, pas encore service déployé.**
@@ -40,3 +57,7 @@ Les dépôts sont maintenant repérés via `docs/inventory/repositories.json` du
 ## v0.4.4 — Boucle manuelle ChatGPT (Medium, PhilPapers et autres sources)
 
 Ouvre `LANCER_DAAT_CHATGPT_LOOP.pyw` : colle le **contenu réellement accessible** (résumé, extrait, métadonnées ou texte complet autorisé), confirme les droits d'usage **et de transmission à ChatGPT**, génère le prompt et colle manuellement la réponse JSON de ChatGPT. DaAT vérifie les citations exactes et produit un **brouillon de composants de Kristal non canoniques**. Aucun scraping, aucune connexion aux comptes sources, aucun appel API ChatGPT, aucune admission Kit. Voir `docs/38-MANUAL-CHATGPT-KRISTAL-PARTS-LOOP.md`.
+
+## Projet cible — pont universel d’information vers ChatGPT (documentation, 2026-11-14)
+
+[**Dossier complet de construction**](docs/pont-information/00-INDEX-ET-STATUT.md) : conception intégrale des 36 familles/89 profils, acquisition autorisée, traitement de lots, provenance, contexte ChatGPT, droits, diagnostics et critères d'acceptation. **Ce dossier décrit une cible non encore implémentée** : aucun nouveau connecteur, accès distant, contrat IK ou Kristal construit n'est annoncé. La cible **exclut toute construction et publication de Kristals**. Les commandes historiques restent disponibles séparément dans 0.4.4.

@@ -1,0 +1,29 @@
+{
+  "schema_note": "illustrative local decision, not a network wire format",
+  "profile_id": "medium",
+  "requested_content": "full_text_authorized",
+  "available_content": "reference_only",
+  "methods_considered": [
+    {
+      "mode": "rss_atom",
+      "possible": "metadata_discovery_only"
+    },
+    {
+      "mode": "user_export",
+      "possible": "requires_user_to_supply_authorized_export"
+    },
+    {
+      "mode": "manual_paste",
+      "possible": "requires_proof_of_permitted_copy_and_ai_disclosure"
+    }
+  ],
+  "selected_method": null,
+  "decision": "BLOCKED",
+  "reasons": [
+    "No full-text permission established",
+    "User login or RSS visibility cannot authorize AI disclosure"
+  ],
+  "next_action": "Ask user for an authorized export or use reference-only mode",
+  "credential_in_output": false,
+  "is_real_provider_test": false
+}

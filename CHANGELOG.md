@@ -1,3 +1,17 @@
+## 0.5.0 — DaaT information bridge code candidate (2026-11-14)
+
+- Completed local multi-file Studio import, strict JSON response review/correction, optional unsigned review audit export, and per-context machine/human feedback.
+- Added bounded office/email readers, optional owner-gated JSON/RSS/OAI ports, robust format/rights/provenance checks, context sharding and package verification.
+- Validated 357 local tests. **Not a certification of 89 external connectors or owner contracts.**
+
+- Added complete local multi-source Context Bundle path, with an interactive Windows `.pyw` Studio and offline CLI.
+- Reused approved bounded local readers and added best-effort DOCX/XLSX/PPTX/ODT/EPUB/EML/HTML parsing; neither Office macros nor source instructions are executed.
+- Added conservative registry route planner for all 89 platform profiles, explicit independent rights and optional owner-controlled generic HTTPS/JSON/RSS/OAI ports. No provider marked certified.
+- Added normalized source fragments, version/locator references, duplicate candidates (review only), tenant-bound metadata checkpoints, stable context sharding, immutable exports and unsigned SHA-256 integrity checks.
+- Added manual ChatGPT JSON candidate verification and bounded citation checks; no canonical authority.
+- Added synthetic security tests, local integration fixtures, packaged resource schemas and diagnostic readiness report.
+- Owner decisions, host integrations, external permissions, Windows visual qualification and R4 production tests remain blocked; see `docs/pont-information/IMPLEMENTATION-0.5.0.md`.
+
 ## 0.4.4 — Operator-mediated ChatGPT prompt/response loop (2026-11-14)
 
 - Added a local `.pyw` desktop GUI and offline CLI for generating provenance-bounded ChatGPT prompts from manually pasted or authorized source representations.

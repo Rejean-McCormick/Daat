@@ -63,3 +63,12 @@ The [36-family exploratory CSV](data/source-family-landscape-36.csv) is a resear
 - [36 — Kristal owner-chain local handoff](36-KRISTAL-OWNER-CHAIN-LOCAL-HANDOFF.md) (v0.4.1; offline, not an approved owner importer).
 
 - [37 — C0 local paths and diK schema-parity limits](37-C0-INVENTORY-AND-DIK-SCHEMA-PARITY.md)
+
+## Pont universel d'information — conception intégrale (2026-11-14)
+
+- [Dossier directeur complet : sources → contexte ChatGPT, sans construction Kristal](pont-information/00-INDEX-ET-STATUT.md).
+- [Plan de réalisation intégrale, livraison unique](pont-information/15-PLAN-DE-REALISATION-INTEGRALE.md).
+- [Registre exhaustif des 89 plateformes](pont-information/04-REGISTRE-89-PLATEFORMES.md) et [36 familles](pont-information/05-COUVERTURE-36-FAMILLES.md).
+- [Contrat local contextuel illustratif](pont-information/08-DOSSIER-CONTEXTUEL-CHATGPT.md), [sécurité et droits](pont-information/10-SECURITE-DROITS-ET-CONFIANCE.md) et [tests d'acceptation](pont-information/14-TESTS-ET-DEFINITION-DE-TERMINE.md).
+
+**Statut** : cible `[PROPOSAL]`, pas une nouvelle livraison de connecteurs. Aucun profil IK, licence de source, droit de transmission ChatGPT ou construction de Kristal n'est accordé par ces documents.

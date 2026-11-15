@@ -1,3 +1,9 @@
+# NOTE 0.5.0 — Current information bridge scope
+
+New `src/daat/information_bridge/` code prepares rights-filtered ChatGPT contexts. It MUST NOT invoke the legacy Kristal build/handoff components, obtain a provider session, or claim adopted IK/Konfid/Mediatheque contract authority. See `docs/pont-information/IMPLEMENTATION-0.5.0.md`.
+
+---
+
 # AGENTS.md — Build contract for AI implementers
 
 This file is binding implementation guidance for code-generation agents working in DaaT. It is **not** a substitute for an approved release or security review.

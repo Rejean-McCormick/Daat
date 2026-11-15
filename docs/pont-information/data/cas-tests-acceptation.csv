@@ -1,0 +1,675 @@
+﻿test_id,subject,test_kind,required_result,proof_level,status_at_specification
+P-philpapers-A,PhilPapers,routing,"Candidate/qualified method selected only if source rights and capability verified, else BLOCKED",R1,DESIGNED_NOT_RUN
+P-philpapers-B,PhilPapers,rights_denial,Unknown/denied read or disclosure must not leak source bytes to ChatGPT,R2,DESIGNED_NOT_RUN
+P-philpapers-C,PhilPapers,provenance,Provenance/revision/granularity preserved for available record or reference-only,R1,DESIGNED_NOT_RUN
+P-philpapers-D,PhilPapers,connector_status,Do not mark operational based solely on catalog entry or mock,R0,DESIGNED_NOT_RUN
+P-philarchive-A,PhilArchive,routing,"Candidate/qualified method selected only if source rights and capability verified, else BLOCKED",R1,DESIGNED_NOT_RUN
+P-philarchive-B,PhilArchive,rights_denial,Unknown/denied read or disclosure must not leak source bytes to ChatGPT,R2,DESIGNED_NOT_RUN
+P-philarchive-C,PhilArchive,provenance,Provenance/revision/granularity preserved for available record or reference-only,R1,DESIGNED_NOT_RUN
+P-philarchive-D,PhilArchive,connector_status,Do not mark operational based solely on catalog entry or mock,R0,DESIGNED_NOT_RUN
+P-medium-A,Medium,routing,"Candidate/qualified method selected only if source rights and capability verified, else BLOCKED",R1,DESIGNED_NOT_RUN
+P-medium-B,Medium,rights_denial,Unknown/denied read or disclosure must not leak source bytes to ChatGPT,R2,DESIGNED_NOT_RUN
+P-medium-C,Medium,provenance,Provenance/revision/granularity preserved for available record or reference-only,R1,DESIGNED_NOT_RUN
+P-medium-D,Medium,connector_status,Do not mark operational based solely on catalog entry or mock,R0,DESIGNED_NOT_RUN
+P-openalex-A,OpenAlex,routing,"Candidate/qualified method selected only if source rights and capability verified, else BLOCKED",R1,DESIGNED_NOT_RUN
+P-openalex-B,OpenAlex,rights_denial,Unknown/denied read or disclosure must not leak source bytes to ChatGPT,R2,DESIGNED_NOT_RUN
+P-openalex-C,OpenAlex,provenance,Provenance/revision/granularity preserved for available record or reference-only,R1,DESIGNED_NOT_RUN
+P-openalex-D,OpenAlex,connector_status,Do not mark operational based solely on catalog entry or mock,R0,DESIGNED_NOT_RUN
+P-crossref-A,Crossref,routing,"Candidate/qualified method selected only if source rights and capability verified, else BLOCKED",R1,DESIGNED_NOT_RUN
+P-crossref-B,Crossref,rights_denial,Unknown/denied read or disclosure must not leak source bytes to ChatGPT,R2,DESIGNED_NOT_RUN
+P-crossref-C,Crossref,provenance,Provenance/revision/granularity preserved for available record or reference-only,R1,DESIGNED_NOT_RUN
+P-crossref-D,Crossref,connector_status,Do not mark operational based solely on catalog entry or mock,R0,DESIGNED_NOT_RUN
+P-semantic-scholar-A,Semantic Scholar,routing,"Candidate/qualified method selected only if source rights and capability verified, else BLOCKED",R1,DESIGNED_NOT_RUN
+P-semantic-scholar-B,Semantic Scholar,rights_denial,Unknown/denied read or disclosure must not leak source bytes to ChatGPT,R2,DESIGNED_NOT_RUN
+P-semantic-scholar-C,Semantic Scholar,provenance,Provenance/revision/granularity preserved for available record or reference-only,R1,DESIGNED_NOT_RUN
+P-semantic-scholar-D,Semantic Scholar,connector_status,Do not mark operational based solely on catalog entry or mock,R0,DESIGNED_NOT_RUN
+P-arxiv-A,arXiv,routing,"Candidate/qualified method selected only if source rights and capability verified, else BLOCKED",R1,DESIGNED_NOT_RUN
+P-arxiv-B,arXiv,rights_denial,Unknown/denied read or disclosure must not leak source bytes to ChatGPT,R2,DESIGNED_NOT_RUN
+P-arxiv-C,arXiv,provenance,Provenance/revision/granularity preserved for available record or reference-only,R1,DESIGNED_NOT_RUN
+P-arxiv-D,arXiv,connector_status,Do not mark operational based solely on catalog entry or mock,R0,DESIGNED_NOT_RUN
+P-pubmed-ncbi-A,PubMed / NCBI,routing,"Candidate/qualified method selected only if source rights and capability verified, else BLOCKED",R1,DESIGNED_NOT_RUN
+P-pubmed-ncbi-B,PubMed / NCBI,rights_denial,Unknown/denied read or disclosure must not leak source bytes to ChatGPT,R2,DESIGNED_NOT_RUN
+P-pubmed-ncbi-C,PubMed / NCBI,provenance,Provenance/revision/granularity preserved for available record or reference-only,R1,DESIGNED_NOT_RUN
+P-pubmed-ncbi-D,PubMed / NCBI,connector_status,Do not mark operational based solely on catalog entry or mock,R0,DESIGNED_NOT_RUN
+P-europe-pmc-A,Europe PMC,routing,"Candidate/qualified method selected only if source rights and capability verified, else BLOCKED",R1,DESIGNED_NOT_RUN
+P-europe-pmc-B,Europe PMC,rights_denial,Unknown/denied read or disclosure must not leak source bytes to ChatGPT,R2,DESIGNED_NOT_RUN
+P-europe-pmc-C,Europe PMC,provenance,Provenance/revision/granularity preserved for available record or reference-only,R1,DESIGNED_NOT_RUN
+P-europe-pmc-D,Europe PMC,connector_status,Do not mark operational based solely on catalog entry or mock,R0,DESIGNED_NOT_RUN
+P-doaj-A,DOAJ,routing,"Candidate/qualified method selected only if source rights and capability verified, else BLOCKED",R1,DESIGNED_NOT_RUN
+P-doaj-B,DOAJ,rights_denial,Unknown/denied read or disclosure must not leak source bytes to ChatGPT,R2,DESIGNED_NOT_RUN
+P-doaj-C,DOAJ,provenance,Provenance/revision/granularity preserved for available record or reference-only,R1,DESIGNED_NOT_RUN
+P-doaj-D,DOAJ,connector_status,Do not mark operational based solely on catalog entry or mock,R0,DESIGNED_NOT_RUN
+P-hal-A,HAL,routing,"Candidate/qualified method selected only if source rights and capability verified, else BLOCKED",R1,DESIGNED_NOT_RUN
+P-hal-B,HAL,rights_denial,Unknown/denied read or disclosure must not leak source bytes to ChatGPT,R2,DESIGNED_NOT_RUN
+P-hal-C,HAL,provenance,Provenance/revision/granularity preserved for available record or reference-only,R1,DESIGNED_NOT_RUN
+P-hal-D,HAL,connector_status,Do not mark operational based solely on catalog entry or mock,R0,DESIGNED_NOT_RUN
+P-zenodo-A,Zenodo,routing,"Candidate/qualified method selected only if source rights and capability verified, else BLOCKED",R1,DESIGNED_NOT_RUN
+P-zenodo-B,Zenodo,rights_denial,Unknown/denied read or disclosure must not leak source bytes to ChatGPT,R2,DESIGNED_NOT_RUN
+P-zenodo-C,Zenodo,provenance,Provenance/revision/granularity preserved for available record or reference-only,R1,DESIGNED_NOT_RUN
+P-zenodo-D,Zenodo,connector_status,Do not mark operational based solely on catalog entry or mock,R0,DESIGNED_NOT_RUN
+P-osf-A,OSF,routing,"Candidate/qualified method selected only if source rights and capability verified, else BLOCKED",R1,DESIGNED_NOT_RUN
+P-osf-B,OSF,rights_denial,Unknown/denied read or disclosure must not leak source bytes to ChatGPT,R2,DESIGNED_NOT_RUN
+P-osf-C,OSF,provenance,Provenance/revision/granularity preserved for available record or reference-only,R1,DESIGNED_NOT_RUN
+P-osf-D,OSF,connector_status,Do not mark operational based solely on catalog entry or mock,R0,DESIGNED_NOT_RUN
+P-ssrn-A,SSRN,routing,"Candidate/qualified method selected only if source rights and capability verified, else BLOCKED",R1,DESIGNED_NOT_RUN
+P-ssrn-B,SSRN,rights_denial,Unknown/denied read or disclosure must not leak source bytes to ChatGPT,R2,DESIGNED_NOT_RUN
+P-ssrn-C,SSRN,provenance,Provenance/revision/granularity preserved for available record or reference-only,R1,DESIGNED_NOT_RUN
+P-ssrn-D,SSRN,connector_status,Do not mark operational based solely on catalog entry or mock,R0,DESIGNED_NOT_RUN
+P-biorxiv-A,bioRxiv,routing,"Candidate/qualified method selected only if source rights and capability verified, else BLOCKED",R1,DESIGNED_NOT_RUN
+P-biorxiv-B,bioRxiv,rights_denial,Unknown/denied read or disclosure must not leak source bytes to ChatGPT,R2,DESIGNED_NOT_RUN
+P-biorxiv-C,bioRxiv,provenance,Provenance/revision/granularity preserved for available record or reference-only,R1,DESIGNED_NOT_RUN
+P-biorxiv-D,bioRxiv,connector_status,Do not mark operational based solely on catalog entry or mock,R0,DESIGNED_NOT_RUN
+P-zotero-A,Zotero,routing,"Candidate/qualified method selected only if source rights and capability verified, else BLOCKED",R1,DESIGNED_NOT_RUN
+P-zotero-B,Zotero,rights_denial,Unknown/denied read or disclosure must not leak source bytes to ChatGPT,R2,DESIGNED_NOT_RUN
+P-zotero-C,Zotero,provenance,Provenance/revision/granularity preserved for available record or reference-only,R1,DESIGNED_NOT_RUN
+P-zotero-D,Zotero,connector_status,Do not mark operational based solely on catalog entry or mock,R0,DESIGNED_NOT_RUN
+P-orcid-A,ORCID,routing,"Candidate/qualified method selected only if source rights and capability verified, else BLOCKED",R1,DESIGNED_NOT_RUN
+P-orcid-B,ORCID,rights_denial,Unknown/denied read or disclosure must not leak source bytes to ChatGPT,R2,DESIGNED_NOT_RUN
+P-orcid-C,ORCID,provenance,Provenance/revision/granularity preserved for available record or reference-only,R1,DESIGNED_NOT_RUN
+P-orcid-D,ORCID,connector_status,Do not mark operational based solely on catalog entry or mock,R0,DESIGNED_NOT_RUN
+P-worldcat-A,WorldCat,routing,"Candidate/qualified method selected only if source rights and capability verified, else BLOCKED",R1,DESIGNED_NOT_RUN
+P-worldcat-B,WorldCat,rights_denial,Unknown/denied read or disclosure must not leak source bytes to ChatGPT,R2,DESIGNED_NOT_RUN
+P-worldcat-C,WorldCat,provenance,Provenance/revision/granularity preserved for available record or reference-only,R1,DESIGNED_NOT_RUN
+P-worldcat-D,WorldCat,connector_status,Do not mark operational based solely on catalog entry or mock,R0,DESIGNED_NOT_RUN
+P-banq-catalogues-qu-b-cois-A,BAnQ / catalogues québécois,routing,"Candidate/qualified method selected only if source rights and capability verified, else BLOCKED",R1,DESIGNED_NOT_RUN
+P-banq-catalogues-qu-b-cois-B,BAnQ / catalogues québécois,rights_denial,Unknown/denied read or disclosure must not leak source bytes to ChatGPT,R2,DESIGNED_NOT_RUN
+P-banq-catalogues-qu-b-cois-C,BAnQ / catalogues québécois,provenance,Provenance/revision/granularity preserved for available record or reference-only,R1,DESIGNED_NOT_RUN
+P-banq-catalogues-qu-b-cois-D,BAnQ / catalogues québécois,connector_status,Do not mark operational based solely on catalog entry or mock,R0,DESIGNED_NOT_RUN
+P-wikidata-A,Wikidata,routing,"Candidate/qualified method selected only if source rights and capability verified, else BLOCKED",R1,DESIGNED_NOT_RUN
+P-wikidata-B,Wikidata,rights_denial,Unknown/denied read or disclosure must not leak source bytes to ChatGPT,R2,DESIGNED_NOT_RUN
+P-wikidata-C,Wikidata,provenance,Provenance/revision/granularity preserved for available record or reference-only,R1,DESIGNED_NOT_RUN
+P-wikidata-D,Wikidata,connector_status,Do not mark operational based solely on catalog entry or mock,R0,DESIGNED_NOT_RUN
+P-dbpedia-rdf-public-A,DBpedia / RDF public,routing,"Candidate/qualified method selected only if source rights and capability verified, else BLOCKED",R1,DESIGNED_NOT_RUN
+P-dbpedia-rdf-public-B,DBpedia / RDF public,rights_denial,Unknown/denied read or disclosure must not leak source bytes to ChatGPT,R2,DESIGNED_NOT_RUN
+P-dbpedia-rdf-public-C,DBpedia / RDF public,provenance,Provenance/revision/granularity preserved for available record or reference-only,R1,DESIGNED_NOT_RUN
+P-dbpedia-rdf-public-D,DBpedia / RDF public,connector_status,Do not mark operational based solely on catalog entry or mock,R0,DESIGNED_NOT_RUN
+P-wikipedia-A,Wikipedia,routing,"Candidate/qualified method selected only if source rights and capability verified, else BLOCKED",R1,DESIGNED_NOT_RUN
+P-wikipedia-B,Wikipedia,rights_denial,Unknown/denied read or disclosure must not leak source bytes to ChatGPT,R2,DESIGNED_NOT_RUN
+P-wikipedia-C,Wikipedia,provenance,Provenance/revision/granularity preserved for available record or reference-only,R1,DESIGNED_NOT_RUN
+P-wikipedia-D,Wikipedia,connector_status,Do not mark operational based solely on catalog entry or mock,R0,DESIGNED_NOT_RUN
+P-mediawiki-autonome-A,MediaWiki autonome,routing,"Candidate/qualified method selected only if source rights and capability verified, else BLOCKED",R1,DESIGNED_NOT_RUN
+P-mediawiki-autonome-B,MediaWiki autonome,rights_denial,Unknown/denied read or disclosure must not leak source bytes to ChatGPT,R2,DESIGNED_NOT_RUN
+P-mediawiki-autonome-C,MediaWiki autonome,provenance,Provenance/revision/granularity preserved for available record or reference-only,R1,DESIGNED_NOT_RUN
+P-mediawiki-autonome-D,MediaWiki autonome,connector_status,Do not mark operational based solely on catalog entry or mock,R0,DESIGNED_NOT_RUN
+P-wordpress-A,WordPress,routing,"Candidate/qualified method selected only if source rights and capability verified, else BLOCKED",R1,DESIGNED_NOT_RUN
+P-wordpress-B,WordPress,rights_denial,Unknown/denied read or disclosure must not leak source bytes to ChatGPT,R2,DESIGNED_NOT_RUN
+P-wordpress-C,WordPress,provenance,Provenance/revision/granularity preserved for available record or reference-only,R1,DESIGNED_NOT_RUN
+P-wordpress-D,WordPress,connector_status,Do not mark operational based solely on catalog entry or mock,R0,DESIGNED_NOT_RUN
+P-ghost-A,Ghost,routing,"Candidate/qualified method selected only if source rights and capability verified, else BLOCKED",R1,DESIGNED_NOT_RUN
+P-ghost-B,Ghost,rights_denial,Unknown/denied read or disclosure must not leak source bytes to ChatGPT,R2,DESIGNED_NOT_RUN
+P-ghost-C,Ghost,provenance,Provenance/revision/granularity preserved for available record or reference-only,R1,DESIGNED_NOT_RUN
+P-ghost-D,Ghost,connector_status,Do not mark operational based solely on catalog entry or mock,R0,DESIGNED_NOT_RUN
+P-substack-A,Substack,routing,"Candidate/qualified method selected only if source rights and capability verified, else BLOCKED",R1,DESIGNED_NOT_RUN
+P-substack-B,Substack,rights_denial,Unknown/denied read or disclosure must not leak source bytes to ChatGPT,R2,DESIGNED_NOT_RUN
+P-substack-C,Substack,provenance,Provenance/revision/granularity preserved for available record or reference-only,R1,DESIGNED_NOT_RUN
+P-substack-D,Substack,connector_status,Do not mark operational based solely on catalog entry or mock,R0,DESIGNED_NOT_RUN
+P-blogger-A,Blogger,routing,"Candidate/qualified method selected only if source rights and capability verified, else BLOCKED",R1,DESIGNED_NOT_RUN
+P-blogger-B,Blogger,rights_denial,Unknown/denied read or disclosure must not leak source bytes to ChatGPT,R2,DESIGNED_NOT_RUN
+P-blogger-C,Blogger,provenance,Provenance/revision/granularity preserved for available record or reference-only,R1,DESIGNED_NOT_RUN
+P-blogger-D,Blogger,connector_status,Do not mark operational based solely on catalog entry or mock,R0,DESIGNED_NOT_RUN
+P-flux-rss-atom-g-n-rique-A,Flux RSS/Atom générique,routing,"Candidate/qualified method selected only if source rights and capability verified, else BLOCKED",R1,DESIGNED_NOT_RUN
+P-flux-rss-atom-g-n-rique-B,Flux RSS/Atom générique,rights_denial,Unknown/denied read or disclosure must not leak source bytes to ChatGPT,R2,DESIGNED_NOT_RUN
+P-flux-rss-atom-g-n-rique-C,Flux RSS/Atom générique,provenance,Provenance/revision/granularity preserved for available record or reference-only,R1,DESIGNED_NOT_RUN
+P-flux-rss-atom-g-n-rique-D,Flux RSS/Atom générique,connector_status,Do not mark operational based solely on catalog entry or mock,R0,DESIGNED_NOT_RUN
+P-ckan-A,CKAN,routing,"Candidate/qualified method selected only if source rights and capability verified, else BLOCKED",R1,DESIGNED_NOT_RUN
+P-ckan-B,CKAN,rights_denial,Unknown/denied read or disclosure must not leak source bytes to ChatGPT,R2,DESIGNED_NOT_RUN
+P-ckan-C,CKAN,provenance,Provenance/revision/granularity preserved for available record or reference-only,R1,DESIGNED_NOT_RUN
+P-ckan-D,CKAN,connector_status,Do not mark operational based solely on catalog entry or mock,R0,DESIGNED_NOT_RUN
+P-statistique-canada-A,Statistique Canada,routing,"Candidate/qualified method selected only if source rights and capability verified, else BLOCKED",R1,DESIGNED_NOT_RUN
+P-statistique-canada-B,Statistique Canada,rights_denial,Unknown/denied read or disclosure must not leak source bytes to ChatGPT,R2,DESIGNED_NOT_RUN
+P-statistique-canada-C,Statistique Canada,provenance,Provenance/revision/granularity preserved for available record or reference-only,R1,DESIGNED_NOT_RUN
+P-statistique-canada-D,Statistique Canada,connector_status,Do not mark operational based solely on catalog entry or mock,R0,DESIGNED_NOT_RUN
+P-portail-donn-es-ouvertes-municipal-A,Portail données ouvertes municipal,routing,"Candidate/qualified method selected only if source rights and capability verified, else BLOCKED",R1,DESIGNED_NOT_RUN
+P-portail-donn-es-ouvertes-municipal-B,Portail données ouvertes municipal,rights_denial,Unknown/denied read or disclosure must not leak source bytes to ChatGPT,R2,DESIGNED_NOT_RUN
+P-portail-donn-es-ouvertes-municipal-C,Portail données ouvertes municipal,provenance,Provenance/revision/granularity preserved for available record or reference-only,R1,DESIGNED_NOT_RUN
+P-portail-donn-es-ouvertes-municipal-D,Portail données ouvertes municipal,connector_status,Do not mark operational based solely on catalog entry or mock,R0,DESIGNED_NOT_RUN
+P-pdf-fourni-par-utilisateur-A,PDF fourni par utilisateur,routing,"Candidate/qualified method selected only if source rights and capability verified, else BLOCKED",R1,DESIGNED_NOT_RUN
+P-pdf-fourni-par-utilisateur-B,PDF fourni par utilisateur,rights_denial,Unknown/denied read or disclosure must not leak source bytes to ChatGPT,R2,DESIGNED_NOT_RUN
+P-pdf-fourni-par-utilisateur-C,PDF fourni par utilisateur,provenance,Provenance/revision/granularity preserved for available record or reference-only,R1,DESIGNED_NOT_RUN
+P-pdf-fourni-par-utilisateur-D,PDF fourni par utilisateur,connector_status,Do not mark operational based solely on catalog entry or mock,R0,DESIGNED_NOT_RUN
+P-docx-texte-fourni-par-utilisateur-A,DOCX/texte fourni par utilisateur,routing,"Candidate/qualified method selected only if source rights and capability verified, else BLOCKED",R1,DESIGNED_NOT_RUN
+P-docx-texte-fourni-par-utilisateur-B,DOCX/texte fourni par utilisateur,rights_denial,Unknown/denied read or disclosure must not leak source bytes to ChatGPT,R2,DESIGNED_NOT_RUN
+P-docx-texte-fourni-par-utilisateur-C,DOCX/texte fourni par utilisateur,provenance,Provenance/revision/granularity preserved for available record or reference-only,R1,DESIGNED_NOT_RUN
+P-docx-texte-fourni-par-utilisateur-D,DOCX/texte fourni par utilisateur,connector_status,Do not mark operational based solely on catalog entry or mock,R0,DESIGNED_NOT_RUN
+P-archives-zip-tar-A,Archives ZIP/TAR,routing,"Candidate/qualified method selected only if source rights and capability verified, else BLOCKED",R1,DESIGNED_NOT_RUN
+P-archives-zip-tar-B,Archives ZIP/TAR,rights_denial,Unknown/denied read or disclosure must not leak source bytes to ChatGPT,R2,DESIGNED_NOT_RUN
+P-archives-zip-tar-C,Archives ZIP/TAR,provenance,Provenance/revision/granularity preserved for available record or reference-only,R1,DESIGNED_NOT_RUN
+P-archives-zip-tar-D,Archives ZIP/TAR,connector_status,Do not mark operational based solely on catalog entry or mock,R0,DESIGNED_NOT_RUN
+P-google-drive-A,Google Drive,routing,"Candidate/qualified method selected only if source rights and capability verified, else BLOCKED",R1,DESIGNED_NOT_RUN
+P-google-drive-B,Google Drive,rights_denial,Unknown/denied read or disclosure must not leak source bytes to ChatGPT,R2,DESIGNED_NOT_RUN
+P-google-drive-C,Google Drive,provenance,Provenance/revision/granularity preserved for available record or reference-only,R1,DESIGNED_NOT_RUN
+P-google-drive-D,Google Drive,connector_status,Do not mark operational based solely on catalog entry or mock,R0,DESIGNED_NOT_RUN
+P-microsoft-sharepoint-onedrive-A,Microsoft SharePoint / OneDrive,routing,"Candidate/qualified method selected only if source rights and capability verified, else BLOCKED",R1,DESIGNED_NOT_RUN
+P-microsoft-sharepoint-onedrive-B,Microsoft SharePoint / OneDrive,rights_denial,Unknown/denied read or disclosure must not leak source bytes to ChatGPT,R2,DESIGNED_NOT_RUN
+P-microsoft-sharepoint-onedrive-C,Microsoft SharePoint / OneDrive,provenance,Provenance/revision/granularity preserved for available record or reference-only,R1,DESIGNED_NOT_RUN
+P-microsoft-sharepoint-onedrive-D,Microsoft SharePoint / OneDrive,connector_status,Do not mark operational based solely on catalog entry or mock,R0,DESIGNED_NOT_RUN
+P-amazon-s3-A,Amazon S3,routing,"Candidate/qualified method selected only if source rights and capability verified, else BLOCKED",R1,DESIGNED_NOT_RUN
+P-amazon-s3-B,Amazon S3,rights_denial,Unknown/denied read or disclosure must not leak source bytes to ChatGPT,R2,DESIGNED_NOT_RUN
+P-amazon-s3-C,Amazon S3,provenance,Provenance/revision/granularity preserved for available record or reference-only,R1,DESIGNED_NOT_RUN
+P-amazon-s3-D,Amazon S3,connector_status,Do not mark operational based solely on catalog entry or mock,R0,DESIGNED_NOT_RUN
+P-github-A,GitHub,routing,"Candidate/qualified method selected only if source rights and capability verified, else BLOCKED",R1,DESIGNED_NOT_RUN
+P-github-B,GitHub,rights_denial,Unknown/denied read or disclosure must not leak source bytes to ChatGPT,R2,DESIGNED_NOT_RUN
+P-github-C,GitHub,provenance,Provenance/revision/granularity preserved for available record or reference-only,R1,DESIGNED_NOT_RUN
+P-github-D,GitHub,connector_status,Do not mark operational based solely on catalog entry or mock,R0,DESIGNED_NOT_RUN
+P-gitlab-A,GitLab,routing,"Candidate/qualified method selected only if source rights and capability verified, else BLOCKED",R1,DESIGNED_NOT_RUN
+P-gitlab-B,GitLab,rights_denial,Unknown/denied read or disclosure must not leak source bytes to ChatGPT,R2,DESIGNED_NOT_RUN
+P-gitlab-C,GitLab,provenance,Provenance/revision/granularity preserved for available record or reference-only,R1,DESIGNED_NOT_RUN
+P-gitlab-D,GitLab,connector_status,Do not mark operational based solely on catalog entry or mock,R0,DESIGNED_NOT_RUN
+P-bitbucket-A,Bitbucket,routing,"Candidate/qualified method selected only if source rights and capability verified, else BLOCKED",R1,DESIGNED_NOT_RUN
+P-bitbucket-B,Bitbucket,rights_denial,Unknown/denied read or disclosure must not leak source bytes to ChatGPT,R2,DESIGNED_NOT_RUN
+P-bitbucket-C,Bitbucket,provenance,Provenance/revision/granularity preserved for available record or reference-only,R1,DESIGNED_NOT_RUN
+P-bitbucket-D,Bitbucket,connector_status,Do not mark operational based solely on catalog entry or mock,R0,DESIGNED_NOT_RUN
+P-jira-A,Jira,routing,"Candidate/qualified method selected only if source rights and capability verified, else BLOCKED",R1,DESIGNED_NOT_RUN
+P-jira-B,Jira,rights_denial,Unknown/denied read or disclosure must not leak source bytes to ChatGPT,R2,DESIGNED_NOT_RUN
+P-jira-C,Jira,provenance,Provenance/revision/granularity preserved for available record or reference-only,R1,DESIGNED_NOT_RUN
+P-jira-D,Jira,connector_status,Do not mark operational based solely on catalog entry or mock,R0,DESIGNED_NOT_RUN
+P-linear-A,Linear,routing,"Candidate/qualified method selected only if source rights and capability verified, else BLOCKED",R1,DESIGNED_NOT_RUN
+P-linear-B,Linear,rights_denial,Unknown/denied read or disclosure must not leak source bytes to ChatGPT,R2,DESIGNED_NOT_RUN
+P-linear-C,Linear,provenance,Provenance/revision/granularity preserved for available record or reference-only,R1,DESIGNED_NOT_RUN
+P-linear-D,Linear,connector_status,Do not mark operational based solely on catalog entry or mock,R0,DESIGNED_NOT_RUN
+P-acomba-A,Acomba,routing,"Candidate/qualified method selected only if source rights and capability verified, else BLOCKED",R1,DESIGNED_NOT_RUN
+P-acomba-B,Acomba,rights_denial,Unknown/denied read or disclosure must not leak source bytes to ChatGPT,R2,DESIGNED_NOT_RUN
+P-acomba-C,Acomba,provenance,Provenance/revision/granularity preserved for available record or reference-only,R1,DESIGNED_NOT_RUN
+P-acomba-D,Acomba,connector_status,Do not mark operational based solely on catalog entry or mock,R0,DESIGNED_NOT_RUN
+P-quickbooks-online-A,QuickBooks Online,routing,"Candidate/qualified method selected only if source rights and capability verified, else BLOCKED",R1,DESIGNED_NOT_RUN
+P-quickbooks-online-B,QuickBooks Online,rights_denial,Unknown/denied read or disclosure must not leak source bytes to ChatGPT,R2,DESIGNED_NOT_RUN
+P-quickbooks-online-C,QuickBooks Online,provenance,Provenance/revision/granularity preserved for available record or reference-only,R1,DESIGNED_NOT_RUN
+P-quickbooks-online-D,QuickBooks Online,connector_status,Do not mark operational based solely on catalog entry or mock,R0,DESIGNED_NOT_RUN
+P-xero-A,Xero,routing,"Candidate/qualified method selected only if source rights and capability verified, else BLOCKED",R1,DESIGNED_NOT_RUN
+P-xero-B,Xero,rights_denial,Unknown/denied read or disclosure must not leak source bytes to ChatGPT,R2,DESIGNED_NOT_RUN
+P-xero-C,Xero,provenance,Provenance/revision/granularity preserved for available record or reference-only,R1,DESIGNED_NOT_RUN
+P-xero-D,Xero,connector_status,Do not mark operational based solely on catalog entry or mock,R0,DESIGNED_NOT_RUN
+P-sage-A,Sage,routing,"Candidate/qualified method selected only if source rights and capability verified, else BLOCKED",R1,DESIGNED_NOT_RUN
+P-sage-B,Sage,rights_denial,Unknown/denied read or disclosure must not leak source bytes to ChatGPT,R2,DESIGNED_NOT_RUN
+P-sage-C,Sage,provenance,Provenance/revision/granularity preserved for available record or reference-only,R1,DESIGNED_NOT_RUN
+P-sage-D,Sage,connector_status,Do not mark operational based solely on catalog entry or mock,R0,DESIGNED_NOT_RUN
+P-sap-A,SAP,routing,"Candidate/qualified method selected only if source rights and capability verified, else BLOCKED",R1,DESIGNED_NOT_RUN
+P-sap-B,SAP,rights_denial,Unknown/denied read or disclosure must not leak source bytes to ChatGPT,R2,DESIGNED_NOT_RUN
+P-sap-C,SAP,provenance,Provenance/revision/granularity preserved for available record or reference-only,R1,DESIGNED_NOT_RUN
+P-sap-D,SAP,connector_status,Do not mark operational based solely on catalog entry or mock,R0,DESIGNED_NOT_RUN
+P-salesforce-A,Salesforce,routing,"Candidate/qualified method selected only if source rights and capability verified, else BLOCKED",R1,DESIGNED_NOT_RUN
+P-salesforce-B,Salesforce,rights_denial,Unknown/denied read or disclosure must not leak source bytes to ChatGPT,R2,DESIGNED_NOT_RUN
+P-salesforce-C,Salesforce,provenance,Provenance/revision/granularity preserved for available record or reference-only,R1,DESIGNED_NOT_RUN
+P-salesforce-D,Salesforce,connector_status,Do not mark operational based solely on catalog entry or mock,R0,DESIGNED_NOT_RUN
+P-microsoft-dynamics-A,Microsoft Dynamics,routing,"Candidate/qualified method selected only if source rights and capability verified, else BLOCKED",R1,DESIGNED_NOT_RUN
+P-microsoft-dynamics-B,Microsoft Dynamics,rights_denial,Unknown/denied read or disclosure must not leak source bytes to ChatGPT,R2,DESIGNED_NOT_RUN
+P-microsoft-dynamics-C,Microsoft Dynamics,provenance,Provenance/revision/granularity preserved for available record or reference-only,R1,DESIGNED_NOT_RUN
+P-microsoft-dynamics-D,Microsoft Dynamics,connector_status,Do not mark operational based solely on catalog entry or mock,R0,DESIGNED_NOT_RUN
+P-odoo-A,Odoo,routing,"Candidate/qualified method selected only if source rights and capability verified, else BLOCKED",R1,DESIGNED_NOT_RUN
+P-odoo-B,Odoo,rights_denial,Unknown/denied read or disclosure must not leak source bytes to ChatGPT,R2,DESIGNED_NOT_RUN
+P-odoo-C,Odoo,provenance,Provenance/revision/granularity preserved for available record or reference-only,R1,DESIGNED_NOT_RUN
+P-odoo-D,Odoo,connector_status,Do not mark operational based solely on catalog entry or mock,R0,DESIGNED_NOT_RUN
+P-shopify-A,Shopify,routing,"Candidate/qualified method selected only if source rights and capability verified, else BLOCKED",R1,DESIGNED_NOT_RUN
+P-shopify-B,Shopify,rights_denial,Unknown/denied read or disclosure must not leak source bytes to ChatGPT,R2,DESIGNED_NOT_RUN
+P-shopify-C,Shopify,provenance,Provenance/revision/granularity preserved for available record or reference-only,R1,DESIGNED_NOT_RUN
+P-shopify-D,Shopify,connector_status,Do not mark operational based solely on catalog entry or mock,R0,DESIGNED_NOT_RUN
+P-woocommerce-A,WooCommerce,routing,"Candidate/qualified method selected only if source rights and capability verified, else BLOCKED",R1,DESIGNED_NOT_RUN
+P-woocommerce-B,WooCommerce,rights_denial,Unknown/denied read or disclosure must not leak source bytes to ChatGPT,R2,DESIGNED_NOT_RUN
+P-woocommerce-C,WooCommerce,provenance,Provenance/revision/granularity preserved for available record or reference-only,R1,DESIGNED_NOT_RUN
+P-woocommerce-D,WooCommerce,connector_status,Do not mark operational based solely on catalog entry or mock,R0,DESIGNED_NOT_RUN
+P-postgresql-mysql-A,PostgreSQL / MySQL,routing,"Candidate/qualified method selected only if source rights and capability verified, else BLOCKED",R1,DESIGNED_NOT_RUN
+P-postgresql-mysql-B,PostgreSQL / MySQL,rights_denial,Unknown/denied read or disclosure must not leak source bytes to ChatGPT,R2,DESIGNED_NOT_RUN
+P-postgresql-mysql-C,PostgreSQL / MySQL,provenance,Provenance/revision/granularity preserved for available record or reference-only,R1,DESIGNED_NOT_RUN
+P-postgresql-mysql-D,PostgreSQL / MySQL,connector_status,Do not mark operational based solely on catalog entry or mock,R0,DESIGNED_NOT_RUN
+P-sql-server-oracle-A,SQL Server / Oracle,routing,"Candidate/qualified method selected only if source rights and capability verified, else BLOCKED",R1,DESIGNED_NOT_RUN
+P-sql-server-oracle-B,SQL Server / Oracle,rights_denial,Unknown/denied read or disclosure must not leak source bytes to ChatGPT,R2,DESIGNED_NOT_RUN
+P-sql-server-oracle-C,SQL Server / Oracle,provenance,Provenance/revision/granularity preserved for available record or reference-only,R1,DESIGNED_NOT_RUN
+P-sql-server-oracle-D,SQL Server / Oracle,connector_status,Do not mark operational based solely on catalog entry or mock,R0,DESIGNED_NOT_RUN
+P-snowflake-A,Snowflake,routing,"Candidate/qualified method selected only if source rights and capability verified, else BLOCKED",R1,DESIGNED_NOT_RUN
+P-snowflake-B,Snowflake,rights_denial,Unknown/denied read or disclosure must not leak source bytes to ChatGPT,R2,DESIGNED_NOT_RUN
+P-snowflake-C,Snowflake,provenance,Provenance/revision/granularity preserved for available record or reference-only,R1,DESIGNED_NOT_RUN
+P-snowflake-D,Snowflake,connector_status,Do not mark operational based solely on catalog entry or mock,R0,DESIGNED_NOT_RUN
+P-bigquery-A,BigQuery,routing,"Candidate/qualified method selected only if source rights and capability verified, else BLOCKED",R1,DESIGNED_NOT_RUN
+P-bigquery-B,BigQuery,rights_denial,Unknown/denied read or disclosure must not leak source bytes to ChatGPT,R2,DESIGNED_NOT_RUN
+P-bigquery-C,BigQuery,provenance,Provenance/revision/granularity preserved for available record or reference-only,R1,DESIGNED_NOT_RUN
+P-bigquery-D,BigQuery,connector_status,Do not mark operational based solely on catalog entry or mock,R0,DESIGNED_NOT_RUN
+P-databricks-A,Databricks,routing,"Candidate/qualified method selected only if source rights and capability verified, else BLOCKED",R1,DESIGNED_NOT_RUN
+P-databricks-B,Databricks,rights_denial,Unknown/denied read or disclosure must not leak source bytes to ChatGPT,R2,DESIGNED_NOT_RUN
+P-databricks-C,Databricks,provenance,Provenance/revision/granularity preserved for available record or reference-only,R1,DESIGNED_NOT_RUN
+P-databricks-D,Databricks,connector_status,Do not mark operational based solely on catalog entry or mock,R0,DESIGNED_NOT_RUN
+P-neo4j-A,Neo4j,routing,"Candidate/qualified method selected only if source rights and capability verified, else BLOCKED",R1,DESIGNED_NOT_RUN
+P-neo4j-B,Neo4j,rights_denial,Unknown/denied read or disclosure must not leak source bytes to ChatGPT,R2,DESIGNED_NOT_RUN
+P-neo4j-C,Neo4j,provenance,Provenance/revision/granularity preserved for available record or reference-only,R1,DESIGNED_NOT_RUN
+P-neo4j-D,Neo4j,connector_status,Do not mark operational based solely on catalog entry or mock,R0,DESIGNED_NOT_RUN
+P-rdf-sparql-endpoint-A,RDF / SPARQL endpoint,routing,"Candidate/qualified method selected only if source rights and capability verified, else BLOCKED",R1,DESIGNED_NOT_RUN
+P-rdf-sparql-endpoint-B,RDF / SPARQL endpoint,rights_denial,Unknown/denied read or disclosure must not leak source bytes to ChatGPT,R2,DESIGNED_NOT_RUN
+P-rdf-sparql-endpoint-C,RDF / SPARQL endpoint,provenance,Provenance/revision/granularity preserved for available record or reference-only,R1,DESIGNED_NOT_RUN
+P-rdf-sparql-endpoint-D,RDF / SPARQL endpoint,connector_status,Do not mark operational based solely on catalog entry or mock,R0,DESIGNED_NOT_RUN
+P-imap-mbox-A,IMAP / MBOX,routing,"Candidate/qualified method selected only if source rights and capability verified, else BLOCKED",R1,DESIGNED_NOT_RUN
+P-imap-mbox-B,IMAP / MBOX,rights_denial,Unknown/denied read or disclosure must not leak source bytes to ChatGPT,R2,DESIGNED_NOT_RUN
+P-imap-mbox-C,IMAP / MBOX,provenance,Provenance/revision/granularity preserved for available record or reference-only,R1,DESIGNED_NOT_RUN
+P-imap-mbox-D,IMAP / MBOX,connector_status,Do not mark operational based solely on catalog entry or mock,R0,DESIGNED_NOT_RUN
+P-slack-A,Slack,routing,"Candidate/qualified method selected only if source rights and capability verified, else BLOCKED",R1,DESIGNED_NOT_RUN
+P-slack-B,Slack,rights_denial,Unknown/denied read or disclosure must not leak source bytes to ChatGPT,R2,DESIGNED_NOT_RUN
+P-slack-C,Slack,provenance,Provenance/revision/granularity preserved for available record or reference-only,R1,DESIGNED_NOT_RUN
+P-slack-D,Slack,connector_status,Do not mark operational based solely on catalog entry or mock,R0,DESIGNED_NOT_RUN
+P-microsoft-teams-A,Microsoft Teams,routing,"Candidate/qualified method selected only if source rights and capability verified, else BLOCKED",R1,DESIGNED_NOT_RUN
+P-microsoft-teams-B,Microsoft Teams,rights_denial,Unknown/denied read or disclosure must not leak source bytes to ChatGPT,R2,DESIGNED_NOT_RUN
+P-microsoft-teams-C,Microsoft Teams,provenance,Provenance/revision/granularity preserved for available record or reference-only,R1,DESIGNED_NOT_RUN
+P-microsoft-teams-D,Microsoft Teams,connector_status,Do not mark operational based solely on catalog entry or mock,R0,DESIGNED_NOT_RUN
+P-moodle-A,Moodle,routing,"Candidate/qualified method selected only if source rights and capability verified, else BLOCKED",R1,DESIGNED_NOT_RUN
+P-moodle-B,Moodle,rights_denial,Unknown/denied read or disclosure must not leak source bytes to ChatGPT,R2,DESIGNED_NOT_RUN
+P-moodle-C,Moodle,provenance,Provenance/revision/granularity preserved for available record or reference-only,R1,DESIGNED_NOT_RUN
+P-moodle-D,Moodle,connector_status,Do not mark operational based solely on catalog entry or mock,R0,DESIGNED_NOT_RUN
+P-canvas-lms-A,Canvas LMS,routing,"Candidate/qualified method selected only if source rights and capability verified, else BLOCKED",R1,DESIGNED_NOT_RUN
+P-canvas-lms-B,Canvas LMS,rights_denial,Unknown/denied read or disclosure must not leak source bytes to ChatGPT,R2,DESIGNED_NOT_RUN
+P-canvas-lms-C,Canvas LMS,provenance,Provenance/revision/granularity preserved for available record or reference-only,R1,DESIGNED_NOT_RUN
+P-canvas-lms-D,Canvas LMS,connector_status,Do not mark operational based solely on catalog entry or mock,R0,DESIGNED_NOT_RUN
+P-serveur-fhir-A,Serveur FHIR,routing,"Candidate/qualified method selected only if source rights and capability verified, else BLOCKED",R1,DESIGNED_NOT_RUN
+P-serveur-fhir-B,Serveur FHIR,rights_denial,Unknown/denied read or disclosure must not leak source bytes to ChatGPT,R2,DESIGNED_NOT_RUN
+P-serveur-fhir-C,Serveur FHIR,provenance,Provenance/revision/granularity preserved for available record or reference-only,R1,DESIGNED_NOT_RUN
+P-serveur-fhir-D,Serveur FHIR,connector_status,Do not mark operational based solely on catalog entry or mock,R0,DESIGNED_NOT_RUN
+P-hl7-dicom-institutionnel-A,HL7/DICOM institutionnel,routing,"Candidate/qualified method selected only if source rights and capability verified, else BLOCKED",R1,DESIGNED_NOT_RUN
+P-hl7-dicom-institutionnel-B,HL7/DICOM institutionnel,rights_denial,Unknown/denied read or disclosure must not leak source bytes to ChatGPT,R2,DESIGNED_NOT_RUN
+P-hl7-dicom-institutionnel-C,HL7/DICOM institutionnel,provenance,Provenance/revision/granularity preserved for available record or reference-only,R1,DESIGNED_NOT_RUN
+P-hl7-dicom-institutionnel-D,HL7/DICOM institutionnel,connector_status,Do not mark operational based solely on catalog entry or mock,R0,DESIGNED_NOT_RUN
+P-legisqu-bec-A,LegisQuébec,routing,"Candidate/qualified method selected only if source rights and capability verified, else BLOCKED",R1,DESIGNED_NOT_RUN
+P-legisqu-bec-B,LegisQuébec,rights_denial,Unknown/denied read or disclosure must not leak source bytes to ChatGPT,R2,DESIGNED_NOT_RUN
+P-legisqu-bec-C,LegisQuébec,provenance,Provenance/revision/granularity preserved for available record or reference-only,R1,DESIGNED_NOT_RUN
+P-legisqu-bec-D,LegisQuébec,connector_status,Do not mark operational based solely on catalog entry or mock,R0,DESIGNED_NOT_RUN
+P-canlii-A,CanLII,routing,"Candidate/qualified method selected only if source rights and capability verified, else BLOCKED",R1,DESIGNED_NOT_RUN
+P-canlii-B,CanLII,rights_denial,Unknown/denied read or disclosure must not leak source bytes to ChatGPT,R2,DESIGNED_NOT_RUN
+P-canlii-C,CanLII,provenance,Provenance/revision/granularity preserved for available record or reference-only,R1,DESIGNED_NOT_RUN
+P-canlii-D,CanLII,connector_status,Do not mark operational based solely on catalog entry or mock,R0,DESIGNED_NOT_RUN
+P-openstreetmap-A,OpenStreetMap,routing,"Candidate/qualified method selected only if source rights and capability verified, else BLOCKED",R1,DESIGNED_NOT_RUN
+P-openstreetmap-B,OpenStreetMap,rights_denial,Unknown/denied read or disclosure must not leak source bytes to ChatGPT,R2,DESIGNED_NOT_RUN
+P-openstreetmap-C,OpenStreetMap,provenance,Provenance/revision/granularity preserved for available record or reference-only,R1,DESIGNED_NOT_RUN
+P-openstreetmap-D,OpenStreetMap,connector_status,Do not mark operational based solely on catalog entry or mock,R0,DESIGNED_NOT_RUN
+P-wfs-geojson-municipal-A,WFS/GeoJSON municipal,routing,"Candidate/qualified method selected only if source rights and capability verified, else BLOCKED",R1,DESIGNED_NOT_RUN
+P-wfs-geojson-municipal-B,WFS/GeoJSON municipal,rights_denial,Unknown/denied read or disclosure must not leak source bytes to ChatGPT,R2,DESIGNED_NOT_RUN
+P-wfs-geojson-municipal-C,WFS/GeoJSON municipal,provenance,Provenance/revision/granularity preserved for available record or reference-only,R1,DESIGNED_NOT_RUN
+P-wfs-geojson-municipal-D,WFS/GeoJSON municipal,connector_status,Do not mark operational based solely on catalog entry or mock,R0,DESIGNED_NOT_RUN
+P-noaa-A,NOAA,routing,"Candidate/qualified method selected only if source rights and capability verified, else BLOCKED",R1,DESIGNED_NOT_RUN
+P-noaa-B,NOAA,rights_denial,Unknown/denied read or disclosure must not leak source bytes to ChatGPT,R2,DESIGNED_NOT_RUN
+P-noaa-C,NOAA,provenance,Provenance/revision/granularity preserved for available record or reference-only,R1,DESIGNED_NOT_RUN
+P-noaa-D,NOAA,connector_status,Do not mark operational based solely on catalog entry or mock,R0,DESIGNED_NOT_RUN
+P-copernicus-A,Copernicus,routing,"Candidate/qualified method selected only if source rights and capability verified, else BLOCKED",R1,DESIGNED_NOT_RUN
+P-copernicus-B,Copernicus,rights_denial,Unknown/denied read or disclosure must not leak source bytes to ChatGPT,R2,DESIGNED_NOT_RUN
+P-copernicus-C,Copernicus,provenance,Provenance/revision/granularity preserved for available record or reference-only,R1,DESIGNED_NOT_RUN
+P-copernicus-D,Copernicus,connector_status,Do not mark operational based solely on catalog entry or mock,R0,DESIGNED_NOT_RUN
+P-broker-mqtt-A,Broker MQTT,routing,"Candidate/qualified method selected only if source rights and capability verified, else BLOCKED",R1,DESIGNED_NOT_RUN
+P-broker-mqtt-B,Broker MQTT,rights_denial,Unknown/denied read or disclosure must not leak source bytes to ChatGPT,R2,DESIGNED_NOT_RUN
+P-broker-mqtt-C,Broker MQTT,provenance,Provenance/revision/granularity preserved for available record or reference-only,R1,DESIGNED_NOT_RUN
+P-broker-mqtt-D,Broker MQTT,connector_status,Do not mark operational based solely on catalog entry or mock,R0,DESIGNED_NOT_RUN
+P-serveur-opc-ua-A,Serveur OPC UA,routing,"Candidate/qualified method selected only if source rights and capability verified, else BLOCKED",R1,DESIGNED_NOT_RUN
+P-serveur-opc-ua-B,Serveur OPC UA,rights_denial,Unknown/denied read or disclosure must not leak source bytes to ChatGPT,R2,DESIGNED_NOT_RUN
+P-serveur-opc-ua-C,Serveur OPC UA,provenance,Provenance/revision/granularity preserved for available record or reference-only,R1,DESIGNED_NOT_RUN
+P-serveur-opc-ua-D,Serveur OPC UA,connector_status,Do not mark operational based solely on catalog entry or mock,R0,DESIGNED_NOT_RUN
+P-lims-eln-A,LIMS / ELN,routing,"Candidate/qualified method selected only if source rights and capability verified, else BLOCKED",R1,DESIGNED_NOT_RUN
+P-lims-eln-B,LIMS / ELN,rights_denial,Unknown/denied read or disclosure must not leak source bytes to ChatGPT,R2,DESIGNED_NOT_RUN
+P-lims-eln-C,LIMS / ELN,provenance,Provenance/revision/granularity preserved for available record or reference-only,R1,DESIGNED_NOT_RUN
+P-lims-eln-D,LIMS / ELN,connector_status,Do not mark operational based solely on catalog entry or mock,R0,DESIGNED_NOT_RUN
+P-iiif-collections-patrimoniales-A,IIIF collections patrimoniales,routing,"Candidate/qualified method selected only if source rights and capability verified, else BLOCKED",R1,DESIGNED_NOT_RUN
+P-iiif-collections-patrimoniales-B,IIIF collections patrimoniales,rights_denial,Unknown/denied read or disclosure must not leak source bytes to ChatGPT,R2,DESIGNED_NOT_RUN
+P-iiif-collections-patrimoniales-C,IIIF collections patrimoniales,provenance,Provenance/revision/granularity preserved for available record or reference-only,R1,DESIGNED_NOT_RUN
+P-iiif-collections-patrimoniales-D,IIIF collections patrimoniales,connector_status,Do not mark operational based solely on catalog entry or mock,R0,DESIGNED_NOT_RUN
+P-internet-archive-A,Internet Archive,routing,"Candidate/qualified method selected only if source rights and capability verified, else BLOCKED",R1,DESIGNED_NOT_RUN
+P-internet-archive-B,Internet Archive,rights_denial,Unknown/denied read or disclosure must not leak source bytes to ChatGPT,R2,DESIGNED_NOT_RUN
+P-internet-archive-C,Internet Archive,provenance,Provenance/revision/granularity preserved for available record or reference-only,R1,DESIGNED_NOT_RUN
+P-internet-archive-D,Internet Archive,connector_status,Do not mark operational based solely on catalog entry or mock,R0,DESIGNED_NOT_RUN
+P-open-banking-autoris-A,Open Banking autorisé,routing,"Candidate/qualified method selected only if source rights and capability verified, else BLOCKED",R1,DESIGNED_NOT_RUN
+P-open-banking-autoris-B,Open Banking autorisé,rights_denial,Unknown/denied read or disclosure must not leak source bytes to ChatGPT,R2,DESIGNED_NOT_RUN
+P-open-banking-autoris-C,Open Banking autorisé,provenance,Provenance/revision/granularity preserved for available record or reference-only,R1,DESIGNED_NOT_RUN
+P-open-banking-autoris-D,Open Banking autorisé,connector_status,Do not mark operational based solely on catalog entry or mock,R0,DESIGNED_NOT_RUN
+P-iso-20022-relev-s-bancaires-A,ISO 20022 / relevés bancaires,routing,"Candidate/qualified method selected only if source rights and capability verified, else BLOCKED",R1,DESIGNED_NOT_RUN
+P-iso-20022-relev-s-bancaires-B,ISO 20022 / relevés bancaires,rights_denial,Unknown/denied read or disclosure must not leak source bytes to ChatGPT,R2,DESIGNED_NOT_RUN
+P-iso-20022-relev-s-bancaires-C,ISO 20022 / relevés bancaires,provenance,Provenance/revision/granularity preserved for available record or reference-only,R1,DESIGNED_NOT_RUN
+P-iso-20022-relev-s-bancaires-D,ISO 20022 / relevés bancaires,connector_status,Do not mark operational based solely on catalog entry or mock,R0,DESIGNED_NOT_RUN
+P-registres-publics-d-entreprises-A,Registres publics d'entreprises,routing,"Candidate/qualified method selected only if source rights and capability verified, else BLOCKED",R1,DESIGNED_NOT_RUN
+P-registres-publics-d-entreprises-B,Registres publics d'entreprises,rights_denial,Unknown/denied read or disclosure must not leak source bytes to ChatGPT,R2,DESIGNED_NOT_RUN
+P-registres-publics-d-entreprises-C,Registres publics d'entreprises,provenance,Provenance/revision/granularity preserved for available record or reference-only,R1,DESIGNED_NOT_RUN
+P-registres-publics-d-entreprises-D,Registres publics d'entreprises,connector_status,Do not mark operational based solely on catalog entry or mock,R0,DESIGNED_NOT_RUN
+P-kafka-cloudevents-A,Kafka / CloudEvents,routing,"Candidate/qualified method selected only if source rights and capability verified, else BLOCKED",R1,DESIGNED_NOT_RUN
+P-kafka-cloudevents-B,Kafka / CloudEvents,rights_denial,Unknown/denied read or disclosure must not leak source bytes to ChatGPT,R2,DESIGNED_NOT_RUN
+P-kafka-cloudevents-C,Kafka / CloudEvents,provenance,Provenance/revision/granularity preserved for available record or reference-only,R1,DESIGNED_NOT_RUN
+P-kafka-cloudevents-D,Kafka / CloudEvents,connector_status,Do not mark operational based solely on catalog entry or mock,R0,DESIGNED_NOT_RUN
+P-webhooks-m-tier-A,Webhooks métier,routing,"Candidate/qualified method selected only if source rights and capability verified, else BLOCKED",R1,DESIGNED_NOT_RUN
+P-webhooks-m-tier-B,Webhooks métier,rights_denial,Unknown/denied read or disclosure must not leak source bytes to ChatGPT,R2,DESIGNED_NOT_RUN
+P-webhooks-m-tier-C,Webhooks métier,provenance,Provenance/revision/granularity preserved for available record or reference-only,R1,DESIGNED_NOT_RUN
+P-webhooks-m-tier-D,Webhooks métier,connector_status,Do not mark operational based solely on catalog entry or mock,R0,DESIGNED_NOT_RUN
+P-formulaires-et-enqu-tes-A,Formulaires et enquêtes,routing,"Candidate/qualified method selected only if source rights and capability verified, else BLOCKED",R1,DESIGNED_NOT_RUN
+P-formulaires-et-enqu-tes-B,Formulaires et enquêtes,rights_denial,Unknown/denied read or disclosure must not leak source bytes to ChatGPT,R2,DESIGNED_NOT_RUN
+P-formulaires-et-enqu-tes-C,Formulaires et enquêtes,provenance,Provenance/revision/granularity preserved for available record or reference-only,R1,DESIGNED_NOT_RUN
+P-formulaires-et-enqu-tes-D,Formulaires et enquêtes,connector_status,Do not mark operational based solely on catalog entry or mock,R0,DESIGNED_NOT_RUN
+P-simulation-jumeaux-num-riques-A,Simulation / jumeaux numériques,routing,"Candidate/qualified method selected only if source rights and capability verified, else BLOCKED",R1,DESIGNED_NOT_RUN
+P-simulation-jumeaux-num-riques-B,Simulation / jumeaux numériques,rights_denial,Unknown/denied read or disclosure must not leak source bytes to ChatGPT,R2,DESIGNED_NOT_RUN
+P-simulation-jumeaux-num-riques-C,Simulation / jumeaux numériques,provenance,Provenance/revision/granularity preserved for available record or reference-only,R1,DESIGNED_NOT_RUN
+P-simulation-jumeaux-num-riques-D,Simulation / jumeaux numériques,connector_status,Do not mark operational based solely on catalog entry or mock,R0,DESIGNED_NOT_RUN
+P-reddit-A,Reddit,routing,"Candidate/qualified method selected only if source rights and capability verified, else BLOCKED",R1,DESIGNED_NOT_RUN
+P-reddit-B,Reddit,rights_denial,Unknown/denied read or disclosure must not leak source bytes to ChatGPT,R2,DESIGNED_NOT_RUN
+P-reddit-C,Reddit,provenance,Provenance/revision/granularity preserved for available record or reference-only,R1,DESIGNED_NOT_RUN
+P-reddit-D,Reddit,connector_status,Do not mark operational based solely on catalog entry or mock,R0,DESIGNED_NOT_RUN
+P-stack-exchange-A,Stack Exchange,routing,"Candidate/qualified method selected only if source rights and capability verified, else BLOCKED",R1,DESIGNED_NOT_RUN
+P-stack-exchange-B,Stack Exchange,rights_denial,Unknown/denied read or disclosure must not leak source bytes to ChatGPT,R2,DESIGNED_NOT_RUN
+P-stack-exchange-C,Stack Exchange,provenance,Provenance/revision/granularity preserved for available record or reference-only,R1,DESIGNED_NOT_RUN
+P-stack-exchange-D,Stack Exchange,connector_status,Do not mark operational based solely on catalog entry or mock,R0,DESIGNED_NOT_RUN
+P-youtube-A,YouTube,routing,"Candidate/qualified method selected only if source rights and capability verified, else BLOCKED",R1,DESIGNED_NOT_RUN
+P-youtube-B,YouTube,rights_denial,Unknown/denied read or disclosure must not leak source bytes to ChatGPT,R2,DESIGNED_NOT_RUN
+P-youtube-C,YouTube,provenance,Provenance/revision/granularity preserved for available record or reference-only,R1,DESIGNED_NOT_RUN
+P-youtube-D,YouTube,connector_status,Do not mark operational based solely on catalog entry or mock,R0,DESIGNED_NOT_RUN
+P-podcasts-rss-A,Podcasts RSS,routing,"Candidate/qualified method selected only if source rights and capability verified, else BLOCKED",R1,DESIGNED_NOT_RUN
+P-podcasts-rss-B,Podcasts RSS,rights_denial,Unknown/denied read or disclosure must not leak source bytes to ChatGPT,R2,DESIGNED_NOT_RUN
+P-podcasts-rss-C,Podcasts RSS,provenance,Provenance/revision/granularity preserved for available record or reference-only,R1,DESIGNED_NOT_RUN
+P-podcasts-rss-D,Podcasts RSS,connector_status,Do not mark operational based solely on catalog entry or mock,R0,DESIGNED_NOT_RUN
+P-r-f-rence-f-d-r-e-externe-A,Référence fédérée externe,routing,"Candidate/qualified method selected only if source rights and capability verified, else BLOCKED",R1,DESIGNED_NOT_RUN
+P-r-f-rence-f-d-r-e-externe-B,Référence fédérée externe,rights_denial,Unknown/denied read or disclosure must not leak source bytes to ChatGPT,R2,DESIGNED_NOT_RUN
+P-r-f-rence-f-d-r-e-externe-C,Référence fédérée externe,provenance,Provenance/revision/granularity preserved for available record or reference-only,R1,DESIGNED_NOT_RUN
+P-r-f-rence-f-d-r-e-externe-D,Référence fédérée externe,connector_status,Do not mark operational based solely on catalog entry or mock,R0,DESIGNED_NOT_RUN
+F-01-01,Références bibliographiques,format_or_representation,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-01-02,Références bibliographiques,licensing,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-01-03,Références bibliographiques,provenance,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-01-04,Références bibliographiques,granularity,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-01-05,Références bibliographiques,sync_or_snapshot,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-01-06,Références bibliographiques,negative_fixture,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-01-07,Références bibliographiques,ai_disclosure,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-01-08,Références bibliographiques,context_bundle,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-02-01,Archives académiques OA,format_or_representation,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-02-02,Archives académiques OA,licensing,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-02-03,Archives académiques OA,provenance,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-02-04,Archives académiques OA,granularity,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-02-05,Archives académiques OA,sync_or_snapshot,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-02-06,Archives académiques OA,negative_fixture,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-02-07,Archives académiques OA,ai_disclosure,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-02-08,Archives académiques OA,context_bundle,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-03-01,Bibliothèques et catalogues,format_or_representation,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-03-02,Bibliothèques et catalogues,licensing,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-03-03,Bibliothèques et catalogues,provenance,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-03-04,Bibliothèques et catalogues,granularity,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-03-05,Bibliothèques et catalogues,sync_or_snapshot,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-03-06,Bibliothèques et catalogues,negative_fixture,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-03-07,Bibliothèques et catalogues,ai_disclosure,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-03-08,Bibliothèques et catalogues,context_bundle,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-04-01,Bases de connaissances publiques,format_or_representation,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-04-02,Bases de connaissances publiques,licensing,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-04-03,Bases de connaissances publiques,provenance,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-04-04,Bases de connaissances publiques,granularity,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-04-05,Bases de connaissances publiques,sync_or_snapshot,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-04-06,Bases de connaissances publiques,negative_fixture,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-04-07,Bases de connaissances publiques,ai_disclosure,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-04-08,Bases de connaissances publiques,context_bundle,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-05-01,Encyclopédies et wikis,format_or_representation,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-05-02,Encyclopédies et wikis,licensing,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-05-03,Encyclopédies et wikis,provenance,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-05-04,Encyclopédies et wikis,granularity,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-05-05,Encyclopédies et wikis,sync_or_snapshot,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-05-06,Encyclopédies et wikis,negative_fixture,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-05-07,Encyclopédies et wikis,ai_disclosure,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-05-08,Encyclopédies et wikis,context_bundle,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-06-01,Sites et articles Web,format_or_representation,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-06-02,Sites et articles Web,licensing,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-06-03,Sites et articles Web,provenance,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-06-04,Sites et articles Web,granularity,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-06-05,Sites et articles Web,sync_or_snapshot,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-06-06,Sites et articles Web,negative_fixture,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-06-07,Sites et articles Web,ai_disclosure,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-06-08,Sites et articles Web,context_bundle,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-07-01,Jeux de données ouverts,format_or_representation,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-07-02,Jeux de données ouverts,licensing,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-07-03,Jeux de données ouverts,provenance,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-07-04,Jeux de données ouverts,granularity,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-07-05,Jeux de données ouverts,sync_or_snapshot,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-07-06,Jeux de données ouverts,negative_fixture,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-07-07,Jeux de données ouverts,ai_disclosure,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-07-08,Jeux de données ouverts,context_bundle,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-08-01,PDF et documents locaux,format_or_representation,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-08-02,PDF et documents locaux,licensing,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-08-03,PDF et documents locaux,provenance,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-08-04,PDF et documents locaux,granularity,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-08-05,PDF et documents locaux,sync_or_snapshot,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-08-06,PDF et documents locaux,negative_fixture,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-08-07,PDF et documents locaux,ai_disclosure,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-08-08,PDF et documents locaux,context_bundle,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-09-01,Archives de documents,format_or_representation,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-09-02,Archives de documents,licensing,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-09-03,Archives de documents,provenance,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-09-04,Archives de documents,granularity,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-09-05,Archives de documents,sync_or_snapshot,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-09-06,Archives de documents,negative_fixture,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-09-07,Archives de documents,ai_disclosure,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-09-08,Archives de documents,context_bundle,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-10-01,Cloud documentaire,format_or_representation,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-10-02,Cloud documentaire,licensing,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-10-03,Cloud documentaire,provenance,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-10-04,Cloud documentaire,granularity,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-10-05,Cloud documentaire,sync_or_snapshot,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-10-06,Cloud documentaire,negative_fixture,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-10-07,Cloud documentaire,ai_disclosure,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-10-08,Cloud documentaire,context_bundle,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-11-01,Dépôts de code,format_or_representation,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-11-02,Dépôts de code,licensing,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-11-03,Dépôts de code,provenance,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-11-04,Dépôts de code,granularity,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-11-05,Dépôts de code,sync_or_snapshot,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-11-06,Dépôts de code,negative_fixture,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-11-07,Dépôts de code,ai_disclosure,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-11-08,Dépôts de code,context_bundle,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-12-01,Gestion de projets et tickets,format_or_representation,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-12-02,Gestion de projets et tickets,licensing,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-12-03,Gestion de projets et tickets,provenance,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-12-04,Gestion de projets et tickets,granularity,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-12-05,Gestion de projets et tickets,sync_or_snapshot,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-12-06,Gestion de projets et tickets,negative_fixture,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-12-07,Gestion de projets et tickets,ai_disclosure,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-12-08,Gestion de projets et tickets,context_bundle,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-13-01,ERP et comptabilité PME,format_or_representation,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-13-02,ERP et comptabilité PME,licensing,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-13-03,ERP et comptabilité PME,provenance,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-13-04,ERP et comptabilité PME,granularity,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-13-05,ERP et comptabilité PME,sync_or_snapshot,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-13-06,ERP et comptabilité PME,negative_fixture,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-13-07,ERP et comptabilité PME,ai_disclosure,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-13-08,ERP et comptabilité PME,context_bundle,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-14-01,ERP/CRM entreprise,format_or_representation,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-14-02,ERP/CRM entreprise,licensing,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-14-03,ERP/CRM entreprise,provenance,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-14-04,ERP/CRM entreprise,granularity,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-14-05,ERP/CRM entreprise,sync_or_snapshot,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-14-06,ERP/CRM entreprise,negative_fixture,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-14-07,ERP/CRM entreprise,ai_disclosure,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-14-08,ERP/CRM entreprise,context_bundle,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-15-01,Commerce et inventaires,format_or_representation,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-15-02,Commerce et inventaires,licensing,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-15-03,Commerce et inventaires,provenance,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-15-04,Commerce et inventaires,granularity,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-15-05,Commerce et inventaires,sync_or_snapshot,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-15-06,Commerce et inventaires,negative_fixture,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-15-07,Commerce et inventaires,ai_disclosure,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-15-08,Commerce et inventaires,context_bundle,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-16-01,Bases relationnelles,format_or_representation,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-16-02,Bases relationnelles,licensing,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-16-03,Bases relationnelles,provenance,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-16-04,Bases relationnelles,granularity,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-16-05,Bases relationnelles,sync_or_snapshot,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-16-06,Bases relationnelles,negative_fixture,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-16-07,Bases relationnelles,ai_disclosure,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-16-08,Bases relationnelles,context_bundle,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-17-01,Lacs analytiques,format_or_representation,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-17-02,Lacs analytiques,licensing,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-17-03,Lacs analytiques,provenance,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-17-04,Lacs analytiques,granularity,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-17-05,Lacs analytiques,sync_or_snapshot,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-17-06,Lacs analytiques,negative_fixture,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-17-07,Lacs analytiques,ai_disclosure,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-17-08,Lacs analytiques,context_bundle,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-18-01,Graphes d’entreprise,format_or_representation,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-18-02,Graphes d’entreprise,licensing,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-18-03,Graphes d’entreprise,provenance,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-18-04,Graphes d’entreprise,granularity,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-18-05,Graphes d’entreprise,sync_or_snapshot,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-18-06,Graphes d’entreprise,negative_fixture,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-18-07,Graphes d’entreprise,ai_disclosure,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-18-08,Graphes d’entreprise,context_bundle,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-19-01,Courriels et discussions,format_or_representation,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-19-02,Courriels et discussions,licensing,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-19-03,Courriels et discussions,provenance,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-19-04,Courriels et discussions,granularity,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-19-05,Courriels et discussions,sync_or_snapshot,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-19-06,Courriels et discussions,negative_fixture,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-19-07,Courriels et discussions,ai_disclosure,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-19-08,Courriels et discussions,context_bundle,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-20-01,Éducation,format_or_representation,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-20-02,Éducation,licensing,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-20-03,Éducation,provenance,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-20-04,Éducation,granularity,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-20-05,Éducation,sync_or_snapshot,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-20-06,Éducation,negative_fixture,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-20-07,Éducation,ai_disclosure,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-20-08,Éducation,context_bundle,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-21-01,Santé,format_or_representation,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-21-02,Santé,licensing,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-21-03,Santé,provenance,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-21-04,Santé,granularity,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-21-05,Santé,sync_or_snapshot,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-21-06,Santé,negative_fixture,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-21-07,Santé,ai_disclosure,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-21-08,Santé,context_bundle,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-22-01,Droit et administration,format_or_representation,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-22-02,Droit et administration,licensing,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-22-03,Droit et administration,provenance,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-22-04,Droit et administration,granularity,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-22-05,Droit et administration,sync_or_snapshot,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-22-06,Droit et administration,negative_fixture,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-22-07,Droit et administration,ai_disclosure,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-22-08,Droit et administration,context_bundle,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-23-01,Cartographie/GIS,format_or_representation,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-23-02,Cartographie/GIS,licensing,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-23-03,Cartographie/GIS,provenance,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-23-04,Cartographie/GIS,granularity,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-23-05,Cartographie/GIS,sync_or_snapshot,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-23-06,Cartographie/GIS,negative_fixture,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-23-07,Cartographie/GIS,ai_disclosure,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-23-08,Cartographie/GIS,context_bundle,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-24-01,Climat et observation Terre,format_or_representation,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-24-02,Climat et observation Terre,licensing,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-24-03,Climat et observation Terre,provenance,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-24-04,Climat et observation Terre,granularity,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-24-05,Climat et observation Terre,sync_or_snapshot,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-24-06,Climat et observation Terre,negative_fixture,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-24-07,Climat et observation Terre,ai_disclosure,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-24-08,Climat et observation Terre,context_bundle,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-25-01,IoT et industrie,format_or_representation,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-25-02,IoT et industrie,licensing,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-25-03,IoT et industrie,provenance,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-25-04,IoT et industrie,granularity,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-25-05,IoT et industrie,sync_or_snapshot,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-25-06,IoT et industrie,negative_fixture,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-25-07,IoT et industrie,ai_disclosure,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-25-08,IoT et industrie,context_bundle,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-26-01,Laboratoires scientifiques,format_or_representation,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-26-02,Laboratoires scientifiques,licensing,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-26-03,Laboratoires scientifiques,provenance,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-26-04,Laboratoires scientifiques,granularity,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-26-05,Laboratoires scientifiques,sync_or_snapshot,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-26-06,Laboratoires scientifiques,negative_fixture,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-26-07,Laboratoires scientifiques,ai_disclosure,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-26-08,Laboratoires scientifiques,context_bundle,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-27-01,Images/vidéos/audio,format_or_representation,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-27-02,Images/vidéos/audio,licensing,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-27-03,Images/vidéos/audio,provenance,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-27-04,Images/vidéos/audio,granularity,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-27-05,Images/vidéos/audio,sync_or_snapshot,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-27-06,Images/vidéos/audio,negative_fixture,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-27-07,Images/vidéos/audio,ai_disclosure,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-27-08,Images/vidéos/audio,context_bundle,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-28-01,Archives institutionnelles,format_or_representation,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-28-02,Archives institutionnelles,licensing,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-28-03,Archives institutionnelles,provenance,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-28-04,Archives institutionnelles,granularity,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-28-05,Archives institutionnelles,sync_or_snapshot,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-28-06,Archives institutionnelles,negative_fixture,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-28-07,Archives institutionnelles,ai_disclosure,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-28-08,Archives institutionnelles,context_bundle,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-29-01,Finances/bancaire,format_or_representation,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-29-02,Finances/bancaire,licensing,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-29-03,Finances/bancaire,provenance,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-29-04,Finances/bancaire,granularity,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-29-05,Finances/bancaire,sync_or_snapshot,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-29-06,Finances/bancaire,negative_fixture,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-29-07,Finances/bancaire,ai_disclosure,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-29-08,Finances/bancaire,context_bundle,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-30-01,Registres publics et société,format_or_representation,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-30-02,Registres publics et société,licensing,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-30-03,Registres publics et société,provenance,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-30-04,Registres publics et société,granularity,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-30-05,Registres publics et société,sync_or_snapshot,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-30-06,Registres publics et société,negative_fixture,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-30-07,Registres publics et société,ai_disclosure,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-30-08,Registres publics et société,context_bundle,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-31-01,Flux d’événements,format_or_representation,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-31-02,Flux d’événements,licensing,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-31-03,Flux d’événements,provenance,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-31-04,Flux d’événements,granularity,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-31-05,Flux d’événements,sync_or_snapshot,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-31-06,Flux d’événements,negative_fixture,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-31-07,Flux d’événements,ai_disclosure,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-31-08,Flux d’événements,context_bundle,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-32-01,Saisie humaine structurée,format_or_representation,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-32-02,Saisie humaine structurée,licensing,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-32-03,Saisie humaine structurée,provenance,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-32-04,Saisie humaine structurée,granularity,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-32-05,Saisie humaine structurée,sync_or_snapshot,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-32-06,Saisie humaine structurée,negative_fixture,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-32-07,Saisie humaine structurée,ai_disclosure,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-32-08,Saisie humaine structurée,context_bundle,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-33-01,Simulation et jumeaux numériques,format_or_representation,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-33-02,Simulation et jumeaux numériques,licensing,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-33-03,Simulation et jumeaux numériques,provenance,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-33-04,Simulation et jumeaux numériques,granularity,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-33-05,Simulation et jumeaux numériques,sync_or_snapshot,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-33-06,Simulation et jumeaux numériques,negative_fixture,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-33-07,Simulation et jumeaux numériques,ai_disclosure,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-33-08,Simulation et jumeaux numériques,context_bundle,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-34-01,Réseaux sociaux/communautés,format_or_representation,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-34-02,Réseaux sociaux/communautés,licensing,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-34-03,Réseaux sociaux/communautés,provenance,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-34-04,Réseaux sociaux/communautés,granularity,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-34-05,Réseaux sociaux/communautés,sync_or_snapshot,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-34-06,Réseaux sociaux/communautés,negative_fixture,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-34-07,Réseaux sociaux/communautés,ai_disclosure,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-34-08,Réseaux sociaux/communautés,context_bundle,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-35-01,Flux et catalogues multimédias,format_or_representation,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-35-02,Flux et catalogues multimédias,licensing,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-35-03,Flux et catalogues multimédias,provenance,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-35-04,Flux et catalogues multimédias,granularity,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-35-05,Flux et catalogues multimédias,sync_or_snapshot,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-35-06,Flux et catalogues multimédias,negative_fixture,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-35-07,Flux et catalogues multimédias,ai_disclosure,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-35-08,Flux et catalogues multimédias,context_bundle,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-36-01,Références fédérées externes,format_or_representation,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-36-02,Références fédérées externes,licensing,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-36-03,Références fédérées externes,provenance,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-36-04,Références fédérées externes,granularity,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-36-05,Références fédérées externes,sync_or_snapshot,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-36-06,Références fédérées externes,negative_fixture,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-36-07,Références fédérées externes,ai_disclosure,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+F-36-08,Références fédérées externes,context_bundle,Validated with representative case or explicitly BLOCKED if inaccessible,R1/R2,DESIGNED_NOT_RUN
+S-01,SSRF,security_integrity_operational,Fail closed with precise and privacy-safe evidence,R2/R3/R4,DESIGNED_NOT_RUN
+S-02,ZIP_BOMB,security_integrity_operational,Fail closed with precise and privacy-safe evidence,R2/R3/R4,DESIGNED_NOT_RUN
+S-03,PROMPT_INJECTION,security_integrity_operational,Fail closed with precise and privacy-safe evidence,R2/R3/R4,DESIGNED_NOT_RUN
+S-04,CROSS_TENANT,security_integrity_operational,Fail closed with precise and privacy-safe evidence,R2/R3/R4,DESIGNED_NOT_RUN
+S-05,REVOKED_LICENSE,security_integrity_operational,Fail closed with precise and privacy-safe evidence,R2/R3/R4,DESIGNED_NOT_RUN
+S-06,SECRET_LEAK,security_integrity_operational,Fail closed with precise and privacy-safe evidence,R2/R3/R4,DESIGNED_NOT_RUN
+S-07,INCORRECT_CITATION,security_integrity_operational,Fail closed with precise and privacy-safe evidence,R2/R3/R4,DESIGNED_NOT_RUN
+S-08,METADATA_ONLY,security_integrity_operational,Fail closed with precise and privacy-safe evidence,R2/R3/R4,DESIGNED_NOT_RUN
+S-09,RATELIMIT_429,security_integrity_operational,Fail closed with precise and privacy-safe evidence,R2/R3/R4,DESIGNED_NOT_RUN
+S-10,UNKNOWN_IK_PROFILE,security_integrity_operational,Fail closed with precise and privacy-safe evidence,R2/R3/R4,DESIGNED_NOT_RUN
+S-11,MEDIATHEQUE_UNSIGNED_RECEIPT,security_integrity_operational,Fail closed with precise and privacy-safe evidence,R2/R3/R4,DESIGNED_NOT_RUN
+S-12,AI_DISCOLSURE_DENIED,security_integrity_operational,Fail closed with precise and privacy-safe evidence,R2/R3/R4,DESIGNED_NOT_RUN
+S-13,WINDOWS_NO_CMD,security_integrity_operational,Fail closed with precise and privacy-safe evidence,R2/R3/R4,DESIGNED_NOT_RUN
+S-14,PROGRESS_ACTUAL,security_integrity_operational,Fail closed with precise and privacy-safe evidence,R2/R3/R4,DESIGNED_NOT_RUN
+S-15,ABORT_AND_REPLAY,security_integrity_operational,Fail closed with precise and privacy-safe evidence,R2/R3/R4,DESIGNED_NOT_RUN
+S-16,SOURCE_DEPENDENCY_CHANGE,security_integrity_operational,Fail closed with precise and privacy-safe evidence,R2/R3/R4,DESIGNED_NOT_RUN
+S-17,OSS_LICENSE_REVIEW,security_integrity_operational,Fail closed with precise and privacy-safe evidence,R2/R3/R4,DESIGNED_NOT_RUN
+S-18,SOURCE_TOKEN_EXPIRED,security_integrity_operational,Fail closed with precise and privacy-safe evidence,R2/R3/R4,DESIGNED_NOT_RUN
+S-19,BUNDLE_SCHEMA,security_integrity_operational,Fail closed with precise and privacy-safe evidence,R2/R3/R4,DESIGNED_NOT_RUN
+S-20,BUNDLE_DIGEST,security_integrity_operational,Fail closed with precise and privacy-safe evidence,R2/R3/R4,DESIGNED_NOT_RUN
+S-21,REVISION_CONFLICT,security_integrity_operational,Fail closed with precise and privacy-safe evidence,R2/R3/R4,DESIGNED_NOT_RUN
+S-22,MATCH_AMBIGUITY,security_integrity_operational,Fail closed with precise and privacy-safe evidence,R2/R3/R4,DESIGNED_NOT_RUN
+S-23,PII_REDACTION,security_integrity_operational,Fail closed with precise and privacy-safe evidence,R2/R3/R4,DESIGNED_NOT_RUN
+S-24,EXPORT_TOO_LARGE,security_integrity_operational,Fail closed with precise and privacy-safe evidence,R2/R3/R4,DESIGNED_NOT_RUN
+S-25,API_OUTAGE,security_integrity_operational,Fail closed with precise and privacy-safe evidence,R2/R3/R4,DESIGNED_NOT_RUN
+S-26,STORAGE_TTL,security_integrity_operational,Fail closed with precise and privacy-safe evidence,R2/R3/R4,DESIGNED_NOT_RUN
+S-27,ATTACKER_CSV_FORMULA,security_integrity_operational,Fail closed with precise and privacy-safe evidence,R2/R3/R4,DESIGNED_NOT_RUN
+S-28,FORGED_RIGHTS,security_integrity_operational,Fail closed with precise and privacy-safe evidence,R2/R3/R4,DESIGNED_NOT_RUN
+S-29,OWNER_CUSTODY_DENIAL,security_integrity_operational,Fail closed with precise and privacy-safe evidence,R2/R3/R4,DESIGNED_NOT_RUN
+S-30,PACKAGING_MANIFEST,security_integrity_operational,Fail closed with precise and privacy-safe evidence,R2/R3/R4,DESIGNED_NOT_RUN

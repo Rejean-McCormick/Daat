@@ -1,0 +1,89 @@
+{
+  "manifest": {
+    "bundle_id": "synthetic-context-001",
+    "format_label": "daat.context-bundle.local-example/0.1-proposed",
+    "generated_at": "2026-11-14T12:00:00Z",
+    "version": 1
+  },
+  "scope": {
+    "question": "Quelles sont les divergences entre sources fictives sur le même sujet?",
+    "language": "fr",
+    "notes": "Exemple synthétique; aucun fournisseur réel appelé."
+  },
+  "sources": [
+    {
+      "source_ref": "source-example-1",
+      "platform_profile_id": "local-file",
+      "external_id": "synthetic://example/article-a",
+      "revision": "snapshot-0001",
+      "content_kind": "excerpt",
+      "rights": {
+        "read": "allowed",
+        "copy": "allowed",
+        "retain": "allowed",
+        "transform": "allowed",
+        "ai_disclosure": "allowed"
+      },
+      "checked_at": "2026-11-14T12:00:00Z",
+      "rights_evidence_ref": "fixture-only-not-real-authorization"
+    },
+    {
+      "source_ref": "source-example-2",
+      "platform_profile_id": "medium",
+      "external_id": "synthetic://example/medium-restricted",
+      "revision": "rss-0001",
+      "content_kind": "reference_only",
+      "rights": {
+        "read": "allowed",
+        "copy": "unknown",
+        "retain": "unknown",
+        "transform": "unknown",
+        "ai_disclosure": "denied"
+      },
+      "checked_at": "2026-11-14T12:00:00Z",
+      "rights_evidence_ref": "fixture-only-not-real-authorization"
+    }
+  ],
+  "fragments": [
+    {
+      "fragment_id": "frag-001",
+      "source_ref": "source-example-1",
+      "source_revision": "snapshot-0001",
+      "text": "Un passage fictif indique que deux points de vue peuvent être comparés sans conclure à une vérité unique.",
+      "locator": "line:1",
+      "content_kind": "excerpt",
+      "quote_verified": true,
+      "share_allowed": true,
+      "sha256": "f3c0abdca9f3ef4ef2e3455b2a744efcba2272f7c3691fb04ecfd742966e1375"
+    }
+  ],
+  "uncertainties": [
+    "La source Medium fictive est reference_only; aucun texte de cet article n’a été lu.",
+    "Exemple sans authentification ni licence réelle."
+  ],
+  "disclosure": {
+    "target": "manual_chatgpt",
+    "status": "prepared_not_sent",
+    "permitted_fragment_ids": [
+      "frag-001"
+    ],
+    "excluded_reasons": [
+      "source-example-2: ai_disclosure denied (fixture)"
+    ],
+    "reviewed_at": "2026-11-14T12:00:00Z"
+  },
+  "prompts": [
+    {
+      "template_id": "compare_sources",
+      "template_revision": "draft-1",
+      "text": "À partir du fragment frag-001 uniquement, explique ce qui est effectivement établi; ne suppose aucun contenu de source-example-2."
+    }
+  ],
+  "validation": {
+    "local_schema_checked": true,
+    "citations_checked": true,
+    "status": "example_only"
+  },
+  "normalized_records": [],
+  "relations": []
+}

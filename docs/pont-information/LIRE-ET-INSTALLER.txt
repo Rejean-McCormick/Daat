@@ -1,0 +1,20 @@
+DaaT - Pont universel d'information - DOCUMENTATION de la cible
+
+Installation Windows simple (ZIP de documentation recommandé) :
+1. Décompresser le ZIP dans C:\mycode.
+2. Ouvrir : C:\mycode\Interaction-Kernel\Daat\docs\pont-information\00-INDEX-ET-STATUT.md
+3. Le plan global est dans 15-PLAN-DE-REALISATION-INTEGRALE.md.
+4. La matrice des 89 sources se trouve dans 04-REGISTRE-89-PLATEFORMES.md.
+
+Le pack de documentation remplace uniquement README.md, README_FR.md,
+docs/README.md et REPOSITORY-MANIFEST.json, et ajoute les fichiers
+à docs/pont-information ainsi que l'ADR-0005 PROPOSE.
+Le manifeste est celui du snapshot local 0.4.4 (registre v1),
+pas celui d'un dépôt local modifié ultérieurement.
+
+La cible n'est PAS codée par ce ZIP : ce sont les spécifications intégrales,
+160 tâches et 674 tests proposés pour la livraison complète. Le seul code
+nouveau dans ce dossier est le validateur documentaire hors ligne.
+Aucun connecteur réseau, contrat IK adopté ou Kristal n'est livré ici.
+
+Aucune commande n'est nécessaire pour lire les documents.
