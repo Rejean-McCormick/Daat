@@ -1,6 +1,6 @@
 # DaaT architecture and implementation documentation
 
-These files form the **canonical build specification** for DaaT. They are intended for human engineers and AI implementation agents; DaaT v0.3.0 includes an **offline Python library/CLI**, not a deployed external integration service; see [19](19-IMPLEMENTATION-STATUS.md).
+These files form the **canonical build specification** for DaaT. They are intended for human engineers and AI implementation agents; DaaT v0.5.0 includes a **local information-bridge implementation candidate**, alongside earlier offline Python library/CLI commands; it is **not** a deployed external integration service. For the current path, see [0.5.0 implementation](pont-information/IMPLEMENTATION-0.5.0.md). [19](19-IMPLEMENTATION-STATUS.md) records an earlier implementation baseline.
 
 Read order:
 
@@ -41,7 +41,7 @@ All four describe implemented local gates and outstanding owner integrations. No
 <!-- daat-universal-onramp-docs-2026-11-13 -->
 ## Universal external-data onramp — final design / coding baseline (2026-11-13)
 
-**Status:** `TARGET_DESIGN`; the DaaT v0.3.0 offline library remains the factual implementation baseline in [19](19-IMPLEMENTATION-STATUS.md). These additions **do not** adopt a new IK wire profile, source custody API, v11 Kit runtime or production service.
+**Status:** `TARGET_DESIGN` for the architecture in this section; the 0.3.0 library described in [19](19-IMPLEMENTATION-STATUS.md) is an **earlier** implementation baseline. The current 0.5.0 local bridge candidate is described [here](pont-information/IMPLEMENTATION-0.5.0.md). These additions **do not** adopt a new IK wire profile, source custody API, v11 Kit runtime or production service.
 
 - [26 — Universal onramp: vision and ownership](26-UNIVERSAL-DATA-ONRAMP.md)
 - [27 — Source taxonomy and 36-family registry](27-SOURCE-TAXONOMY-AND-REGISTRY.md)
@@ -56,7 +56,7 @@ All four describe implemented local gates and outstanding owner integrations. No
 
 The [36-family exploratory CSV](data/source-family-landscape-36.csv) is a research catalogue, not a claim that connectors are shipped or that their data may be copied. Future external integrations require exact producer/consumer owner contracts and qualification.
 
-## Offline source-preparation code (0.4.0)
+## Historical offline source-preparation code (0.4.x; retained in 0.5.0)
 
 - [35 — Implemented offline source-to-candidate CLI and owner blockers](35-OFFLINE-ONRAMP-IMPLEMENTATION-0.4.md)
 

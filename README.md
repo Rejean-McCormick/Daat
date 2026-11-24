@@ -8,7 +8,7 @@
 
 # DaaT — External Interoperability & Alignment Boundary
 
-**Code version:** `0.4.2` (offline source-preparation + existing security-boundary alpha). **Runtime status:** pre-production, **not a deployed IK service**.
+**Current code version:** `0.5.0` (local information-bridge candidate, with earlier 0.4.x offline source-preparation and security gates retained). **Runtime status:** pre-production, **not a deployed IK service**. See [0.5.0 implementation and limits](docs/pont-information/IMPLEMENTATION-0.5.0.md) and [release validation](RELEASE-VALIDATION-0.5.0.md).
 
 > DaaT makes integration possible without imposing uniformity. An external application's necessary semantic adaptations can be recorded and measured as a transparent, reducible *alignment burden*, not a judgment of the application's quality.
 
